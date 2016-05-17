@@ -10,22 +10,19 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+// index 首页
 Route::get('/', function () {
     return view('welcome');
 });
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
-
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+//index 首页
+Route::get('index','HomeController@index');
+//single  详情页
+Route::get('single','HomeController@single');
+//events
+Route::get('events','EventsController@index');
+//shortCodes
+Route::get('shortCodes','ShortController@index');
+//mail
+Route::get('mail','MailController@index');
+//services
+Route::get('services','ServicesController@index');
