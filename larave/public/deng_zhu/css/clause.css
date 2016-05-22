@@ -1,0 +1,134 @@
+﻿#sidebarBox{
+	width:160px;
+}
+.sidebarNav{
+	background:#f2f0ee;
+	border-left:1px solid #e5e5e5;
+	border-top:1px solid #e5e5e5;
+}
+.sidebarNav li{
+	line-height:34px;
+	border-bottom:1px solid #e5e5e5;
+}
+.sidebarNav li a{
+	display:block;
+	padding-left:38px;
+}
+.sidebarNav li a:hover{
+	background:#e7e7e7;
+}
+.sidebarNav li .current,
+.sidebarNav li .current:hover{
+	background:#f60;
+	color:#fff;
+	cursor:default;
+	text-decoration:none;
+}
+#mainContent{
+	width:790px;
+}
+.clause-wrap{
+	padding:0 30px 20px;
+	background:#fff;
+	border:1px solid #ddd;
+	font-family:"宋体",verdana,Arial,"simsun";
+}
+    .clause-wrap.noBorder {
+        border:none;
+    }
+
+.clause-wrap h2,.clause-wrap h3{
+	color: #FF6600;
+    font-family: "Microsoft YaHei","宋体",verdana,Arial,"simsun";
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.clause-wrap h3 {
+    font-size:24px;
+}
+.clause-wrap h2.prepaidCardTitle {
+        text-align:left;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+.clause-wrap li{
+	line-height:2.0;
+	padding-top:20px;
+	text-align:justify;
+}
+.clause-wrap li h3,.clause-wrap li h4{
+	color: #FF6600;
+    font-family: "Microsoft YaHei","宋体",verdana,Arial,"simsun";
+    font-size: 16px;
+}
+.clause-wrap li h4{
+	margin-top:10px;
+	font-size:14px;
+}
+.clause-wrap li ul li{
+	margin-left:18px;
+	padding:0;
+	list-style-type:disc;
+}
+.clause-wrap li strong{
+	color:#f60;
+	font-size:14px;
+}
+.clause-wrap li span{
+	color:#000;
+	font-size:14px;
+    font-weight:bold;
+}
+.clause-wrap li .black {
+    color:#333;
+    font-weight:bold;
+}
+.clause-wrap li dl{
+	margin-top:-20px;
+}
+.clause-wrap li dt{
+	margin-top:20px;
+}
+.clause-wrap li dd{
+	text-indent:2em;
+}
+
+.dividing-line{
+	height:2px;
+	margin:30px 0;
+	border-bottom:1px dashed #ddd;
+}
+.c-red{
+	color:#f00;
+}
+/*PassengerCasualty*/
+.clause-wrap table{
+	width:100%;
+	margin-top:10px;
+	border:1px solid #ccc;    
+}
+.clause-wrap table caption {
+    line-height:30px;
+    font-weight:bold;
+}
+.clause-wrap  table th,.clause-wrap  table td{   
+	line-height:30px;
+	padding:5px 10px;
+	border:1px solid #eaeaea;
+    vertical-align: middle;
+}
+.clause-wrap table td {
+    text-align:left;
+}
+.clause-wrap  table th{
+	font-weight:bold;
+	background:#fdfdfd;
+	color:#f60;
+	font-size:14px;
+    text-align:center;
+}
+.clause-wrap table th.w50 {
+    width:50%;
+}
