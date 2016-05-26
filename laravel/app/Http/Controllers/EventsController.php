@@ -1,0 +1,96 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use DB,Request;
+
+
+/*
+ * $Author:董梦桃
+ * $Id:EventsController.php 2016-05-21 8:26 dongmengtao
+ */
+
+class EventsController extends Controller
+{
+    //展示今日更新页面
+    public function index()
+    {
+        //今天凌晨
+        $endTime=date("Y-m-d 00:00:00",time());
+        $time=time($endTime);
+
+        //今天午夜
+        $dayTime=$time+3600*24;
+        $startDayTime=date("Y-m-d 00:00:00",$dayTime);
+        /*$today=DB::table("house")
+            ->join('images', 'images.h_id', '=', 'house.h_id')
+            ->whereBetween('h_time', [$endTime,$startDayTime])
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+        var_dump($today);die;  */
+        $dayTime=$time+3600*24;
+        $startDayTime=date("Y-m-d 00:00:00",$dayTime);
+        $today=DB::table("house")
+            ->join("images","house.h_id","=","images.h_id")
+            ->whereBetween('h_time', [$endTime,$startDayTime])
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+        /*foreach($today as  $key=>$val){
+            $id=$val->h_id;
+            $arr=DB::table("images")->where('h_id',$id)->get();
+            $today[$key]->img=$arr[0]-> img;
+        }*/
+        //var_dump($today);die;
+        //三天前
+        $threeTime=$time-3600*24*3;
+        $startThreeTime=date("Y-m-d 00:00:00",$threeTime);
+        $threedays=DB::table("house")
+            ->join("images","house.h_id","=","images.h_id")
+            -> whereBetween('h_time', [$startThreeTime,$endTime])
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+
+        //七天前
+        $weekTime=$time-3600*24*7;
+        $startWeekTime=date("Y-m-d 00:00:00",$weekTime);
+        $weekdays=DB::table("house")
+            ->join("images","house.h_id","=","images.h_id")
+            ->whereBetween('h_time', [$startWeekTime,$endTime])
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+
+        //var_dump($threedays);die;
+        return view('events/events',['arr'=>$today,'arr1'=>$threedays,'arr2'=>$weekdays]);
+
+    }
+    //查询更新的房源
+    /* public function lists()
+    {
+          //今天凌晨
+        $endTime=date("Y-m-d 00:00:00",time());
+        $time=time($endTime);
+
+        //今天午夜
+        $dayTime=$time+3600*24;
+        $startDayTime=date("Y-m-d 00:00:00",$dayTime);
+        $today=DB::table("house")->whereBetween('h_time', [$endTime,$startDayTime])->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+
+        //三天前
+        $threeTime=$time-3600*24*3;
+        $startThreeTime=date("Y-m-d 00:00:00",$threeTime);
+        $threedays=DB::table("house")->whereBetween('h_time', [$startThreeTime,$endTime])->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+
+        //七天前
+        $weekTime=$time-3600*24*7;
+        $startWeekTime=date("Y-m-d 00:00:00",$weekTime);
+        $weekdays=DB::table("house")->whereBetween('h_time', [$startWeekTime,$endTime])->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+
+        //var_dump($threedays);die;
+        return view('events/events',['arr'=>$today,'arr1'=>$threedays,'arr2'=>$weekdays]);
+    }*/
+    //点击更多,查看详细页面
+    public function more(){
+        $h_id= Request::get('h_id');
+        $arr= DB :: table ('house')->where('h_id',$h_id)->get();
+        //var_dump($arr);die;
+        return view('events/single')->with('arr',$arr);
+    }
+
+
+}

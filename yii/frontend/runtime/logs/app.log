@@ -4916,3 +4916,499 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1463713084.163
     'REQUEST_TIME' => 1463713084
 ]
+2016-05-26 21:26:56 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:26:56 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2112'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65160'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269216.0487
+    'REQUEST_TIME' => 1464269216
+]
+2016-05-26 21:27:15 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:27:15 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2240'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65169'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269235.8179
+    'REQUEST_TIME' => 1464269235
+]
+2016-05-26 21:28:37 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:28:37 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+    'CNZZDATA155540' => 'cnzz_eid=479049484-1464264581-&ntime=1464264581'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2012'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65213'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D; CNZZDATA155540=cnzz_eid%3D479049484-1464264581-%26ntime%3D1464264581'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269317.5895
+    'REQUEST_TIME' => 1464269317
+]
+2016-05-26 21:29:22 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:29:22 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+    'CNZZDATA155540' => 'cnzz_eid=479049484-1464264581-&ntime=1464264581'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65219'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D; CNZZDATA155540=cnzz_eid%3D479049484-1464264581-%26ntime%3D1464264581'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269362.3281
+    'REQUEST_TIME' => 1464269362
+]
+2016-05-26 21:29:30 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:29:30 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+    'CNZZDATA155540' => 'cnzz_eid=479049484-1464264581-&ntime=1464264581'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65220'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D; CNZZDATA155540=cnzz_eid%3D479049484-1464264581-%26ntime%3D1464264581'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269370.5756
+    'REQUEST_TIME' => 1464269370
+]
+2016-05-26 21:29:33 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-26 21:29:33 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+    'CNZZDATA155540' => 'cnzz_eid=479049484-1464264581-&ntime=1464264581'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2232'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65220'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D; CNZZDATA155540=cnzz_eid%3D479049484-1464264581-%26ntime%3D1464264581'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269373.0167
+    'REQUEST_TIME' => 1464269373
+]
+2016-05-26 21:33:58 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-26 21:33:58 [127.0.0.1][-][rnr4ilkh4ia5vgarrh4anuasc1][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'rnr4ilkh4ia5vgarrh4anuasc1'
+    '_csrf' => '35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ\";}'
+    'CNZZDATA155540' => 'cnzz_eid=479049484-1464264581-&ntime=1464264581'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2184'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65261'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=rnr4ilkh4ia5vgarrh4anuasc1; _csrf=35c594a7988fedbab134c41d8dfd2f434ce0bad32ce0fcddefcca4a493f6164ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22NPX2fYAAXcdqBYTC9CDaxpATr86m4eVQ%22%3B%7D; CNZZDATA155540=cnzz_eid%3D479049484-1464264581-%26ntime%3D1464264581'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=user%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464269638.1019
+    'REQUEST_TIME' => 1464269638
+]

@@ -28,7 +28,7 @@ class LoginController extends \yii\web\Controller
     public function actionLogin()
     {
         $loginForm = new LoginForm();//这里要把刚才写的类new下，注意你们要引入文件路径额
-        return $this->renderPartial('login.html',array('loginForm'=>$loginForm));
+        return $this->renderPartial('login',array('loginForm'=>$loginForm));
     }
     /**
      * @用户授权规则
