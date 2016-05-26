@@ -5,33 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
+    <script src="js/jquery-1.11.1.min.js"></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
+
 <!-- //js -->
 <!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet"> 
+<link href="css/animate.min.css" rel="stylesheet">
 <script src="js/wow.min.js"></script>
 <script>
  new WOW().init();
 </script>
 <!-- //animation-effect -->
-<link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" type="text/css" href="css/common.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/detail_new.css"/>
 
-<script  type="text/javascript" src="js/jquery.min.js"></script>
+
 <script type="text/javascript" src="js/z-common.min.js"></script>
 <script type="text/javascript" src="js/detail.js"></script>
 <script  type="text/javascript" src="js/jquery.easing.js"></script>
 <script type="text/javascript" src="js/cea6b8fffcbf412bba56464a5408f59c.js"></script>
 <script type="text/javascript" src="js/wdatepicker.js"></script>
-<script src="js/mappage.js" type="text/javascript"></script>
+
 <script>
     myTongji('www','detail');
 </script>
@@ -43,89 +42,21 @@
 @include ("commonality.head");
     
     <div class="area clearfix">
+
+        <!--焦点图开始-->
          <div class="room_detail_left">
              <div id="lofslidecontent45" class="lof-slidecontent current_lof">
                  <div class="lof-main-outer" id="cao">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-                     	<li>
-                            <span class="woshi"></span>        
-                              <a href="picture/v800x600_20160523193314991_f.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20160523193314991_f.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
+                         @foreach($img as $k=>$v)
                         <li>
-                            <span class="woshi"></span>        
-                              <a href="picture/v800x600_20160523132257797.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20160523132257797.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>        
-                              <a href="picture/v800x600_20160523132303410.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20160523132303410.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>        
-                              <a href="picture/v800x600_20150519203245.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20150519203245.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>        
-                              <a href="picture/v800x600_20160523132327153.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20160523132327153.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316005018.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316005018.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316005025.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316005025.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316004619.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316004619.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316004628.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316004628.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316004808.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316004808.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316004921.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316004921.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                            <span class="woshi"></span>     
-                             <a href="picture/v800x600_20120316004931.jpg"  class="pirobox_t6">
-                                <img src="picture/v800x600_20120316004931.jpg" class="loadImgError" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                            </a>
-                        </li>
-                        <li>
-                        	<span class="woshi"></span>     
-                        	<a href="picture/20120316004528.png"  class="pirobox_t6">
-                            <img src="picture/20120316004528.png" class="loadImgError" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/{{$v->img}}"  class="pirobox_t6">
+                            <img src="houst_img/{{$v->img}}" class="loadImgError" width="620" height="470"/>
 	                        </a>
 	                    </li>
+                        @endforeach
                     </ul>
                 <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
             </div><!--lof-main-outer -->
@@ -133,84 +64,14 @@
 					<div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                     <div class="lof-navigator-outer" >
                   		<ul class="lof-navigator">
-                  			<li>
-                                <div class="lidiv">
-                                    <img src="picture/v298x198_20160523193314991_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/>
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
+                        @foreach($img as $k=>$v)
                             <li>
                                 <div class="lidiv">
-                                    <img src="picture/v298x198_20160523132257797.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/>
+                                    <img src="houst_img/{{$v->img}}" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
                                     <div class="bor_act"></div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/v298x198_20160523132303410.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/>
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/v298x198_20150519203245.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/>
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/v298x198_20160523132327153.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/>
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316005018.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316005025.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004619.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004628.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004808.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004921.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004931.jpg"  onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="lidiv">
-                                    <img src="picture/20120316004528.png" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
-                                    <div class="bor_act"></div>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div><!--lof-navigator-outer -->
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
@@ -246,72 +107,8 @@
 		<li class="have"><span class="microwave"></span>微波炉</li>
 		<li class="last"><span class="lock"></span>智能锁</li>
 	</ul>             
-	<div class="title" display:none>
-		<span class="line"></span>
-		<h2 class="cn"><span class="s"></span>好室友<span class="y">●</span></h2>
-		<p class="en">Great Roommate<span class="y">●</span></p>
-	</div>
-	<div class="greatRoommate" display:none>
-		<ul class="clearfix">
-			<li class="current " >
-				<div class="box">
-					<div class="user_top clearfix">
-						<div class="avatar"></div>
-						<p>01卧</p>
-						<span class="tags">当前房源</span>
-					</div>
-					<div class="user_center">
-						<p class="sign">…<span class="gray-6">星座</span></p>
-						<p class="jobs">
-							<span class="ellipsis">…</span><span class="gray-6">职业</span>
-						</p>
-					</div>
-					<div class="user_bottom">
-						<p>…</p>
-						<span class="gray-6">入住时间</span>
-					</div>
-				</div>
-			</li>
-			<li class="woman " >
-				<div class="box">
-					<div class="user_top clearfix">
-						<div class="avatar"></div>
-						<p>02卧</p>
-						<span class="tags">已入住</span>
-					</div>
-					<div class="user_center">
-						<p class="sign">双鱼座<span class="gray-6">星座</span></p>
-						<p class="jobs">
-							<span class="ellipsis">职员</span><span class="gray-6">职业</span>
-						</p>
-					</div>
-					<div class="user_bottom">
-						<p>2016/06-2017/06</p>
-						<span class="gray-6">入住时间</span>
-					</div>
-				</div>
-			</li>
-			<li class="man " >
-				<div class="box">
-					<div class="user_top clearfix">
-						<div class="avatar"></div>
-						<p>03卧</p>
-						<span class="tags">已入住</span>
-					</div>
-					<div class="user_center">
-						<p class="sign">水瓶座<span class="gray-6">星座</span></p>
-						<p class="jobs">
-							<span class="ellipsis">...</span><span class="gray-6">职业</span>
-						</p>
-					</div>
-					<div class="user_bottom">
-						<p>2016/05-2017/05</p>
-						<span class="gray-6">入住时间</span>
-					</div>
-				</div>
-			</li>                                                
-		</ul>
-	</div><!--/greatRoommate-->
+	<!--/greatRoommate-->
+
 
 	<div class="title">
 		<span class="line"></span>
@@ -464,6 +261,7 @@
                 <li><b></b>朝向： 南</li>
             	<li><b></b>户型： 3室1厅<span class="icons">合</span></li>
             	<li><b></b>楼层： 7/13层</li>
+
                 <li class="last">
                  	<b></b>交通：
             		<span class="lineList" id="lineList">距5号线立水桥279米
@@ -505,7 +303,7 @@
 
 <!--从接口中获取管家信息-->
 	<div class="r_fixed" id="r_fixed">
-	    <div class="tel"><span class="icon"></span> 400 100 1111 - 111301</div>
+	    <div class="tel"><span class="icon"></span> 151 0014 6754</div>
 			<div class="con">
 				<div class="zoInfo clearfix ">
 					<div class="img">
@@ -514,7 +312,7 @@
 			         </div>
 					<div class="txt">
 						<span class="icon yinLeft"></span>
-						<p>我是U+管家李敏，一直秉承着客户至上的理念，认真的帮助客户租住适合的房屋，期待您加入我们的大家庭。</p>
+						<p>我是U+管家{{$list->real_name}}，一直秉承着客户至上的理念，认真的帮助客户租住适合的房屋，期待您加入我们的大家庭。</p>
 						<p class="org pr">U家(U+管家)：{{$list->real_name}} <span class="icon yinRight"></span></p>
 					</div>
 				</div>
@@ -1159,73 +957,14 @@ function leaveMessage(collect_id,is_whole){
                  <div class="lof-main-outer">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-					<li>
-                          <a href="picture/v800x600_20160523193314991_f.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20160523193314991_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                          <a href="picture/v800x600_20160523132257797.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20160523132257797.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                          <a href="picture/v800x600_20160523132303410.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20160523132303410.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                          <a href="picture/v800x600_20150519203245.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20150519203245.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                          <a href="picture/v800x600_20160523132327153.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20160523132327153.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316005018.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316005018.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316005025.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316005025.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316004619.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316004619.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316004628.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316004628.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-
-                         <a href="picture/v800x600_20120316004808.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316004808.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316004921.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316004921.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                    <li>
-                         <a href="picture/v800x600_20120316004931.jpg"  class="pirobox_t6">
-                            <img src="picture/v800x600_20120316004931.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>     
-                    <li>
-                        <a href="picture/20120316004528.png"  class="pirobox_t6">
-                           <img src="picture/20120316004528.png" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
-                        </a>
-                    </li>
-                                        </ul>
+                         @foreach($img as $k=>$v)
+                            <li>
+                                <a href="house_img/{{$v->img}}"  class="pirobox_t6">
+                                   <img src="house_img/{{$v->img}}" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
+                                </a>
+                            </li>
+                          @endforeach
+                     </ul>
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
                  </div><!--lof-main-outer -->
 
@@ -1430,3 +1169,288 @@ function leaveMessage(collect_id,is_whole){
 <!-- //for bootstrap working -->
 </body>
 </html>
+
+<script>
+    $(function(){
+
+
+        var $mapSearchText=$("#mapsearchText");
+        var $mapTitle = $mapSearchText.attr('data-title');
+        var $toBus=$("#toBus");
+        var to;
+        var $reasultbox=$("#reasultbox");
+
+        var map1 = new BMap.Map("mainmap");
+        map1.addControl(new BMap.NavigationControl());
+        map1.addControl(new BMap.ScaleControl());
+        map1.enableScrollWheelZoom();
+        var lng =$mapSearchText.attr('data-lng');
+        var lat =$mapSearchText.attr('data-lat');
+
+
+        //alert({{$list->x_postion}})
+        var point=new BMap.Point({{$list->x_postion}},{{$list->y_postion}});
+    var marker=new BMap.Marker(point);
+    map1.centerAndZoom(point,14);
+    map1.addOverlay(marker);
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    var keyFlag = 0;
+    var keyVal = '';
+
+    var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+            {"input" : "mapsearchText"
+                ,"location" : map1
+            });
+
+
+    $('#toLocation').click(function(){
+        map1.centerAndZoom(point,14);
+        map1.addOverlay(marker);
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    });
+
+    $('#msTab p').click(function(){
+        $(this).addClass('active').siblings().removeClass();
+        keyFlag = $(this).index();
+
+    });
+
+    var local = new BMap.LocalSearch(map1, {
+        renderOptions:{map: map1}
+    });
+
+    var $mapTabLi=$("#mapTab li");
+    $mapTabLi.click(function(){
+        var txt=$(this).attr('title');
+        $mapTabLi.removeClass("active");
+        $(this).addClass('active');
+        local.searchInBounds(txt, map1.getBounds());
+    });
+
+
+
+
+    var routePolicy = [BMAP_TRANSIT_POLICY_LEAST_TIME,BMAP_TRANSIT_POLICY_LEAST_TRANSFER,BMAP_TRANSIT_POLICY_LEAST_WALKING,BMAP_TRANSIT_POLICY_AVOID_SUBWAYS];
+    var transit = new BMap.TransitRoute(map1, {
+        renderOptions: {map: map1},
+        policy: 0,
+        onSearchComplete:function(e){
+            var plan=e.getPlan(0);
+            var title="";
+            if(plan.getNumLines() > 0){
+                title=plan.getLine(0).title;
+                if(title.indexOf("(") > 0){
+                    title=title.substring(0,title.indexOf("("));
+                }
+            }
+            s=plan.getDescription().replace(/\，(\<b\>步行\<\/b\>)/g,'@$1').replace(/\，(乘坐)/g,'@$1').split("@");
+
+
+            var adds="";
+            for(var j in s){
+                if(j%2===0){
+                    adds +='<div class="t_buxing"><i></i>'+s[j]+'</div>';
+                }else{
+                    adds +='<div class="t_chengzuo"><i></i>'+s[j]+'</div>';
+                }
+            }
+
+
+
+
+            var t1='',
+                    t2='';
+
+            if(keyFlag){
+                t1 = $mapTitle;
+                t2 = to;
+            }else{
+                t2 = $mapTitle;
+                t1 = to;
+            }
+
+
+
+            var string='<div class="reasultsmallbox"><div class="reasultsmallbox_h">'
+                    +'<p class="numicon">1</p>'
+                    +'<font size="3">'+title+'</font>&nbsp;&nbsp;&nbsp;&nbsp;全程约'+plan.getDuration()
+                    +'</div>'
+                    +'<div style="display: block;" class="reasultsmallbox_c tt_show">'
+                    +'<div class="map_starticon">'
+                    +'  <p class="t_qidian">起</p>'
+                    +'    <span class="t_zhongdianbg">'+t1+'</span>'
+                    +'</div>'
+                    + adds
+                    +'<div class="map_starticon zhong">'
+                    +' <p class="t_zhongdian">终</p>'
+                    +' <span class="t_zhongdianbg">'+t2+'</span></div>'
+                    +'</div></div>';
+
+            $reasultbox.show().html(string);
+        }
+    });
+    var transitSearch=function(){
+        var i=0;
+        to=$mapSearchText.val();
+
+        if(to.length===0){return;}
+
+
+
+        search(point,to,routePolicy[i]);
+
+
+        function search(start,end,route){
+            transit.setPolicy(route);
+
+            if(keyFlag){
+                transit.search(point,end);
+                $('#reasultbox').show();
+                $('#closeReasult').show();
+            }else{
+                transit.search(end,point);
+                $('#reasultbox').show();
+                $('#closeReasult').show();
+            }
+
+
+
+
+        }
+    }
+    $toBus.click(function(){
+        keyVal = $mapSearchText.val();
+        checkVal(keyVal);
+        transitSearch();
+
+
+    });
+    //公交结束
+
+
+    //驾车开始
+    //地址解析  坐标点解析为汉字
+    var geoc = new BMap.Geocoder();
+    var curDress = '';
+    geoc.getLocation(point,function(rs){
+        var addComp = rs.addressComponents;
+        curDress = addComp.province+addComp.city+addComp.district+addComp.street+addComp.streetNumber;
+    });
+
+    var driving = new BMap.DrivingRoute(map1, {renderOptions: {map: map1, panel: "reasultbox", autoViewport: true}});
+    $('#toDriver').click(function(){
+
+
+
+        keyVal = $mapSearchText.val();
+        checkVal(keyVal);
+
+        point=new BMap.Point($mapSearchText.attr('data-lng'),$mapSearchText.attr('data-lat'));
+
+        if(keyFlag){
+            driving.search(curDress, keyVal);
+            $('#reasultbox').show();
+            $('#closeReasult').show();
+        }else{
+            driving.search(keyVal,curDress);
+            $('#reasultbox').show();
+            $('#closeReasult').show();
+        }
+    });
+    //驾车结束
+
+
+
+    //步行
+    var walking = new BMap.WalkingRoute(map1, {renderOptions: {map: map1, panel: "reasultbox", autoViewport: true}});
+    $('#toWalk').click(function(){
+
+        //$(this).addClass('active').siblings('.btn').removeClass('active');
+
+
+
+        keyVal = $mapSearchText.val();
+        checkVal(keyVal);
+        point=new BMap.Point($mapSearchText.attr('data-lng'),$mapSearchText.attr('data-lat'));
+        if(keyFlag){
+            walking.search(curDress, keyVal);
+            $('#reasultbox').show();
+            $('#closeReasult').show();
+        }else{
+            walking.search(keyVal,curDress);
+            $('#reasultbox').show();
+            $('#closeReasult').show();
+        }
+
+    });
+
+
+    //步行结束
+
+
+    function checkVal(val){
+
+        var num=0;
+        if(val==''){
+            $mapSearchText.removeClass('textFocus');
+            var timer = setInterval(function(){
+                num++;
+                if(num%2==0){
+                    $mapSearchText.addClass('textError')
+                }else{
+                    $mapSearchText.removeClass('textError')
+                }
+
+                if(num>= 4){
+                    clearInterval(timer);
+                    $mapSearchText.focus();
+                }
+
+            },100);
+            $mapSearchText.addClass('textError').removeClass('textFocus');
+        }
+    }
+
+
+    $mapSearchText.focus(function(){
+        $(this).addClass('textFocus').removeClass('textError');
+    }).blur(function(){
+        $(this).removeClass('textFocus textError');
+    });
+
+
+
+    /*
+     $mapSearchText.keyup(function(e){
+     var searchText=$(this).val().trim();
+     if(searchText==""){
+     map1.removeOverlay();
+     return false;
+     }
+     if(e.which==13 || e.which==1){
+     if($('#toBus').hasClass('active')){
+     transitSearch();
+     }
+
+
+
+     }
+     return false;
+     })
+     */
+
+
+    $('#closeReasult').click(function(){
+        $(this).hide();
+        $('#reasultbox').hide();
+    });
+
+
+
+    });
+
+
+
+
+</script>
+

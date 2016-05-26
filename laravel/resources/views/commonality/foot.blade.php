@@ -50,7 +50,7 @@
                 </div>
                 <div class="clearfix"> </div>
                 <div class="footer-grd">
-                    <a href="#"><img src="houst_img/(6).jpg class="img-responsive" alt=" " /></a>
+                    <a href="#"><img src="houst_img/(6).jpg" class="img-responsive" alt=" " /></a>
                 </div>
                 <div class="footer-grd">
                     <a href="#"><img src="houst_img/(5).jpg" class="img-responsive" alt=" " /></a>

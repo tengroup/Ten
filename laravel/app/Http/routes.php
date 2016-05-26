@@ -24,6 +24,8 @@ Route::get('single','HomeController@single');
 
 //events
 Route::get('events','EventsController@index');
+// 更新
+//Route::get('events','EventsController@lists');
 
 
 //shortCodes

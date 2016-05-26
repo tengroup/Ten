@@ -34,6 +34,8 @@ class LoginController extends Controller
 
     //注册页面接值进行入库
     public function registerPro(){
+
+
         $tel=Request::get('Mobile');
         $u_name=Request::get('u_name');
         $id_card=Request::get('id_card');
@@ -42,6 +44,7 @@ class LoginController extends Controller
         $password=Request::get('Password');
         $radio=Request::get('radio');
         $email=Request::get('Email');
+
         $reg_time=date("Y-m-d H:i:s",time());
         if($radio==0){
             $id=DB::table("users")->insertGetId(
@@ -55,7 +58,7 @@ class LoginController extends Controller
                     'pet_name'=>$pet_name,'real_name'=>$real_name,'u_email'=>$email,'reg_time'=>$reg_time)
             );
         }
-        echo "注册成功";
+
         return redirect('login');
     }
 
@@ -74,6 +77,7 @@ class LoginController extends Controller
 
     /*会员登录处理*/
     public function loginPro1(){
+        date_default_timezone_set('Asia/Shanghai');
         $username=Request::get('username');
         $pwd=Request::get('pwd');
         $status=Request::get('status');
@@ -103,8 +107,12 @@ class LoginController extends Controller
         if($arr){
             //echo $arr->u_id;die;
             if($arr->u_pwd==$pwd){
-//                session(["username"=>$username]);
-//                session(["u_id"=>$arr->u_id]);
+                //判断登录人是房东还是客户  将登陆时间入库
+                if($status==1){
+                    DB::table("f_users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                }else{
+                    DB::table("users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                }
                 setcookie("username",$username);
                 setcookie("u_id",$arr->u_id);
                 //echo $_COOKIE['status'];die;

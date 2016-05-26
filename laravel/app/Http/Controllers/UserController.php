@@ -99,8 +99,12 @@ class UserController extends Controller
     public function perLook()
     {
         $uId=Request::get('id');
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->join("images","images.h_id","=","house.h_id")->where('house.h_id', "$uId")->first();
-        return view("home/single",['list'=>$oneMess]);
+
+        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
+        //var_dump($oneMess);die;
+        $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
+        //var_dump($img);die;
+        return view("home/single",['list'=>$oneMess,'img'=>$img]);
     }
     
 	   //房源添加
@@ -148,6 +152,8 @@ class UserController extends Controller
                 $newName=date('Y-m-d').'/'.$newName;
                DB::table("images")->insert(["h_id"=>$h_id,"img"=>$newName]);
             }
+            $u_id=$_COOKIE['u_id'];
+            DB::table('preplot')->insert(['u_id'=>$u_id,'h_id'=>$h_id]);
             return redirect("fyAdd");
         }else{
             echo "<script>alert('添加失败哦');location.href='fyAdd'</script>";
