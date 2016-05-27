@@ -42,7 +42,7 @@
             @foreach($arr as $v)
                 <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <p class="dte">{{$v->h_time}}</p>
-                    <a href="{{URL('perLook?id')}}={{$v->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v->img}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
+                    <a href="{{URL('perLook?id')}}={{$v->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
 
                     <p class="quod"></p>
                     <div class="more">
@@ -59,7 +59,7 @@
                 @foreach($arr1 as $v1)
                     <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <p class="dte">{{$v1->h_time}}</p>
-                        <a href="{{URL('perLook?id')}}={{$v1->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v1->img}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
+                        <a href="{{URL('perLook?id')}}={{$v1->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v1->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
 
                         <p class="quod"></p>
                         <div class="more">
@@ -76,7 +76,7 @@
                 @foreach($arr2 as $v2)
                     <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <p class="dte">{{$v2->h_time}}</p>
-                        <a href="{{URL('perLook?id')}}={{$v2->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v2->img}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
+                        <a href="{{URL('perLook?id')}}={{$v2->h_id}}" class="hvr-curl-bottom-right"><img src="houst_img/{{$v2->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/></a>
 
                         <p class="quod"></p>
                         <div class="more">

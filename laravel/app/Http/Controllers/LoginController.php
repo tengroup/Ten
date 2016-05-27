@@ -7,7 +7,11 @@ use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
 use Builder;
 
-
+/*
+ * $Author:孙辉
+ * $Id:LoginController.php
+ * 2016-05-21 8:26
+ */
 
 
 class LoginController extends Controller
@@ -138,9 +142,14 @@ class LoginController extends Controller
         setcookie('username','',time()-24*60*60);
 
         //echo $_COOKIE['username'];die;
-        setcookie('u_id','',time()-1);
-        setcookie('status','',time()-1);
+        setcookie('u_id','',time()-24*60*60);
+        setcookie('status','',time()-24*60*60);
         return redirect('/');
+    }
+
+    //第三方登录
+    public function qq(){
+        return view('login/demo');
     }
 
 }

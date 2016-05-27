@@ -24,17 +24,21 @@
                     <ul class="nav navbar-nav">
                         <li><a href="<?php echo e(URl('index')); ?>" class="active">首页</a></li>
                         <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                我要租房 <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo e(URl('short')); ?>">短租房屋</a></li>
-                                <li><a href="<?php echo e(URl('long')); ?>">长租房屋</a></li>
-                            </ul>
+                            <?php /*<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">*/ ?>
+                                <?php /*我要租房 <span class="caret"></span>*/ ?>
+                            <?php /*</a>*/ ?>
+                            <a href="<?php echo e(URl('short')); ?>"> 我要租房  </a>
+                            <?php /*<ul class="dropdown-menu">*/ ?>
+                                <?php /*<li><a href="<?php echo e(URl('short')); ?>">短租房屋</a></li>*/ ?>
+                                <?php /*<li><a href="<?php echo e(URl('long')); ?>">长租房屋</a></li>*/ ?>
+
+                            <?php /*</ul>*/ ?>
                         </li>
-                        <li><a href="<?php echo e(URl('shortCodes')); ?>">  短码  </a></li>
+
                         <li><a href="<?php echo e(URl('events')); ?>"> 今日更新 </a></li>
+                     <?php if(!empty($_COOKIE['username'])): ?>
                         <li><a href="<?php echo e(URl('message')); ?>"> 留言 </a></li>
+                     <?php endif; ?>
                     </ul>
 
                 </nav>
@@ -56,13 +60,15 @@
                         <?php if(!empty($_COOKIE['username'])): ?>
                             <li><a href="<?php echo e('login/loginout'); ?>">退出</a></li>
                         <?php else: ?>
-                            <li><a href="<?php echo e(URl('login')); ?>">登录</a></li>
+                            <li><a href="<?php echo e(URl('login')); ?>" style="color: blue">登录</a></li>
                         <?php endif; ?>
-                        <li><a href="<?php echo e(URl('register')); ?>">注册</a></li>
+                        <li><a href="<?php echo e(URl('register')); ?>" style="color: blue">注册</a></li>
                         <li role="presentation" class="dropdown">
+                            <?php if(!empty($_COOKIE['status'])): ?>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 用户中心 <span class="caret"></span>
                             </a>
+                            <?php endif; ?>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo e(URl('personal')); ?>">个人信息</a></li>
                                 <?php if(empty($_COOKIE['status'])): ?>
@@ -72,6 +78,7 @@
                                     <li><a href="<?php echo e(URl('appointment')); ?>">预约列表</a></li>
                                 <?php elseif($_COOKIE['status']==1): ?>
                                     <li><a href="<?php echo e(URl('fyAdd')); ?>">房源添加</a></li>
+                                    <li><a href="<?php echo e(URl('fyList')); ?>">房源列表</a></li>
                                 <?php endif; ?>
                             </ul>
                         </li>

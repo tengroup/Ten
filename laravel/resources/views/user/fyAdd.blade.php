@@ -23,8 +23,8 @@
 <!-- //js -->
 
     <!--图片上传-->
-    <script src="jiaoben/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="jiaoben/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--<script src="jiaoben/js/bootstrap.min.js" type="text/javascript"></script>-->
     <script src="jiaoben/js/jquery.filer.min.js" type="text/javascript"></script>
     <script src="jiaoben/js/prettify.js" type="text/javascript"></script>
     <script src="jiaoben/js/scripts.js" type="text/javascript"></script>
@@ -38,8 +38,9 @@
  new WOW().init();
 </script>
 <!-- //animation-effect -->
-<link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+-->
 </head>
 <style>
 #map{
@@ -88,7 +89,11 @@
 			<h3 class="bars wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">房源发布</h3>
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<span class="input-group-addon" id="basic-addon1">address</span>
-				<input type="hidden" class="form-control" id="h_address" placeholder="房源地址" aria-describedby="basic-addon1" name="h_address" >
+                @if(!empty($list->h_address))
+				<input type="text" class="form-control" id="h_address" placeholder="房源地址" aria-describedby="basic-addon1" name="h_address" value='{{$list->h_address}}'>
+                @else
+                <input type="hidden" class="form-control" id="h_address" placeholder="房源地址" aria-describedby="basic-addon1" name="h_address" value=''>
+                @endif
                 <input type="button" id="tj_address" value="+添加地址">
 			</div>
 
@@ -98,22 +103,47 @@
             <div id="map" style="display:none;">
                 @include("commonality.map")
             </div>
-            
+
             <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <span class="input-group-addon" id="basic-addon1">area</span><input type="text" placeholder="房屋面积" name="h_area"/>
-                <span class="input-group-addon" id="basic-addon1">number</span><input type="text" placeholder="可住人数" name="number">
+                <span class="input-group-addon" id="basic-addon1">area</span>
+                @if(!empty($list->h_area))
+                    <input type="text" placeholder="房屋面积" name="h_area" value="{{$list->h_area}}"/>
+                @else
+                    <input type="text" placeholder="房屋面积" name="h_area" value=""/>
+                @endif
+
+                <span class="input-group-addon" id="basic-addon1">number</span>
+                @if(!empty($list->number))
+                    <input type="text" placeholder="可住人数" name="number" value="{{$list->number}}">
+                @else
+                    <input type="text" placeholder="可住人数" name="number" value="">
+                @endif
             </div>
 
             <!--接待时间、押金-->
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <span class="input-group-addon" id="basic-addon1">Receive_Time</span><input placeholder="接待时间" class="laydate-icon" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" name="Receive_Time">
-                <span class="input-group-addon" id="basic-addon1">￥</span> <input type="text" placeholder="压金" name="deposit">
+                <span class="input-group-addon" id="basic-addon1">Receive_Time</span>
+                @if(!empty($list->receive_time))
+                    <input placeholder="接待时间" class="laydate-icon" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" name="Receive_Time" value="{{$list->receive_time}}">
+                @else
+                    <input placeholder="接待时间" class="laydate-icon" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" name="Receive_Time" value="">
+                @endif
+                <span class="input-group-addon" id="basic-addon1">￥</span>
+                @if(!empty($list->deposit))
+                    <input type="text" placeholder="压金" name="deposit"  value="{{$list->deposit}}">
+                @else
+                    <input type="text" placeholder="压金" name="deposit" >
+                @endif
 			</div>
 
             <!--租金"-->
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms"  data-wow-delay="300ms">
 				<span class="input-group-addon">$</span>
-					<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay">
+                @if(!empty($list->pay))
+					<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="{{$list->pay}}">
+                @else
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="">
+                @endif
 				<span class="input-group-addon">.00</span>
 			</div>
 
@@ -121,13 +151,21 @@
             <!--联系人-->
             <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon2">Linkman</span>
-                <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman">
+                @if(!empty($list->linkman))
+                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="{{$list->linkman}}">
+                @else
+                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="">
+                @endif
             </div>
 
             <!--联系电话-->
             <div class="input-group input-group-sm wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon3">Tel</span>
-                <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone">
+                @if(!empty($list->phone))
+                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="{{$list->phone}}">
+                @else
+                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="">
+                @endif
             </div>
 
 
@@ -136,14 +174,14 @@
                 <!--热销、精品、特价房-->
 				<div class="col-lg-6 in-gp-tb">
 					<div class="input-group">
-						<span class="input-group-addon">
+						<!--<span class="input-group-addon">
 							热销房：<input type="checkbox" aria-label="..." value="1"  name="is_hot">
+                        </span>-->
+                        <span class="input-group-addon">
+                            精品房：<input type="checkbox" aria-label="..." value="1" name="is_best" @if(!empty($list->is_best)) checked @endif >
                         </span>
                         <span class="input-group-addon">
-                            精品房：<input type="checkbox" aria-label="..." value="1" name="is_best">
-                        </span>
-                        <span class="input-group-addon">
-                             特价房：<input type="checkbox" aria-label="..." value="1" name="is_cheap">
+                             特价房：<input type="checkbox" aria-label="..." value="1" name="is_cheap" @if(!empty($list->is_cheap)) checked @endif>
                         </span>
 					</div>
 				</div>
@@ -152,17 +190,30 @@
             <!--房屋的类型-->
             <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="basic-addon1">Type</span>
-                <select name="t_id" id="" aria-describedby="sizing-addon2">
-                    @foreach($type as $k=>$v)
-                    <option value="{{$v->t_id}}">{{$v->t_name}}</option>
-                    @endforeach
-                </select>
+
+                @if(empty($list))
+                    <select name="t_id" id="" aria-describedby="sizing-addon2">
+                        @foreach($type as $k=>$v)
+                            <option value="{{$v->t_id}}">{{$v->t_name}}</option>
+                        @endforeach
+                    </select>
+                 @else
+                    <select name="t_id" id="" aria-describedby="sizing-addon2">
+                        @foreach($type as $k=>$v)
+                            <option value="{{$v->t_id}}" @if($list->t_id==$v->t_id)selected @endif>{{$v->t_name}}</option>
+                        @endforeach
+                    </select>
+                @endif
             </div>
 
             <!-- 房屋描述-->
             <div class="input-group input-group-lg wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon1">content</span>
-                <textarea   aria-describedby="sizing-addon1" cols="130" placeholder="这里填写您对房屋的描述" rows="10" name="content"></textarea>
+                <textarea   aria-describedby="sizing-addon1" cols="130" placeholder="这里填写您对房屋的描述" rows="10" name="content">
+                    @if(!empty($list->content))
+                        {{$list->content}}
+                    @endif
+                </textarea>
             </div>
 
             <!--图片上传-->
@@ -172,61 +223,21 @@
 
 
 
-
-                <input type="submit" value="发布信息"/>
+            @if(!empty($list))
+                <input type="submit" value="更新房源信息"/>
+             @else
+                <input type="submit" value="发布房源信息"/>
+             @endif
             </form>
 
 
 
-			<div class="page-header wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<h3 class="bars">Tables</h3>
-			</div>
-			<h2 class="typoh2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">信息提交的列表</h2>
-            <div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>房源地址</th>
-							<th>面积</th>
-							<th>押金</th>
-							<th>租金</th>
-                            <th>描述</th>
-                            <th>联系人</th>
-                            <th>审核的状态</th>
-						</tr>
-					</thead>
-					<tbody>
-                    @foreach($list as $v)
-						<tr>
-							<td>{{$v->h_address}}</td>
-							<td>{{$v->h_area}}</td>
-							<td>{{$v->deposit}}</td>
-							<td>{{$v->pay}}</td>
-                            <td>{{$v->h_address}}</td>
-                            <td>{{$v->linkman}}</td>
-                            <td>
-                                @if($v->status==0)
-                                    未审核
-                                @elseif($v->status==1)
-                                    审核已通过
-                                 @else
-                                    审核未通过
-                                @endif
-                            </td>
-						</tr>
-                    @endforeach
-					</tbody>
-				</table>
-                {!! $list->render() !!}
-			</div>
-			<hr class="bs-docs-separator">
-
-	</div>
+        </div>
+    </div>
 <!-- //typography-page -->
 
 <!--引用底部公用信息-->
 @include('commonality.foot');
-
 
 
 <!-- for bootstrap working -->

@@ -30,7 +30,7 @@ class EventsController extends Controller
         $dayTime=$time+3600*24;
         $startDayTime=date("Y-m-d 00:00:00",$dayTime);
         $today=DB::table("house")
-            ->join("images","house.h_id","=","images.h_id")
+            ->where('status','=','1')
             ->whereBetween('h_time', [$endTime,$startDayTime])
             ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
         /*foreach($today as  $key=>$val){
@@ -43,7 +43,7 @@ class EventsController extends Controller
         $threeTime=$time-3600*24*3;
         $startThreeTime=date("Y-m-d 00:00:00",$threeTime);
         $threedays=DB::table("house")
-            ->join("images","house.h_id","=","images.h_id")
+            ->where('status','=','1')
             -> whereBetween('h_time', [$startThreeTime,$endTime])
             ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
 
@@ -51,7 +51,7 @@ class EventsController extends Controller
         $weekTime=$time-3600*24*7;
         $startWeekTime=date("Y-m-d 00:00:00",$weekTime);
         $weekdays=DB::table("house")
-            ->join("images","house.h_id","=","images.h_id")
+            ->where('status','=','1')
             ->whereBetween('h_time', [$startWeekTime,$endTime])
             ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
 
@@ -87,7 +87,7 @@ class EventsController extends Controller
     //点击更多,查看详细页面
     public function more(){
         $h_id= Request::get('h_id');
-        $arr= DB :: table ('house')->where('h_id',$h_id)->get();
+        $arr= DB :: table ('house')->where('status','=','1')->where('h_id',$h_id)->get();
         //var_dump($arr);die;
         return view('events/single')->with('arr',$arr);
     }

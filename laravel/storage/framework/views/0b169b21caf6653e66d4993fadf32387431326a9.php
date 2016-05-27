@@ -44,7 +44,7 @@
 
     <script type="text/javascript">
         function qqLogin() {
-            window.location = "https://passport.tujia.com/PortalSite/QQLogin?srcUrl=https%3a%2f%2fpassport.tujia.com%2fPortalSite%2fLoginPage%2f";
+            window.location = "<?php echo e(URL("qq")); ?>";
         }
 
         function sinaLogin() {
@@ -109,7 +109,7 @@
 
 <div class="wrap-large">
     <div class="banner-box">
-        <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="deng_zhu/picture/20160503175358635.jpg" alt="" width="880" height="450" /></a>
+        <a href="http://go.tujia.com/3270/?code=2016dsndly" target="_blank" rel="nofollow"><img src="deng_zhu/picture/dishini.jpg" alt="" width="880" height="450" /></a>
     </div>
     <div class="sidebar-box">
         <div class="login-hd">
@@ -217,7 +217,7 @@
                 </form>
             </div>
 
-            <div class="column-box"><a href="/PortalSite/Register">我要注册！</a>注册立送<span class="h-text">100元</span>+1000积分(抵<span class="h-text">10元</span>)</div>
+            <div class="column-box"><a href="<?php echo e(URL("register")); ?>">我要注册！</a>注册立送<span class="h-text">100元</span>+1000积分(抵<span class="h-text">10元</span>)</div>
         </div>
         <div class="coagent-cont">
             <div class="coagent-tit"><span>合作网站账号登录</span></div>
@@ -236,9 +236,9 @@
 <div class="m-footer-link-list">
     <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
     <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-    <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入途家</a>|
+    <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入U+</a>|
     <a href="http://www.tujia.com/SiteMap/UnitDestination" target="_blank">网站地图</a>|
-    <a href="http://www.tujia.com/SiteMap/Default" target="_blank">城市地图</a>
+    <a href="http://maps.baidu.com/" target="_blank">城市地图</a>
 </div>
 
 <script>

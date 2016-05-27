@@ -24,17 +24,21 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{URl('index')}}" class="active">首页</a></li>
                         <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                我要租房 <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{URl('short')}}">短租房屋</a></li>
-                                <li><a href="{{URl('long')}}">长租房屋</a></li>
-                            </ul>
+                            {{--<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">--}}
+                                {{--我要租房 <span class="caret"></span>--}}
+                            {{--</a>--}}
+                            <a href="{{URl('short')}}"> 我要租房  </a>
+                            {{--<ul class="dropdown-menu">--}}
+                                {{--<li><a href="{{URl('short')}}">短租房屋</a></li>--}}
+                                {{--<li><a href="{{URl('long')}}">长租房屋</a></li>--}}
+
+                            {{--</ul>--}}
                         </li>
-                        <li><a href="{{URl('shortCodes')}}">  短码  </a></li>
+
                         <li><a href="{{URl('events')}}"> 今日更新 </a></li>
+                     @if(!empty($_COOKIE['username']))
                         <li><a href="{{URl('message')}}"> 留言 </a></li>
+                     @endif
                     </ul>
 
                 </nav>
@@ -55,13 +59,15 @@
                         @if(!empty($_COOKIE['username']))
                             <li><a href="{{'login/loginout'}}">退出</a></li>
                         @else
-                            <li><a href="{{URl('login')}}">登录</a></li>
+                            <li><a href="{{URl('login')}}" style="color: blue">登录</a></li>
                         @endif
-                        <li><a href="{{URl('register')}}">注册</a></li>
+                        <li><a href="{{URl('register')}}" style="color: blue">注册</a></li>
                         <li role="presentation" class="dropdown">
+                            @if(!empty($_COOKIE['status']))
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 用户中心 <span class="caret"></span>
                             </a>
+                            @endif
                             <ul class="dropdown-menu">
                                 <li><a href="{{URl('personal')}}">个人信息</a></li>
                                 @if(empty($_COOKIE['status']))
@@ -71,6 +77,7 @@
                                     <li><a href="{{URl('appointment')}}">预约列表</a></li>
                                 @elseif($_COOKIE['status']==1)
                                     <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
+                                    <li><a href="{{URl('fyList')}}">房源列表</a></li>
                                 @endif
                             </ul>
                         </li>

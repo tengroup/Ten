@@ -110,14 +110,17 @@ class UserController extends Controller
 	   //房源添加
     public function fyAdd()
     {
-        $u_id=$_COOKIE['u_id'];
-        $arr['type']=DB::table("house_type")->get();
-        $arr['list'] = DB::table('house')
-            ->join('house_type', 'house.t_id', '=', 'house_type.t_id')
-            ->where('u_id','=',$u_id)
-            ->orderBy('h_time', 'desc')
-            ->paginate(5);
-        //return view('user/fyAdd', ['list' => $arr]);
+        if(empty(Request::get("h_id"))){
+            $arr['type']=DB::table("house_type")->get();
+            //return view('user/fyAdd', ['list' => $arr]);
+
+        }else{
+           $arr['list'] = DB::table('house')
+               ->join("house_type",'house_type.t_id','=','house.t_id')
+               ->where('h_id','=',Request::get("h_id"))
+               ->first();
+           $arr['type']=DB::table("house_type")->get();
+        }
         return view("user/fyAdd",$arr);
     }
     /**
@@ -129,7 +132,7 @@ class UserController extends Controller
         $arr=Request::all();
 
         $file =Request::file('files');
-        ///var_dump($file );die;
+        //var_dump($file );die;
         unset($arr['video']);
         unset($arr['files']);
         $arr['is_hot']=Request::get("is_hot");
@@ -137,12 +140,13 @@ class UserController extends Controller
         $arr['is_cheap']=Request::get("is_cheap");
         $arr['h_time']=date("Y-m-d H:i:s",time());
         $arr['u_id']=$_COOKIE['u_id'];
-
-
+       //var_dump($arr);die;
         $h_id=DB::table("house")->insertGetId($arr);
+        //die;
         if($h_id){
             //图片进行入库
             for($i=0;$i<count($file);$i++){
+                //var_dump($file);die;
                 $clientName = $file[$i]  ->  getClientOriginalName();
                 $extension = $file[$i]->getClientOriginalExtension();
                 $newName = md5(date('ymdhis').$clientName).".".$extension;
@@ -152,6 +156,9 @@ class UserController extends Controller
                 $newName=date('Y-m-d').'/'.$newName;
                DB::table("images")->insert(["h_id"=>$h_id,"img"=>$newName]);
             }
+            DB::table("house")->where('h_id','=',$h_id)->update(['photo'=>$newName]);
+
+
             $u_id=$_COOKIE['u_id'];
             DB::table('preplot')->insert(['u_id'=>$u_id,'h_id'=>$h_id]);
             return redirect("fyAdd");
@@ -159,6 +166,18 @@ class UserController extends Controller
             echo "<script>alert('添加失败哦');location.href='fyAdd'</script>";
         }
 
+    }
+
+    //房源添加列表
+    public function fyList(){
+        $u_id=$_COOKIE['u_id'];
+        $arr['list'] = DB::table('house')
+            ->join('house_type', 'house.t_id', '=', 'house_type.t_id')
+            ->where('u_id','=',$u_id)
+            ->orderBy('h_time', 'desc')
+            ->paginate(5);
+
+        return view("user/fyList",$arr);
     }
 
 
