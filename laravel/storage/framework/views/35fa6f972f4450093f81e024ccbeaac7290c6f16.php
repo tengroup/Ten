@@ -75,7 +75,7 @@
                                     <li><a href="<?php echo e(URl('fyAdd')); ?>">房源添加</a></li>
                                     <li><a href="<?php echo e(URl('appointment')); ?>">预约列表</a></li>
                                 <?php elseif($_COOKIE['status']==10): ?>
-                                    <li><a href="<?php echo e(URl('appointment')); ?>">预约列表</a></li>
+                                    <li><a href="<?php echo e(URl('appointment')); ?>">收藏列表</a></li>
                                 <?php elseif($_COOKIE['status']==1): ?>
                                     <li><a href="<?php echo e(URl('fyAdd')); ?>">房源添加</a></li>
                                     <li><a href="<?php echo e(URl('fyList')); ?>">房源列表</a></li>

@@ -19703,3 +19703,6 @@ Stack trace:
 #37 D:\xq\lx_xiangmu\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 >>>>>>> 6c7e4491a647bda6afdb3d83a69a06cb624bbc8f
 #38 {main}  
+[2016-05-27 12:38:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in E:\phpstudy\WWW\Ten\laravel\app\Http\routes.php:43
+Stack trace:
+#0 {main}  
