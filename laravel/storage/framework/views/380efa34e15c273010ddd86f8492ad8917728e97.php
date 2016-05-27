@@ -283,8 +283,6 @@
                     </ul>
 
                     <div style="float:right;margin-top:-20px;margin-right: -10px;">
-                        <?php echo $data->render(); ?>
-
                     </div>
                     <!--t_shuaichoose_order_page -->
                 </div><!--t_shuaichoose_order -->
@@ -327,7 +325,6 @@
                     <?php endforeach; ?>
                     </div>
                 </ul>
-                <div > <?php echo $data->render(); ?></div>
 
                 <!--t_newlistbox -->
             </div><!--t_newlistbox -->
