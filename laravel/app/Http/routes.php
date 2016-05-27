@@ -40,12 +40,19 @@ Route::post('perEditSubmit','UserController@perEditSubmit');
 Route::any('fyAdd','UserController@fyAdd');
 Route::any('addhoust','UserController@addHoust');
 Route::any('video','UserController@videoDo');
+<<<<<<< HEAD
 Route::get('fyList','UserController@fyList');
 
 //appointment  预约列表
 Route::get('appointment','UserController@appointment');
 
 //perLook  查看预约信息
+=======
+//appointment  收藏列表
+Route::any('appointmentAdd','UserController@appointmentAdd');
+Route::get('appointment','UserController@appointment');
+//perLook  查看预约列表
+>>>>>>> 6c7e4491a647bda6afdb3d83a69a06cb624bbc8f
 Route::get('perLook','UserController@perLook');
 
 

@@ -19,12 +19,14 @@ class UserController extends Controller
     //个人信息
     public function personal()
     {
-        $type=1;
+        //$type=1;
         $uId=$_COOKIE['u_id'];
+        $type=$_COOKIE['status'];
+        //echo $type;die;
         /**
          *     判断登陆人，查询不同
          */
-        if($type==1){
+        if($type==10){
             $user = DB::table('users')->where('u_id', "$uId")->first();
             $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('preplot.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/personal",["user"=>$user,'pre'=>$pre]);
@@ -36,12 +38,13 @@ class UserController extends Controller
     //编辑个人信息页面
     public function perEdit()
     {
-        $type=1;
+        //$type=1;
         $uId=$_COOKIE['u_id'];
+        $type=$_COOKIE['status'];
         /**
          *     判断登陆人，查询不同
          */
-        if($type==1){
+        if($type==10){
             $user = DB::table('users')->where('u_id', "$uId")->first();
             $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('preplot.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/per-edit",array("user"=>$user,'pre'=>$pre));
@@ -53,7 +56,8 @@ class UserController extends Controller
     //修改个人信息
     public function perEditSubmit()
     {
-        $type=1;
+        //$type=1;
+        $type=$_COOKIE['status'];
         $uId=Request::input('u_id');
         $name=Request::input('u_name');
         $petName=Request::input("pet_name");
@@ -63,7 +67,7 @@ class UserController extends Controller
         /**
          *     判断登陆人，修改不同
          */
-        if($type==1){
+        if($type==10){
             $idCard=Request::input("id_card");
             $upd=DB::table("users")->where("u_id",'=',"$uId")->update(
                 array(
@@ -95,7 +99,7 @@ class UserController extends Controller
             return Redirect::to("personal");
         }
     }
-    //查看预约信息
+    //查看预约列表
     public function perLook()
     {
         $uId=Request::get('id');
@@ -105,6 +109,35 @@ class UserController extends Controller
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
         return view("home/single",['list'=>$oneMess,'img'=>$img]);
+    }
+    //添加收藏
+    public function appointmentAdd()
+    {
+        $hId=Request::get('id');
+        $uId=$_COOKIE['u_id'];
+        $data = DB::table('collect')->where('u_id', $uId)->where('h_id', $hId)->get();
+        if($data){
+            echo 0;
+        }else{
+            $time=date("Y-m-d",time());
+            $type = DB::table('collect')->insert(array(
+                'h_id' => $hId,
+                'u_id' => $uId,
+                'addtime' => $time
+                ));
+            if($type==1){
+                echo 1;
+            }else{
+                echo 2;
+            }
+        }
+    }
+    //查看收藏列表
+    public function appointment()
+    {
+        $uId=$_COOKIE['u_id'];
+        $list=DB::table('users')->join("collect","collect.u_id","=","users.u_id")->join("house","house.h_id","=","collect.h_id")->where('users.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+        return view("user/collect",['app'=>$list]);
     }
     
 	   //房源添加

@@ -69,7 +69,7 @@
 							</tr>
 							<tr>
 								<td>身份证号：</td>
-								<td><input type="text" name="id_card" value="{{$user->u_card}}"></td>
+								<td><input type="text" name="u_card" value="{{$user->u_card}}"></td>
 							</tr>
 							<tr>
 								<td>上次登陆时间：</td>
