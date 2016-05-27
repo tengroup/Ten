@@ -68,7 +68,7 @@
                                     <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
                                     <li><a href="{{URl('appointment')}}">预约列表</a></li>
                                 @elseif($_COOKIE['status']==10)
-                                    <li><a href="{{URl('appointment')}}">预约列表</a></li>
+                                    <li><a href="{{URl('appointment')}}">收藏列表</a></li>
                                 @elseif($_COOKIE['status']==1)
                                     <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
                                 @endif

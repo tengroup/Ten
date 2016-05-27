@@ -37,52 +37,10 @@
 <!--typography-page -->
 	<div class="typo">
 		<div class="container">
-			<div class="grid_3 grid_5 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<h3>我的信息</h3>
-				<div class="col-md-6">
-					<p>我的个人详细信息：<a href="{{URL('perEdit')}}" style="float:right">编辑</a></p>
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>账号：</th>
-								<th><span class="badge badge-success">{{$user->u_name}}</span></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>昵称：</td>
-								<td><span class="badge">{{$user->pet_name}}</span></td>
-							</tr>
-							<tr>
-								<td>真实姓名：</td>
-								<td><span class="badge badge-primary">{{$user->real_name}}</span></td>
-							</tr>
-							<tr>
-								<td>邮箱：</td>
-								<td><span class="badge badge-success">{{$user->u_email}}</span></td>
-							</tr>
-							<tr>
-								<td>手机号：</td>
-								<td><span class="badge badge-info">{{$user->u_tel}}</span></td>
-							</tr>
-							<tr>
-								<td>身份证号：</td>
-								<td><span class="badge badge-warning">{{$user->id_card}}</span></td>
-							</tr>
-							<tr>
-								<td>上次登陆时间：</td>
-								<td><span class="badge badge-danger">{{$user->last_login}}</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			   <div class="clearfix"> </div>
-			</div>
+
+			<h2 class="typoh2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">我的收藏</h2>
 			
-		
-			<h2 class="typoh2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">我的预约</h2>
-			
-			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约列表信息</p>
+			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">收藏列表信息</p>
 			<div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<table class="table table-bordered" id="replace">
 					<thead>
@@ -95,7 +53,7 @@
 							<th>联系人</th>
 						</tr>
 					</thead>
-					@foreach($pre as $list)
+					@foreach($app as $list)
 					<tbody>
 						<tr>
 							<td id="load"><a href="{{URL('perLook?id')}}={{$list->h_id}}">{{$list->h_address}}</a></td>
@@ -108,14 +66,14 @@
 					</tbody>
 					@endforeach
 				</table>
-				<center>{!! $pre->render() !!}</center>
+				<center>{!! $app->render() !!}</center>
 			</div>
 		</div>
 		<script>
 		window.onload=function(){
 			var load=$("#load").val();
 			if(load!=""){
-				if(confirm("列表空空！去找房？")){
+				if(confirm("收藏空空！去找房？")){
 					location.href="{{'index'}}";
 				}else{
 					$("#replace").html("<center><h2>空空无一！</h2></center>");

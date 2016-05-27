@@ -91,7 +91,7 @@
 			
 			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约列表信息</p>
 			<div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<table class="table table-bordered">
+				<table class="table table-bordered" id="replace">
 					<thead>
 						<tr>
 							<th>房屋地址</th>
@@ -105,7 +105,7 @@
 					@foreach($pre as $list)
 					<tbody>
 						<tr>
-							<td><a href="{{URL('perLook?id')}}={{$list->h_id}}">{{$list->h_address}}</a></td>
+							<td id="load"><a href="{{URL('perLook?id')}}={{$list->h_id}}">{{$list->h_address}}</a></td>
 							<td>{{$list->h_area}}方/.\{{$list->number}}人/.\{{$list->pay}}￥</td>
 							<td>{{$list->in_time}}</td>
 							<td>{{$list->out_time}}</td>
@@ -117,8 +117,15 @@
 				</table>
 				<center>{!! $pre->render() !!}</center>
 			</div>
-		
 		</div>
+		<script>
+		window.onload=function(){
+			var load=$("#load").val();
+			if(load!=""){
+				$("#replace").html("<center><h2>空空无一！</h2></center>");
+			}
+		}
+		</script>
 	</div>
 <!-- //typography-page -->
 

@@ -282,12 +282,26 @@
          		<a href="javascript:;" class="btn view" id="zreserve" onclick="ZiroomLogin(24432,'BJCP84231043_01')" >
          			<span class="icon"></span>立即预定
          		</a>
-             	<a href="javascript:;" class="btn collect  "  id="toCollect"   onclick="ZiroomCollect(24432,0)">
-             		<span class="icon"></span>收藏
-             	</a>
-                         
-                                                                        
-             	<div class="sharebtn pr"><a class="btn "><span class="icon"></span>分享</a>
+             	<a class="btn collect"  id="toCollect">
+             		<span class="icon">收藏</span>
+             	</a>   
+             	<script>
+             		$("#toCollect").click(function(){
+             			var url="{{'appointmentAdd'}}";
+             			var id={{$list->h_id}};
+             			var data={id:id};
+             			$.get(url,data,function(msg){
+             				if(msg==0){
+             					alert("您已经收藏过该房源了！");
+             				}else if(msg==1){
+             					alert("您收藏了该房源！");
+             				}else{
+             					alert("抱歉，您收藏失败！");
+             				}
+						});
+             		})
+             	</script>                                             
+	         	<div class="sharebtn pr"><a class="btn "><span class="icon"></span>分享</a>
 					<span class="shareCon pa">
 						<b></b>
 						<span class="weixin" title="微信"></span>
@@ -297,7 +311,7 @@
 						<span class=" sina" title="新浪微博" onclick="jiathis_sendto('tsina');"></span>
 					</span>
 				</div>
-         	</div>
+			</div>
 
 	<script type="text/javascript" src="js/jia.js" charset="utf-8"></script>
 

@@ -40,9 +40,10 @@ Route::post('perEditSubmit','UserController@perEditSubmit');
 Route::get('fyAdd','UserController@fyAdd');
 Route::any('addhoust','UserController@addHoust');
 Route::any('video','UserController@videoDo');
-//appointment  预约列表
+//appointment  收藏列表
+Route::any('appointmentAdd','UserController@appointmentAdd');
 Route::get('appointment','UserController@appointment');
-//perLook  查看预约信息
+//perLook  查看预约列表
 Route::get('perLook','UserController@perLook');
 
 
