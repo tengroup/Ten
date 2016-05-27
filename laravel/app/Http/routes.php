@@ -81,3 +81,9 @@ Route::get('dynamic','LoginController@dynamic');        //ajax获取动态密码
 Route::any('login_pro1','LoginController@loginPro1');    //账号登录
 Route::any('loginpro2','LoginController@loginPro2');    //手机登录
 Route::any('qq','LoginController@qq');    //第三方登录
+
+
+
+
+//底部关于我们
+Route::any('foot/guanyu','FootController@guanyu');

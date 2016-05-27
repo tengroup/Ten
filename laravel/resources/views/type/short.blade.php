@@ -283,7 +283,6 @@
                     </ul>
 
                     <div style="float:right;margin-top:-20px;margin-right: -10px;">
-                        {!! $data->render() !!}
                     </div>
                     <!--t_shuaichoose_order_page -->
                 </div><!--t_shuaichoose_order -->
@@ -325,7 +324,6 @@
                     @endforeach
                     </div>
                 </ul>
-                <div > {!! $data->render() !!}</div>
 
                 <!--t_newlistbox -->
             </div><!--t_newlistbox -->
