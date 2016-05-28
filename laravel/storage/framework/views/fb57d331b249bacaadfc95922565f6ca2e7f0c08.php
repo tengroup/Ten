@@ -91,7 +91,7 @@
 							<th>面积,人数,价格</th>
 							<th>入住时间</th>
 							<th>退房时间</th>
-							<th>房屋描述</th>
+							<th>房东审核</th>
 							<th>联系人</th>
 						</tr>
 					</thead>
@@ -102,7 +102,15 @@
 							<td><?php echo e($list->h_area); ?>方/.\<?php echo e($list->number); ?>人/.\<?php echo e($list->pay); ?>￥</td>
 							<td><?php echo e($list->in_time); ?></td>
 							<td><?php echo e($list->out_time); ?></td>
-							<td><?php echo e($list->content); ?></td>
+							<td>
+								<?php if($list->statr==0): ?>
+									未审核
+								<?php elseif($list->statr==1): ?>
+									通过
+								<?php else: ?>
+									未通过
+								<?php endif; ?>
+							</td>
 							<td><?php echo e($list->linkman); ?>:<?php echo e($list->u_tel); ?></td>
 						</tr>
 					</tbody>
