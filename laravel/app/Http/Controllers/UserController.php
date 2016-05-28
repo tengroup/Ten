@@ -103,7 +103,7 @@ class UserController extends Controller
     public function perLook()
     {
         $uId=Request::get('id');
-
+		
         $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
