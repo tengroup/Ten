@@ -106,7 +106,7 @@ class UserController extends Controller
     {
         $hId=Request::get('id');
 
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+        $oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
@@ -126,6 +126,27 @@ class UserController extends Controller
                 'h_id' => $hId,
                 'u_id' => $uId,
                 'addtime' => $time
+                ));
+            if($type==1){
+                echo 1;
+            }else{
+                echo 2;
+            }
+        }
+    }
+    //添加预约
+    public function appointAdd()
+    {
+        $hId=Request::get('id');
+        $uId=$_COOKIE['u_id'];
+        $data = DB::table('preplot')->where('u_id', $uId)->where('h_id', $hId)->get();
+        if($data){
+            echo 0;
+        }else{
+            $time=date("Y-m-d",time());
+            $type = DB::table('preplot')->insert(array(
+                'h_id' => $hId,
+                'u_id' => $uId
                 ));
             if($type==1){
                 echo 1;
@@ -200,9 +221,6 @@ class UserController extends Controller
             }
             DB::table("house")->where('h_id','=',$h_id)->update(['photo'=>$newName]);
 
-
-            $u_id=$_COOKIE['u_id'];
-            DB::table('preplot')->insert(['u_id'=>$u_id,'h_id'=>$h_id]);
             return redirect("fyAdd");
         }else{
             echo "<script>alert('添加失败哦');location.href='fyAdd'</script>";
