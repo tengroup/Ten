@@ -21,6 +21,15 @@
     <!-- //animation-effect -->
     <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
     <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="sel_css/css/mains.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="sel_css/js/jquery.js"></script>
+    <script type="text/javascript" src="sel_css/js/hhDrop.js"></script>
+    <script>
+      $(function(){
+        $('#hhDrop00').hhDrop({});
+        $('#hhDrop01').hhDrop({});
+      })
+    </script>
 </head>
 
 <body>
@@ -151,21 +160,119 @@
     </div>
 </div>
 <!-- //旗下 -->
-<!-- 通讯 -->
+<!-- 根据城市查询 -->
 <div class="newsletter">
     <div class="container">
         <div class="newsletter-info">
-            <h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">Newsletter</h3>
-            <p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">But who has any right to find fault with a man who chooses to enjoy
-                a pleasure that has no annoying consequences</p>
+            <h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">U+</h3>
             <form class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <input type="mail" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}" required="">
-                <input type="submit" value="Send">
+                <li class="thRelative" id="hhDrop00">
+                    <div class="boxSearch">
+                      <span class="key_word">
+                        <b class="size_14">北京</b>
+                        出发城市
+                      </span>
+                      <em class="ico thLeft ico_shBlue"></em>
+                      <a class="thRight ico btn_search" href="javascript:void(0)"></a>
+                    </div>
+                      
+                      <input class="thLeft" name="textfield2" type="text" id="arriveSearchText" value="请输入关键词" />
+                    <input type="button" class="ico btn_close thLeft" item="close" style="margin:8px 8px 0 0;" id="btn_delete" value="删除">
+                    <input type="submit" value="搜索">
+                      
+                    
+                    <div class="search_form_suggest" style="display:none;">
+                      <h3><a class="ico btn_close thRight" item="close">关闭</a>热门出发城市</h3>
+                      <dl class="search_hotList">
+                        <dd class="clr_after">
+                          <a href="#">北京</a>
+                          <a href="#">上海</a>
+                          <a href="#">广州</a>
+                          <a href="#">成都</a>
+                          <a href="#">杭州</a>
+                          <a href="#">南京</a>
+                          <a href="#">深圳</a>
+                          <a href="#">济南</a>
+                          <a href="#">石家庄</a>
+                          <a href="#">武汉</a>
+                          <a href="#">郑州</a>
+                          <a href="#">重庆</a>
+                          <a href="#">福州</a>
+                          <a href="#">西安</a>
+                          <a href="#">长沙</a>
+                          <a href="#">沈阳</a>
+                          <a href="#">天津</a>
+                          <a href="#">哈尔滨</a>
+                          <a href="#">苏州</a>
+                          <a href="#">南宁</a>
+                        </dd>
+                      </dl>
+                      
+                      <div class="clear"></div>
+                     
+                      
+                      <div class="thLeft thPadT5 tab_select">
+                        <dl class="clrfix">
+                          <dt>A-G</dt>
+                          <dd class="clr_after">
+                            <a href="#">北京</a>
+                            <a href="#">长沙</a>
+                            <a href="#">成都</a>
+                            <a href="#">重庆</a>
+                            <a href="#">福州</a>
+                            <a href="#">广州</a>
+                            <a href="#">贵阳</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>H-L</dt>
+                          <dd class="clr_after">
+                            <a href="#">哈尔滨</a>
+                            <a href="#">杭州</a>
+                            <a href="#">合肥</a>
+                            <a href="#">济南</a>
+                            <a href="#">昆明</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>M-T</dt>
+                          <dd class="clr_after">
+                            <a href="#">南昌</a>
+                            <a href="#">南京</a>
+                            <a href="#">南宁</a>
+                            <a href="#">宁波</a>
+                            <a href="#">青岛</a>
+                            <a href="#">三亚</a>
+                            <a href="#">上海</a>
+                            <a href="#">沈阳</a>
+                            <a href="#">深圳</a>
+                            <a href="#">石家庄</a>
+                            <a href="#">苏州</a>
+                            <a href="#">太原</a>
+                            <a href="#">天津</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>W-Z</dt>
+                          <dd class="clr_after">
+                            <a href="#">武汉</a>
+                            <a href="#">厦门</a>
+                            <a href="#">西安</a>
+                            <a href="#">郑州</a>
+                            <a href="#">中山</a>
+                          </dd>
+                        </dl>
+                      </div>  
+                    </div>
+                
+                    
+                </li>
+                
             </form>
         </div>
     </div>
 </div>
-<!-- //通讯 -->
+<!-- //根据城市查询 -->
 <!-- 通讯底层 -->
 <div class="newsletter-bottom">
     <div class="container">

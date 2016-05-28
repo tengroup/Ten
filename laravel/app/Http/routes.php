@@ -19,9 +19,6 @@ Route::get('index','HomeController@index');
 Route::get('/','HomeController@index');
 
 
-
-
-
 //events
 Route::get('events','EventsController@index');
 // 更新
@@ -51,11 +48,11 @@ Route::any('appointAdd','UserController@appointAdd');   //预约添加
 Route::get('perLook','UserController@perLook');
 
 
-//Message
+//Message  评论我们
 Route::get('message','MessageController@index');
 Route::any('messageInsert','MessageController@aduser');
 
-Route::get('long','TypeController@long');
+
 //short  短租
 Route::get('short','TypeController@short');
 //传地址
