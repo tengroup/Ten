@@ -24,78 +24,7 @@
     <favorites_list name="Ten" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="short.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/type/short.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1875" vertical-offset="8484" max-vertical-offset="13130">
-              <caret line="330" column="135" selection-start-line="330" selection-start-column="135" selection-end-line="330" selection-end-column="135" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#1;n#dd#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#2;n#dd#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#3;n#dd#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#4;n#dd#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#1;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#2;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#3;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#4;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#5;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#6;n#dd#0;n#dl#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#1;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#2;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#3;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#4;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#5;n#dd#0;n#dl#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#0;n#dl#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#li#0;n#div#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#p#2;n#div#2;n#li#0;n#div#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TypeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.285714" vertical-offset="468" max-vertical-offset="3822">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-              <folding>
-                <marker date="1464423620277" expanded="true" signature="290:411" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="456:578" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="624:748" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="1167:1306" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="1510:1631" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="1677:1798" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="1845:1967" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="2017:2141" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="3752:3938" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="5329:5444" placeholder="select * fro..house..." />
-                <marker date="1464423620277" expanded="true" signature="5794:5882" placeholder="select * fro..house..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -315,11 +244,15 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fb2ac920-9789-45ec-a996-c6e9db28321a" name="默认的" comment="" />
@@ -330,8 +263,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -340,7 +273,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13464448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -415,29 +348,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TypeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.285714" vertical-offset="468" max-vertical-offset="3822">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding>
-            <marker date="1464423620277" expanded="true" signature="290:411" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="456:578" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="624:748" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="1167:1306" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="1510:1631" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="1677:1798" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="1845:1967" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="2017:2141" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="3752:3938" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="5329:5444" placeholder="select * fro..house..." />
-            <marker date="1464423620277" expanded="true" signature="5794:5882" placeholder="select * fro..house..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/type/short.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1875" vertical-offset="8484" max-vertical-offset="13130">
+        <state vertical-scroll-proportion="0.19009902" vertical-offset="8484" max-vertical-offset="13130">
           <caret line="330" column="135" selection-start-line="330" selection-start-column="135" selection-end-line="330" selection-end-column="135" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -477,6 +390,26 @@
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TypeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48598132" vertical-offset="468" max-vertical-offset="3822">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
+            <marker date="1464423620277" expanded="true" signature="-1:-1" placeholder="select * fro..house..." />
           </folding>
         </state>
       </provider>

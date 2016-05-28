@@ -113,10 +113,10 @@ class UserController extends Controller
     public function perLook()
     {
         $uId=Request::get('id');
-<<<<<<< HEAD
+
 		
         $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
-=======
+
         $filename= base_path("resources/static/").'2001006_'.$uId.'.blade.php';
         //echo $filename;die;
         if(file_exists($filename) ){
@@ -131,16 +131,14 @@ class UserController extends Controller
 
         $hId=Request::get('id');
 
-<<<<<<< HEAD
+
         $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
->>>>>>> 16d0d2d6a8d4cfdbd16e414c352648d18c2e619c
->>>>>>> c714accac227f4b7ae46d4e26068259ad45badbb
-=======
+
         /*$oneMess=DB::table('preplot')
             ->join("house","preplot.h_id","=","house.h_id")
             ->join("f_users","f_users.u_id","=","house.u_id")
             ->where('house.h_id', "$hId")->first();*/
->>>>>>> 00f84ef748acd17eae911480fb1d357f345b3048
+
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
