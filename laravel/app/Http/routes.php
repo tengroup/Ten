@@ -28,8 +28,6 @@ Route::get('events','EventsController@index');
 //Route::get('events','EventsController@lists');
 
 
-//shortCodes
-Route::get('shortCodes','UserController@index');
 //personal  个人信息
 Route::get('personal','UserController@personal');
 //editStatr 房东修改状态
@@ -52,7 +50,8 @@ Route::get('appointment','UserController@appointment');
 //appointment  收藏列表
 Route::any('appointmentAdd','UserController@appointmentAdd');
 Route::get('appointment','UserController@appointment');
-//perLook  查看预约列表
+
+//perLook  查看详情页面
 Route::get('perLook','UserController@perLook');
 
 

@@ -101,12 +101,12 @@ class UserController extends Controller
             return Redirect::to("personal");
         }
     }
-    //查看预约列表
+    //查看详情页面
     public function perLook()
     {
-        $uId=Request::get('id');
+        $hId=Request::get('id');
 
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
+        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
@@ -141,7 +141,7 @@ class UserController extends Controller
         $list=DB::table('users')->join("collect","collect.u_id","=","users.u_id")->join("house","house.h_id","=","collect.h_id")->where('users.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
         return view("user/collect",['app'=>$list]);
     }
-    //查看收藏列表
+    //房东修改状态
     public function editStatr()
     {
         $hId=Request::get('id');
