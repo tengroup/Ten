@@ -37,7 +37,9 @@
 
                         <li><a href="<?php echo e(URl('events')); ?>"> 今日更新 </a></li>
                      <?php if(!empty($_COOKIE['username'])): ?>
-                        <li><a href="<?php echo e(URl('message')); ?>"> 留言 </a></li>
+                         <?php if($_COOKIE['status']!=1): ?>
+                            <li><a href="<?php echo e(URl('message')); ?>"> 留言 </a></li>
+                         <?php endif; ?>
                      <?php endif; ?>
                     </ul>
 
@@ -58,14 +60,14 @@
                                 <?php endif; ?>
                             登录</font>
                         <?php if(!empty($_COOKIE['username'])): ?>
-                            <li><a href="<?php echo e('login/loginout'); ?>">退出</a></li>
+                            <li><a href="<?php echo e('login/loginout'); ?>" style="color: blue">退出</a></li>
                         <?php else: ?>
                             <li><a href="<?php echo e(URl('login')); ?>" style="color: blue">登录</a></li>
                         <?php endif; ?>
                         <li><a href="<?php echo e(URl('register')); ?>" style="color: blue">注册</a></li>
                         <li role="presentation" class="dropdown">
                             <?php if(!empty($_COOKIE['status'])): ?>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: blue">
                                 用户中心 <span class="caret"></span>
                             </a>
                             <?php endif; ?>

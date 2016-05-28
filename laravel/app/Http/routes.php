@@ -55,6 +55,7 @@ Route::get('perLook','UserController@perLook');
 
 //Message
 Route::get('message','MessageController@index');
+Route::any('messageInsert','MessageController@aduser');
 
 
 Route::get('long','TypeController@long');
