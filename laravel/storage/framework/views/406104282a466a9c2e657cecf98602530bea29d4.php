@@ -976,7 +976,7 @@ function leaveMessage(collect_id,is_whole){
                          <?php foreach($img as $k=>$v): ?>
                             <li>
                                 <a href="house_img/<?php echo e($v->img); ?>"  class="pirobox_t6">
-                                   <img src="house_img/<?php echo e($v->img); ?>" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" title="朝阳立水桥5号线,13号线立水桥立城苑3居室" alt="朝阳立水桥5号线,13号线立水桥立城苑3居室" />
+                                   <img src="house_img/<?php echo e($v->img); ?>" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
                                 </a>
                             </li>
                           <?php endforeach; ?>

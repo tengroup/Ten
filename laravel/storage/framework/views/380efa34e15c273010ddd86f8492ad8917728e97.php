@@ -318,7 +318,7 @@
 
                                 </p>
                                 <a href="<?php echo e(URL("perLook?id=$v->h_id")); ?>" target="_blank" style="line-height: 20px;"><font color="red">❤ </font> 加入收藏</a>
-                                <p class="more"><a href="<?php echo e(URL("perLook?id=$v->h_id")); ?>" target="_blank" style="line-height: 20px;">查看更多</a></p>
+                                <p class="more"><a href="<?php echo e(URL("perLook?id")); ?>=<?php echo e($v->h_id); ?>" target="_blank" style="line-height: 20px;">查看更多</a></p>
 
                             </div><!--/priceDetail-->
                         </li>
