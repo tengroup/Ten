@@ -209,7 +209,7 @@
 <!-- //通讯底层 -->
 
 <!--引用底部公用信息-->
-<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <!-- for bootstrap working -->
 <script src="js/bootstrap.js"></script>
