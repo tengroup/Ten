@@ -13,6 +13,8 @@
 <!--图片上传-->
     <link rel="stylesheet" type="text/css" href="jiaoben/css/jquery.filer.css">
     <link rel="stylesheet" type="text/css" href="jiaoben/css/jquery.filer-dragdropbox-theme.css">
+    <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 
 

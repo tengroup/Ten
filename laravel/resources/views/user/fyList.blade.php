@@ -9,6 +9,8 @@
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
@@ -49,11 +51,11 @@
                                 <a href="{{URL("perLook?id=$v->h_id")}}" class="hvr-curl-bottom-right">详情</a>
                             </div>
                             @if($v->status==1)
-                                通过
+                               审核 通过
                              @elseif($v->status==2)
-                                未通过
+                                审核 未通过
                              @else
-                                未审核
+                                 未审核
                             @endif
                         </div>
                         <div class="service-grd-pos2">

@@ -41,7 +41,70 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+<!-- 导航条 -->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a class="navbar-brand" href="http://localhost/Ten/laravel/public/index">
+                        U+
+                        <!-- <img src="images/u+.jpg" alt="U+"> -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                <nav class="cl-effect-13" id="cl-effect-13">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://localhost/Ten/laravel/public/index" class="active">首页</a></li>
+                        <li role="presentation" class="dropdown">
+                                                                                                                    <a href="http://localhost/Ten/laravel/public/short"> 我要租房  </a>
+                                                                                            
+                                                    </li>
+
+                        <li><a href="http://localhost/Ten/laravel/public/events"> 今日更新 </a></li>
+                                                                          <li><a href="http://localhost/Ten/laravel/public/message"> 留言 </a></li>
+                                                                  </ul>
+
+                </nav>
+                <div class="social-icons">
+                    <ul>
+                        <!--<li><a class="icon-link round facebook" href="#"></a></li>
+                        <li><a class="icon-link round p" href="#"></a></li>
+                        <li><a class="icon-link round twitter" href="#"></a></li>
+                        <li><a class="icon-link round dribble" href="#"></a></li>
+                        <li><a href="http://localhost/Ten/laravel/public/login"><img src="houst_img/user_center.png" alt=""></a></li>-->
+                        <font color="#f0f8ff">欢迎
+                                                                    辉哥哥
+                                                            登录</font>
+                                                    <li><a href="login/loginout" style="color: blue">退出</a></li>
+                                                <li><a href="http://localhost/Ten/laravel/public/register" style="color: blue">注册</a></li>
+                        <li role="presentation" class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: blue">
+                                用户中心 <span class="caret"></span>
+                            </a>
+                                                        <ul class="dropdown-menu">
+                                <li><a href="http://localhost/Ten/laravel/public/personal">个人信息</a></li>
+                                                                    <li><a href="http://localhost/Ten/laravel/public/appointment">收藏列表</a></li>
+                                                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+<!-- 导航条 -->;
     
     <div class="area clearfix">
 
@@ -51,30 +114,74 @@
                  <div class="lof-main-outer" id="cao">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-                         @foreach($img as $k=>$v)
-                        <li>
+                                                 <li>
                         	<span class="woshi"></span>
-                        	<a href="houst_img/{{$v->img}}"  class="pirobox_t6">
-                            <img src="houst_img/{{$v->img}}" class="loadImgError" width="620" height="470"/>
+                        	<a href="houst_img/2016-05-28/4ef0934a6daba31ac9e6002ef704f303.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-28/4ef0934a6daba31ac9e6002ef704f303.jpg" class="loadImgError" width="620" height="470"/>
 	                        </a>
 	                    </li>
-                        @endforeach
-                    </ul>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-28/5fcaed944f9a454fa57b161348423e05.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-28/5fcaed944f9a454fa57b161348423e05.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-28/b1140a1f9ec97c1990ee7a574822f43e.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-28/b1140a1f9ec97c1990ee7a574822f43e.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-28/887f7f7a0f733b66b4157a92a92560ba.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-28/887f7f7a0f733b66b4157a92a92560ba.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-28/638d706b1be7820353987172ae2b309f.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-28/638d706b1be7820353987172ae2b309f.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                            </ul>
                 <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
             </div><!--lof-main-outer -->
                 <div class="lof-navigator-wapper">
 					<div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                     <div class="lof-navigator-outer" >
                   		<ul class="lof-navigator">
-                        @foreach($img as $k=>$v)
-                            <li>
+                                                    <li>
                                 <div class="lidiv">
-                                    <img src="houst_img/{{$v->img}}" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <img src="houst_img/2016-05-28/4ef0934a6daba31ac9e6002ef704f303.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
                                     <div class="bor_act"></div>
                                 </div>
                             </li>
-                            @endforeach
-                        </ul>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-28/5fcaed944f9a454fa57b161348423e05.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-28/b1140a1f9ec97c1990ee7a574822f43e.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-28/887f7f7a0f733b66b4157a92a92560ba.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-28/638d706b1be7820353987172ae2b309f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                    </ul>
                     </div><!--lof-navigator-outer -->
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
                 </div>
@@ -90,7 +197,7 @@
 		<p><strong>周边：</strong>从小区北门出，步行2分钟即可到达汤立路，路边有多家便利店和好适口等多种快餐店；如果你觉得还不够可以沿着汤立路向北步行10分钟就是龙德广场，汉拿山，家乐福，万达影城，还有优衣库哦；如果你觉得大商场里面的东西太贵？不要担心，龙德广场旁边就是明珠百货，里面各种生活用品各种价位都有，满足你的所有需求，不过在明珠百货里面购物砍价一定要狠哦！
 		</p>
 	<br/>
-		<p><strong>描述：</strong>{{$list->content}}</p>
+		<p><strong>描述：</strong>这是个很好的房子</p>
 	</div><!--/aboutRoom-->
 	<div class="title">
 		<span class="line"></span>
@@ -248,7 +355,7 @@
             		[朝阳立水桥]5号线立水桥
             		<span class="price">
 	            		<b></b>
-	            		<span class="room_price">￥{{$list->pay}}</span>
+	            		<span class="room_price">￥15</span>
 	            		<span class="gray-6">(每月)</span>
                     </span>
                 </p>
@@ -259,7 +366,7 @@
            		<span class="style">风格1.0 原味</span>
             </p>
             <ul class="detail_room">
-            	<li><b></b>面积： {{$list->h_area}}㎡</li>
+            	<li><b></b>面积： 333㎡</li>
                 <li><b></b>朝向： 南</li>
             	<li><b></b>户型： 3室1厅<span class="icons">合</span></li>
             	<li><b></b>楼层： 7/13层</li>
@@ -281,32 +388,16 @@
             </script>
             </ul><!--/detail_room-->
          	<div class="room_btns clearfix">
-         		<a href="javascript:;" class="btn view" id="zreserve">
+         		<a href="javascript:;" class="btn view" id="zreserve" onclick="ZiroomLogin(24432,'BJCP84231043_01')" >
          			<span class="icon"></span>立即预定
          		</a>
              	<a class="btn collect"  id="toCollect">
              		<span class="icon">收藏</span>
              	</a>   
              	<script>
-             		//预定
-             		$("#zreserve").click(function(){
-             			var url="{{'appointAdd'}}";
-             			var id={{$list->h_id}};
-             			var data={id:id};
-             			$.get(url,data,function(msg){
-             				if(msg==0){
-             					alert("您已经预约过该房源了！");
-             				}else if(msg==1){
-             					alert("您预约了该房源！");
-             				}else{
-             					alert("抱歉，您预约失败！");
-             				}
-						});
-             		})
-             		//收藏
              		$("#toCollect").click(function(){
-             			var url="{{'appointmentAdd'}}";
-             			var id={{$list->h_id}};
+             			var url="appointmentAdd";
+             			var id=3;
              			var data={id:id};
              			$.get(url,data,function(msg){
              				if(msg==0){
@@ -344,8 +435,8 @@
 			         </div>
 					<div class="txt">
 						<span class="icon yinLeft"></span>
-						<p>我是U+管家{{$list->real_name}}，一直秉承着客户至上的理念，认真的帮助客户租住适合的房屋，期待您加入我们的大家庭。</p>
-						<p class="org pr">U家(U+管家)：{{$list->real_name}} <span class="icon yinRight"></span></p>
+						<p>我是U+管家孙辉，一直秉承着客户至上的理念，认真的帮助客户租住适合的房屋，期待您加入我们的大家庭。</p>
+						<p class="org pr">U家(U+管家)：孙辉 <span class="icon yinRight"></span></p>
 					</div>
 				</div>
 				<dl class="chengnuo">
@@ -989,14 +1080,32 @@ function leaveMessage(collect_id,is_whole){
                  <div class="lof-main-outer">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-                         @foreach($img as $k=>$v)
-                            <li>
-                                <a href="house_img/{{$v->img}}"  class="pirobox_t6">
-                                   <img src="house_img/{{$v->img}}" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                                     <li>
+                                <a href="house_img/2016-05-28/4ef0934a6daba31ac9e6002ef704f303.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-28/4ef0934a6daba31ac9e6002ef704f303.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
                                 </a>
                             </li>
-                          @endforeach
-                     </ul>
+                                                      <li>
+                                <a href="house_img/2016-05-28/5fcaed944f9a454fa57b161348423e05.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-28/5fcaed944f9a454fa57b161348423e05.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-28/b1140a1f9ec97c1990ee7a574822f43e.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-28/b1140a1f9ec97c1990ee7a574822f43e.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-28/887f7f7a0f733b66b4157a92a92560ba.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-28/887f7f7a0f733b66b4157a92a92560ba.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-28/638d706b1be7820353987172ae2b309f.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-28/638d706b1be7820353987172ae2b309f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                               </ul>
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
                  </div><!--lof-main-outer -->
 
@@ -1192,7 +1301,89 @@ function leaveMessage(collect_id,is_whole){
 
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+<!-- 页脚 -->
+<!--<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>cumque nihil impedit</h3>
+                <div class="footer-grd-left">
+                    <img src="houst_img/6.jpg" class="img-responsive" alt=" " />
+                </div>
+                <div class="footer-grd-left">
+                    <p>Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus
+                        id quod maxime placeat facere possimus, omnis voluptas assumenda
+                        est, omnis dolor repellendus</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>voluptas assumenda</h3>
+                <ul>
+                    <li><a href="#">doloribus asperiores</a></li>
+                    <li><a href="#">Itaque earum rerum</a></li>
+                    <li><a href="#">deserunt mollitia</a></li>
+                    <li><a href="#">facilis est et expedita</a></li>
+                    <li><a href="#">occaecati cupiditate</a></li>
+                    <li><a href="#">deserunt mollitia laborum</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>deserunt mollitia</h3>
+                <ul>
+                    <li><a href="#">doloribus asperiores</a></li>
+                    <li><a href="#">Itaque earum rerum</a></li>
+                    <li><a href="#">deserunt mollitia</a></li>
+                    <li><a href="#">facilis est et expedita</a></li>
+                    <li><a href="#">occaecati cupiditate</a></li>
+                    <li><a href="#">deserunt mollitia laborum</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>Flickr Posts</h3>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(4).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(5).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(6).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="clearfix"> </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(6).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(5).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(4).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+
+<div class="footer-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" >
+    <div class="container">
+        <a href="foot/guanyu" target="_blank" class="forst" rel="nofollow">关于我们</a>|
+        <a href="foot/myfk" target="_blank" rel="nofollow">我是房客</a>|
+        <a href="foot/jiaru" target="_blank" rel="nofollow">加入U+</a>|
+        <a href="foot/fuwu" target="_blank">服务条款</a>|
+        <a href="foot/yinsi" target="_blank">隐私权条款</a>
+    </div>
+</div>
+<!-- //页脚 -->
+;
 
 
 
@@ -1220,8 +1411,8 @@ function leaveMessage(collect_id,is_whole){
         var lat =$mapSearchText.attr('data-lat');
 
 
-        //alert({{$list->x_postion}})
-        var point=new BMap.Point({{$list->x_postion}},{{$list->y_postion}});
+        //alert(116.413554)
+        var point=new BMap.Point(116.413554,39.911013);
     var marker=new BMap.Marker(point);
     map1.centerAndZoom(point,14);
     map1.addOverlay(marker);
