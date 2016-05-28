@@ -78,8 +78,75 @@
 				</div>
 			   <div class="clearfix"> </div>
 			</div>
-		
+
+			<h2 class="typoh2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约我的</h2>
+			
+			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约列表信息</p>
+			<div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<table class="table table-bordered" id="replace">
+					<thead>
+						<tr>
+							<th>房屋地址</th>
+							<th>面积,人数,价格</th>
+							<th>入住时间</th>
+							<th>退房时间</th>
+							<th>房东审核</th>
+							<th>预定人</th>
+						</tr>
+					</thead>
+					@foreach($pre as $list)
+					<tbody>
+						<tr>
+							<td id="load"><a href="{{URL('perLook?id')}}={{$list->h_id}}">{{$list->h_address}}</a></td>
+							<td>{{$list->h_area}}方/.\{{$list->number}}人/.\{{$list->pay}}￥</td>
+							<td>{{$list->in_time}}</td>
+							<td>{{$list->out_time}}</td>
+							<td class="dddd_{{$list->h_id}}">
+								@if($list->statr==0)
+									<a class="pass" title="{{$list->h_id}}">通过</a>/
+									<a class="unpass" title="{{$list->h_id}}">不通过</a>
+								@elseif($list->statr==1)
+									通过
+								@else
+									未通过
+								@endif
+							</td>
+							<td>{{$list->u_name}}：{{$list->u_tel}}</td>
+						</tr>
+					</tbody>
+					@endforeach
+				</table>
+				<center>{!! $pre->render() !!}</center>
+			</div>
 		</div>
+		<script>
+		window.onload=function(){
+			var load=$("#load").val();
+			if(load!=""){
+				$("#replace").html("<center><h2>可怜没人爱！</h2></center>");
+			}
+		}
+		$(".pass").click(function(){
+			var id=$(this).attr("title");
+			var data={id:id,statr:1};
+			var url="{{'editStatr'}}";
+			$.get(url,data,function(msg){
+				if(msg==1){
+					$(".dddd_"+id).html("通过");
+				}
+			});
+		})
+		$(".unpass").click(function(){
+			var id=$(this).attr("title");
+			var data={id:id,statr:2};
+			var url="{{'editStatr'}}";
+			$.get(url,data,function(msg){
+				if(msg==1){
+					$(".dddd_"+id).html("未通过");
+				}
+			});
+		})
+		</script>
 	</div>
 <!-- //typography-page -->
 

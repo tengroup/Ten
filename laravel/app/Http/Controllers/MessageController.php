@@ -24,11 +24,15 @@ class MessageController extends Controller
     	
     	$u_id = $_COOKIE['u_id'];
 		$username = $_COOKIE['username'];
+
+    	$users = DB::table('message')->orderBy('m_id','desc')->limit(5)->join("users","message.u_id","=","users.u_id")->get();
+
           $users = DB::table('message')
                 ->join("users","message.u_id","=","users.u_id")
                 ->orderBy('m_id','desc')
                 ->limit(3)
                 ->get();
+
     	// $uer = [
     	// 	'm_id' =>$users['m_id'],
     	// 	'u_id' =>$users['u_id'],
@@ -36,6 +40,8 @@ class MessageController extends Controller
     	// 	'm_img' =>$users['m_img'],
     	// 	'm_time' =>$users['m_time']
     	// ]
+
+		// var_dump($users);die;
 
     	return view("message/message",array('users'=>$users,'username'=>$username,'u_id'=>$u_id));
     }
@@ -50,11 +56,14 @@ class MessageController extends Controller
     	$data = date('Y-m-d H:i:s',time());
     	DB::table('message')->insert(array('m_content'=> $oConBox,'m_img'=> $oUserImg,'m_time'=> $data,'u_id'=> $oUserId));
 
+    	$users = DB::table('message')->orderBy('m_id','desc')->limit(5)->join("users","message.u_id","=","users.u_id")->get();
+
             $users = DB::table('message')
                 ->orderBy('m_id','desc')
                 ->limit(3)
                 ->join("users","message.u_id","=","users.u_id")
                 ->get();
+
 
     	return view("message/messageerplace",array('users'=>$users));
     }

@@ -98,7 +98,7 @@
 							<th>面积,人数,价格</th>
 							<th>入住时间</th>
 							<th>退房时间</th>
-							<th>房屋描述</th>
+							<th>房东审核</th>
 							<th>联系人</th>
 						</tr>
 					</thead>
@@ -109,7 +109,15 @@
 							<td>{{$list->h_area}}方/.\{{$list->number}}人/.\{{$list->pay}}￥</td>
 							<td>{{$list->in_time}}</td>
 							<td>{{$list->out_time}}</td>
-							<td>{{$list->content}}</td>
+							<td>
+								@if($list->statr==0)
+									未审核
+								@elseif($list->statr==1)
+									通过
+								@else
+									未通过
+								@endif
+							</td>
 							<td>{{$list->linkman}}:{{$list->u_tel}}</td>
 						</tr>
 					</tbody>
