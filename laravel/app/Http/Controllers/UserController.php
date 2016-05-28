@@ -29,11 +29,18 @@ class UserController extends Controller
          */
         if($type==10){
             $user = DB::table('users')->where('u_id', "$uId")->first();
-            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('preplot.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            $pre = DB::table('preplot')
+                ->join("house","preplot.h_id","=","house.h_id")
+                ->join("f_users","f_users.u_id","=","house.u_id")
+                ->where('preplot.u_id', "$uId")
+                ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/personal",["user"=>$user,'pre'=>$pre]);
         }else{
             $user = DB::table('f_users')->where('u_id', "$uId")->first();
-            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("users","users.u_id","=","preplot.u_id")->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            $pre = DB::table('preplot')
+                ->join("house","preplot.h_id","=","house.h_id")
+                ->join("users","users.u_id","=","preplot.u_id")
+                ->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/fang-personal",["user"=>$user,'pre'=>$pre]);
         }
     }
@@ -105,8 +112,6 @@ class UserController extends Controller
     //查看详情页面
     public function perLook()
     {
-<<<<<<< HEAD
-
         $uId=Request::get('id');
 <<<<<<< HEAD
 		
@@ -123,12 +128,19 @@ class UserController extends Controller
             ->join("f_users","f_users.u_id","=","house.u_id")
             ->where('house.h_id', "$uId")
             ->first();
-=======
+
         $hId=Request::get('id');
 
+<<<<<<< HEAD
         $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
 >>>>>>> 16d0d2d6a8d4cfdbd16e414c352648d18c2e619c
 >>>>>>> c714accac227f4b7ae46d4e26068259ad45badbb
+=======
+        /*$oneMess=DB::table('preplot')
+            ->join("house","preplot.h_id","=","house.h_id")
+            ->join("f_users","f_users.u_id","=","house.u_id")
+            ->where('house.h_id', "$hId")->first();*/
+>>>>>>> 00f84ef748acd17eae911480fb1d357f345b3048
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;

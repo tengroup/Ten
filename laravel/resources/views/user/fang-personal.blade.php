@@ -80,7 +80,7 @@
 			</div>
 
 			<h2 class="typoh2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约我的</h2>
-			
+
 			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约列表信息</p>
 			<div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<table class="table table-bordered" id="replace">

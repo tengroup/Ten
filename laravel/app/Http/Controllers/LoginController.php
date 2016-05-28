@@ -58,7 +58,7 @@ class LoginController extends Controller
             DB::table('users')->where('u_id','=',$id)->update(array('u_points'=>100));
         }else{
             DB::table("f_users")->insert(
-                array('u_name'=>$u_name,'u_pwd'=>$password,'u_tel'=>$tel,'id_card'=>$id_card,
+                array('u_name'=>$u_name,'u_pwd'=>$password,'u_tel'=>$tel,'u_card'=>$id_card,
                     'pet_name'=>$pet_name,'real_name'=>$real_name,'u_email'=>$email,'reg_time'=>$reg_time)
             );
         }
