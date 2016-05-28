@@ -203,20 +203,26 @@
                         </dl>
                         <dl class=" listIndex" attr="terminal_os_s">
                             <dt>居住人数</dt>
-                            <dd>
+                    <dd>
                                 <label><a href="javascript:;"  attrval="不限">不限</a> </label>
                                 <label>
-                                    <input name="num[]" type="checkbox" value="1" autocomplete="off" style="margin-top: 10px;"/>
+                                    <input name="num" type="radio" value="1" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="1"> 1人</a> </label>
                                 <label>
-                                    <input name="num[]" type="checkbox" value="2" autocomplete="off" style="margin-top: 10px;"/>
+                                    <input name="num" type="radio" value="2" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="2">2人</a></label>
                                 <label>
-                                    <input name="num[]" type="checkbox" value="3" autocomplete="off" style="margin-top: 10px;"/>
+                                    <input name="num" type="radio" value="3" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="3">3人</a></label>
                                 <label>
-                                    <input name="num[]" type="checkbox" value="4" autocomplete="off" style="margin-top: 10px;"/>
+                                    <input name="num" type="radio" value="4" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="4">4人</a></label>
+                                <label>
+                                    <input name="num" type="radio" value="5" autocomplete="off" style="margin-top: 10px;"/>
+                                    <a href="javascript:;"  attrval="5">5人</a></label>
+                                <label>
+                                    <input name="num" type="radio" value="6" autocomplete="off" style="margin-top: 10px;"/>
+                                    <a href="javascript:;"  attrval="6">6人</a></label>
                             </dd>
                         </dl>
                         <dl class="listIndex" attr="terminal_brand_s">
@@ -227,11 +233,16 @@
                                     <input name="h_type[]" type="checkbox" value="一室一厅" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="一室一厅">一室一厅</a></label>
                                 <label>
+									<input name="h_type[]" type="checkbox" value="两室一厅" autocomplete="off" style="margin-top: 10px;"/>
+                                    <a href="javascript:;"  attrval="两室两厅">两室一厅</a> </label>
                                     <input name="h_type[]" type="checkbox" value="两室两厅" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="两室两厅">两室两厅</a> </label>
                                 <label>
                                     <input name="h_type[]" type="checkbox" value="三室两厅" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="三室两厅">三室两厅</a> </label>
+									 <label>
+                                    <input name="h_type[]" type="checkbox" value="四室三厅" autocomplete="off" style="margin-top: 10px;"/>
+                                    <a href="javascript:;"  attrval="四室三厅">四室三厅</a></label>
                                 <label>
                                     <input name="h_type[]" type="checkbox" value="四室四厅" autocomplete="off" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="四室四厅">四室四厅</a></label>
@@ -289,6 +300,7 @@
 
                 <ul id="houseList">
                     <div class="container">
+				@if(!empty($data))
                     @foreach($data as $v)
                         <li  class="clearfix">
                             <div class="img">
@@ -322,6 +334,9 @@
                             </div><!--/priceDetail-->
                         </li>
                     @endforeach
+					 @else
+                    <span style="font-size: 20px;">sorry,没有找到符合条件的房源</span>
+				@endif
                     </div>
                 </ul>
 

@@ -23,6 +23,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/common.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/detail_new.css"/>
+    <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 
 <script type="text/javascript" src="js/z-common.min.js"></script>

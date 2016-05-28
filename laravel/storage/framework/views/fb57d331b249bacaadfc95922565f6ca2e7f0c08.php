@@ -84,7 +84,7 @@
 			
 			<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">预约列表信息</p>
 			<div class="bs-docs-example wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<table class="table table-bordered">
+				<table class="table table-bordered" id="replace">
 					<thead>
 						<tr>
 							<th>房屋地址</th>
@@ -98,7 +98,7 @@
 					<?php foreach($pre as $list): ?>
 					<tbody>
 						<tr>
-							<td><a href="<?php echo e(URL('perLook?id')); ?>=<?php echo e($list->h_id); ?>"><?php echo e($list->h_address); ?></a></td>
+							<td id="load"><a href="<?php echo e(URL('perLook?id')); ?>=<?php echo e($list->h_id); ?>"><?php echo e($list->h_address); ?></a></td>
 							<td><?php echo e($list->h_area); ?>方/.\<?php echo e($list->number); ?>人/.\<?php echo e($list->pay); ?>￥</td>
 							<td><?php echo e($list->in_time); ?></td>
 							<td><?php echo e($list->out_time); ?></td>
@@ -110,8 +110,19 @@
 				</table>
 				<center><?php echo $pre->render(); ?></center>
 			</div>
-		
 		</div>
+		<script>
+		window.onload=function(){
+			var load=$("#load").val();
+			if(load!=""){
+				if(confirm("列表空空！去找房？")){
+					location.href="<?php echo e('index'); ?>";
+				}else{
+					$("#replace").html("<center><h2>空空无一！</h2></center>");
+				}
+			}
+		}
+		</script>
 	</div>
 <!-- //typography-page -->
 

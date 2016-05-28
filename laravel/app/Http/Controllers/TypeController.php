@@ -12,11 +12,11 @@ class TypeController extends Controller
 	//短租
     public function short()
     {
-        //地区传值
-        $value=isset($_REQUEST['value'])?$_REQUEST['value']:'';
+          //地区传值
+        $value=Request::get('value')?Request::get('value'):'';
        //查询
-        //$data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('h_address','like',"%$value%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
-         $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 ORDER by h_id limit 15");
+        //  $data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('h_address','like',"%$value%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
+       $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and h_address like '%$value%' ORDER by h_id limit 15");
         //var_dump($data);die;
          //$number=$num[0]->count;
         // $data=DB::select("select * from house where h_address like '%$value%' ORDER by h_id limit 15");
@@ -24,13 +24,16 @@ class TypeController extends Controller
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
         $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
         return view("type/short",['data'=>$data,'hot'=>$hot,'best'=>$best,'cheap'=>$cheap]);
+   
     }
 
     public function check_time()
     {
-        //接收时间和 关键字查询
-        $time=isset($_REQUEST['dates'])?$_REQUEST['dates']:'';
-        $check_name=isset($_REQUEST['gjz'])?$_REQUEST['gjz']:'';
+       //接收时间和 关键字查询
+      // $time=Request::get('dates');
+        $time=Request::get('dates')?Request::get('dates'):'';
+        $check_name=Request::get('gjz')?Request::get('gjz'):'';
+       // $check_name=isset($_REQUEST['gjz'])?$_REQUEST['gjz']:'';
         //分割字符串取时间段
         $start_time=substr($time,0,10)?substr($time,0,10):'2080-01-01';
         $end_time=substr($time,17,11)?substr($time,17,11):'2016-01-01';
@@ -52,7 +55,6 @@ class TypeController extends Controller
         //echo $check_name;die;
        //$data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('in_time','<=',"$start_time")->where('out_time','>=',"$end_time")->where('h_address','like',"%$check_name%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
         $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' ORDER  by h_id limit 15");
-     // var_dump($data);die;
         $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 ORDER by h_id limit 3");
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 ORDER by h_id limit 3");
         $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1 ORDER by h_id limit 3");
@@ -61,13 +63,14 @@ class TypeController extends Controller
     }
 
     public function all_sel(){
-        //查询价格 和类型
-        $price=isset($_REQUEST['radio2'])?$_REQUEST['radio2']:'';
-        $s_price=isset($_REQUEST['s_price'])?$_REQUEST['s_price']:'';
-        $b_price=isset($_REQUEST['b_price'])?$_REQUEST['b_price']:'';
-        $mon=isset($_REQUEST['num'])?$_REQUEST['num']:'';
-        $lx=isset($_REQUEST['h_type'])?$_REQUEST['h_type']:'';
+      //查询价格 和类型
+        $price=Request::get('radio2')?Request::get('radio2'):'';
+        $s_price=Request::get('s_price')?Request::get('s_price'):'';
+        $b_price=Request::get('b_price')?Request::get('b_price'):'';
+        $num=Request::get('num')?Request::get('num'):'';
+        $lx=Request::get('h_type')?Request::get('h_type'):'';
         //文本如果为空  则赋值
+        //var_dump($num);die;
         if(empty($s_price) &&empty($b_price)){
             if(!empty($price)){
                 $ks=explode('-',$price);
@@ -85,20 +88,27 @@ class TypeController extends Controller
            // $data=DB::table("house")->join("house_type","h_id","=","h_id")->whereBetween('h_address',[1,800])->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
              $where.=" and pay between $s_price and $b_price";
         }
+        if(!empty($num)){
+            $where.=" and number =$num";
+        }
         if(!empty($lx)){
             for($i=0;$i<count($lx);$i++){
-               $res[]=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and t_name like '%$lx[$i]%' $where");
+               $res[]=DB::select(" select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and t_name like '%$lx[$i]%' $where");
             }
-            foreach($res as $v){
-                foreach($v as $vv){
-                    $data[]=$vv;
+            //var_dump($data);die;
+            if(!empty($res[0])){
+                foreach($res as $v){
+                    foreach($v as $vv){
+                        $data[]=$vv;
+                    }
                 }
+            }else{
+                $data='';
             }
         }else{
             $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1  $where");
         }
         //var_dump($data);die;
-       //die;
         $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
         $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1 and status=1 ORDER by h_id limit 3");
@@ -109,9 +119,6 @@ class TypeController extends Controller
         //return redirect('act_place');
     }
 
-    public function check_more(){
-      echo   $_GET['id'];
-    }
 
 
 //    public function long()

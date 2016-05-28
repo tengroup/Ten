@@ -37,7 +37,9 @@
 
                         <li><a href="{{URl('events')}}"> 今日更新 </a></li>
                      @if(!empty($_COOKIE['username']))
-                        <li><a href="{{URl('message')}}"> 留言 </a></li>
+                         @if($_COOKIE['status']!=1)
+                            <li><a href="{{URl('message')}}"> 留言 </a></li>
+                         @endif
                      @endif
                     </ul>
 
@@ -57,14 +59,14 @@
                                 @endif
                             登录</font>
                         @if(!empty($_COOKIE['username']))
-                            <li><a href="{{'login/loginout'}}">退出</a></li>
+                            <li><a href="{{'login/loginout'}}" style="color: blue">退出</a></li>
                         @else
                             <li><a href="{{URl('login')}}" style="color: blue">登录</a></li>
                         @endif
                         <li><a href="{{URl('register')}}" style="color: blue">注册</a></li>
                         <li role="presentation" class="dropdown">
                             @if(!empty($_COOKIE['status']))
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: blue">
                                 用户中心 <span class="caret"></span>
                             </a>
                             @endif

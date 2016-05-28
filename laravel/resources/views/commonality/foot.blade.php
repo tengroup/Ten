@@ -73,10 +73,10 @@
 <div class="footer-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" >
     <div class="container">
         <a href="{{('foot/guanyu')}}" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-        <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-        <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入U+</a>|
-        <a href="http://www.tujia.com/SiteMap/UnitDestination" target="_blank">网站地图</a>|
-        <a href="http://www.tujia.com/SiteMap/Default" target="_blank">城市地图</a>
+        <a href="{{('foot/myfk')}}" target="_blank" rel="nofollow">我是房客</a>|
+        <a href="{{('foot/jiaru')}}" target="_blank" rel="nofollow">加入U+</a>|
+        <a href="{{('foot/fuwu')}}" target="_blank">服务条款</a>|
+        <a href="{{('foot/yinsi')}}" target="_blank">隐私权条款</a>
     </div>
 </div>
 <!-- //页脚 -->

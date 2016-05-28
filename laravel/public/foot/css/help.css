@@ -1,0 +1,251 @@
+﻿#pageBody{
+	width:100%;
+	background:url(../images/pagebody.jpg) repeat-y center top;
+	overflow:hidden;
+}
+#sidebarBox{
+	width:160px;
+}
+.sidebarNav{
+	background:#f2f0ee;
+	border-left:1px solid #e5e5e5;
+	border-top:1px solid #e5e5e5;
+}
+
+.sidebarNav li{
+	line-height:34px;
+	border-bottom:1px solid #e5e5e5;
+}
+.sidebarNav li a{
+	display:block;
+	padding-left:38px;
+}
+.sidebarNav li a:hover{
+	background:#e7e7e7;
+}
+.sidebarNav li .current,
+.sidebarNav li .current:hover{
+	background:#f60;
+	color:#fff;
+	cursor:default;
+	text-decoration:none;
+}
+#mainContent{
+	width:790px;
+	padding-bottom:30px;
+}
+
+.fqas{
+	line-height: 1.8;
+    padding:20px 50px 0;
+}
+.fqas dt{
+	color: #FF6600;
+    font-family: "Microsoft YaHei","宋体",verdana,Arial,"simsun";
+    font-size: 18px;
+}
+
+
+/*  会员帮助中心 */
+.Memberhelp{
+	padding:0 50px;
+    min-height: 460px;
+	line-height:24px;
+}
+.Memberhelp h1,.Memberhelp h2,.Memberhelp h3{
+	margin: 20px 0;
+	font-size: 30px;
+	color: #f60;
+	text-align: center;
+	font-family: "Microsoft YaHei", "宋体", verdana, Arial, "simsun";
+}
+
+
+.Memberhelp h2{
+	text-align:left;
+	font-size:18px;	
+	color:#f60;
+}
+.Memberhelp dl,.Memberhelp h2{
+	
+}
+.Memberhelp dt{
+	margin:10px 0 6px;
+	font-size: 16px;
+	color: #f60;
+	font-family: "Microsoft YaHei", "宋体", verdana, Arial, "simsun"
+}
+.Memberhelp dd{
+	padding-bottom:10px;
+}
+.Memberhelp  table{
+	width:100%;
+	margin-top:10px;
+	border:1px solid #ccc;
+}
+.Memberhelp  table th,.Memberhelp  table td{
+	line-height:30px;
+	padding:5px 10px;
+	border:1px solid #eaeaea;
+	text-align:left;
+}
+.Memberhelp  table th{
+	font-weight:bold;
+	background:#fdfdfd;
+	color:#f60;
+	font-size:14px;
+}
+.msgText{
+	margin-top:10px;
+	color:#f00;
+}
+.msgText strong{
+	font-weight:bold;
+}
+
+.levelInfo td{
+	vertical-align:middle;
+}
+.levelInfo td li{
+	line-height:20px;
+	margin-left:20px;
+	list-style-type:decimal;
+}
+
+/*  管家说明 */
+.directions-wrap{
+	padding:20px 50px 0;
+}
+.text-box {
+    padding: 16px 0 14px;
+}
+.text-box dt {
+    color: #FF6600;
+    font-family: "Microsoft YaHei","宋体",verdana,Arial,"simsun";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.text-box dt span {
+    color: #666666;
+    font-size: 14px;
+    margin-left: 6px;
+}
+.text-box dd {
+    font-family: "宋体";
+    font-size: 13px;
+    line-height: 24px;
+}
+.text-box dd p {
+    padding: 4px 0;
+}
+.text-box dd h4 {
+    font-family: "宋体";
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.text-box dd li {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/*  商户帮助入驻 */
+.residentWrap {
+    padding: 0px 50px 20px;
+    line-height: 1.8;
+}
+.residentWrap div{
+    padding: 20px 0px;
+    border-bottom: 1px solid #F0F0F0;
+}
+.residentWrap h2 {
+    padding-bottom: 6px;
+    font-size: 20px;
+    color: #333;
+}
+.residentWrap p {
+    padding-bottom: 10px;
+}
+.residentWrap p strong {
+    color:#f60;
+    font-weight:bold;
+}
+
+.residentWrap .checkInStep {
+    background:url(../images/checkinstepbg.jpg) repeat-y center top;
+    text-align:center;
+    font-size:14px;
+    line-height:70px;
+    color:#666666;
+    padding-bottom:0;
+    padding-right:70px;
+}
+.residentWrap .checkInStep a {
+    color:#f60;
+}
+.residentWrap .checkInStep span {
+    float:left;
+    display:inline-block;
+    width:85px;
+    height:60px;
+    text-align:center;
+    font-size:18px;
+    line-height:24px;
+    color:#fff;
+    vertical-align:middle;
+    padding-top:10px;
+}
+.residentWrap .icon_checkIn{
+    text-align:center;
+    padding-bottom:0;
+}
+.sidebarHelp {
+    position: fixed;
+    left: 50%;
+    margin-left: 475px;
+    top: 259px;
+    width: 92px;
+    padding: 15px 0px;
+    line-height: 14px;
+    text-align: center;
+    border: 1px solid #EBEBEB;
+    background-color: #FFF;
+}
+/*违规细则*/
+.Violations-wrap {
+    padding:20px 50px 20px;
+}
+.Violations-wrap h2 {
+    padding-top:20px;
+    font-size:28px;
+    font-weight:bold;
+    line-height:30px;
+    text-align:center;
+    color:#000;
+}
+    .Violations-wrap p {
+        font-size:16px;
+        line-height:26px;
+        margin:10px 0;
+        text-indent:2em;
+    }
+.Violations-wrap h3 {
+    font-size:20px;
+    line-height:30px;
+    margin:10px 0;
+
+}
+.Violations-wrap dl dt {
+    font-size:14px;
+    line-height:2.2;
+    font-weight:bold;
+}
+.Violations-wrap dl  dd {
+    line-height:2.2;
+}
+.Violations-wrap dl .f60 {
+    color:#f60;
+}
+.Violations-wrap dl .f60 strong {
+    font-weight:bold;
+}

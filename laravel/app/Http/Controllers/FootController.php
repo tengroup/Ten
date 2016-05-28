@@ -16,4 +16,25 @@ class FootController extends Controller
     public function guanyu(){
         return view('commonality/foot/guanyu');
     }
+
+    //指向渲染页面我是房客
+    public function myfk(){
+        return view('commonality/foot/myfk');
+    }
+
+    //指向渲染页面加入u+
+    public function jiaru(){
+        return view('commonality/foot/jiaru');
+    }
+
+    //指向渲染页面服务条款
+    public function fw(){
+        return view('commonality/foot/fw');
+    }
+
+    //指向渲染页面隐私权条款
+    public function yinsi(){
+        return view('commonality/foot/yinsi');
+    }
+
 }
