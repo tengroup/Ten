@@ -11,11 +11,12 @@
 |
 */
 // index 首页
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 //index 首页
 Route::get('index','HomeController@index');
+Route::get('/','HomeController@index');
 
 
 
@@ -31,6 +32,8 @@ Route::get('events','EventsController@index');
 Route::get('shortCodes','UserController@index');
 //personal  个人信息
 Route::get('personal','UserController@personal');
+//editStatr 房东修改状态
+Route::get('editStatr','UserController@editStatr');
 //per_edit  编辑个人信息
 Route::get('perEdit','UserController@perEdit');
 //perEditSubmit  提交修改个人信息
@@ -55,7 +58,7 @@ Route::get('perLook','UserController@perLook');
 
 //Message
 Route::get('message','MessageController@index');
-
+Route::any('messageInsert','MessageController@aduser');
 
 Route::get('long','TypeController@long');
 //short  短租

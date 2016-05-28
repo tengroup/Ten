@@ -32,7 +32,8 @@ class UserController extends Controller
             return view("user/personal",["user"=>$user,'pre'=>$pre]);
         }else{
             $user = DB::table('f_users')->where('u_id', "$uId")->first();
-            return view("user/fang-personal",["user"=>$user]);
+            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("users","users.u_id","=","preplot.u_id")->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            return view("user/fang-personal",["user"=>$user,'pre'=>$pre]);
         }
     }
     //编辑个人信息页面
@@ -50,7 +51,8 @@ class UserController extends Controller
             return view("user/per-edit",array("user"=>$user,'pre'=>$pre));
         }else{
             $user = DB::table('f_users')->where('u_id', "$uId")->first();
-            return view("user/fangper-edit",["user"=>$user,'type'=>$type]);
+            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("users","users.u_id","=","preplot.u_id")->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            return view("user/fangper-edit",["user"=>$user,'pre'=>$pre]);
         }
     }
     //修改个人信息
@@ -139,7 +141,14 @@ class UserController extends Controller
         $list=DB::table('users')->join("collect","collect.u_id","=","users.u_id")->join("house","house.h_id","=","collect.h_id")->where('users.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
         return view("user/collect",['app'=>$list]);
     }
-    
+    //查看收藏列表
+    public function editStatr()
+    {
+        $hId=Request::get('id');
+        $statr=Request::get('statr');
+        $data=DB::table("preplot")->where("h_id",'=',"$hId")->update(array('statr'=>"$statr"));
+        return $data;
+    }
 	   //房源添加
     public function fyAdd()
     {
