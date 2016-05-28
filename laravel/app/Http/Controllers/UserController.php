@@ -5,6 +5,7 @@ use App\Http\Requests;
 use Session;
 use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
+use Illuminate\View\View;
 
 /**
  *
@@ -28,11 +29,18 @@ class UserController extends Controller
          */
         if($type==10){
             $user = DB::table('users')->where('u_id', "$uId")->first();
-            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('preplot.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            $pre = DB::table('preplot')
+                ->join("house","preplot.h_id","=","house.h_id")
+                ->join("f_users","f_users.u_id","=","house.u_id")
+                ->where('preplot.u_id', "$uId")
+                ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/personal",["user"=>$user,'pre'=>$pre]);
         }else{
             $user = DB::table('f_users')->where('u_id', "$uId")->first();
-            $pre = DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("users","users.u_id","=","preplot.u_id")->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+            $pre = DB::table('preplot')
+                ->join("house","preplot.h_id","=","house.h_id")
+                ->join("users","users.u_id","=","preplot.u_id")
+                ->where('house.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
             return view("user/fang-personal",["user"=>$user,'pre'=>$pre]);
         }
     }
@@ -104,13 +112,46 @@ class UserController extends Controller
     //查看详情页面
     public function perLook()
     {
+        $uId=Request::get('id');
+
+		
+        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
+
+        $filename= base_path("resources/static/").'2001006_'.$uId.'.blade.php';
+        //echo $filename;die;
+        if(file_exists($filename) ){
+            echo file_get_contents($filename);
+            exit;
+        }
+
+        $oneMess=DB::table('house')
+            ->join("f_users","f_users.u_id","=","house.u_id")
+            ->where('house.h_id', "$uId")
+            ->first();
+
         $hId=Request::get('id');
 
+
         $oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+
+
+        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+
+        /*$oneMess=DB::table('preplot')
+            ->join("house","preplot.h_id","=","house.h_id")
+            ->join("f_users","f_users.u_id","=","house.u_id")
+            ->where('house.h_id', "$hId")->first();*/
+
+
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
-        return view("home/single",['list'=>$oneMess,'img'=>$img]);
+        //生成静态页面
+        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img])->__toString();
+        file_put_contents($filename,$htmlStrings);
+        return  view("home/single",['list'=>$oneMess,'img'=>$img]);
+
+
     }
     //添加收藏
     public function appointmentAdd()
@@ -220,6 +261,7 @@ class UserController extends Controller
                DB::table("images")->insert(["h_id"=>$h_id,"img"=>$newName]);
             }
             DB::table("house")->where('h_id','=',$h_id)->update(['photo'=>$newName]);
+
 
             return redirect("fyAdd");
         }else{
