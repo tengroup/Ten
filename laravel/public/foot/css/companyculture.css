@@ -1,0 +1,71 @@
+﻿#CompanyCultureBox{
+	background:#fff;
+}
+#CompanyCultureBox h1{
+	margin:20px 0 10px 50px;
+	font-size:30px;
+}
+#CompanyCultureBox h1 span{
+	color:#f60;
+}
+
+#sidebarBox{
+	width:160px;
+}
+.sidebarNav{
+	background:#f2f0ee;
+	border-left:1px solid #e5e5e5;
+	border-top:1px solid #e5e5e5;
+}
+
+.sidebarNav li{
+	line-height:34px;
+	border-bottom:1px solid #e5e5e5;
+}
+.sidebarNav li a{
+	display:block;
+	padding-left:38px;
+}
+.sidebarNav li a:hover{
+	background:#e7e7e7;
+}
+.sidebarNav li .current,
+.sidebarNav li .current:hover{
+	background:#f60;
+	color:#fff;
+	cursor:default;
+	text-decoration:none;
+}
+.pageBanner{
+	width:790px;
+	height:140px;
+	margin: 0 auto;
+	background:url(../images/companyculture.jpg) no-repeat;
+}
+.CompanyCultureInfo,.ideaBox{
+	margin:40px 50px;
+}
+.CompanyCultureInfo h2,.ideaBox h2{
+	margin-bottom:10px;
+	font-size:20px;
+	color:#333;
+}
+.ideaBox ul{
+	overflow:hidden;
+    margin-left:-40px;
+}
+.ideaBox li{
+	float:left;
+	width:110px;
+	height:102px;
+	padding:15px;
+	margin-left:90px;
+	display:inline;
+	background:#f1efed;
+    text-align:center;
+    border-radius:2px;
+}
+.ideaBox li h3{
+	font-size:16px;
+	color:#f60;
+} 

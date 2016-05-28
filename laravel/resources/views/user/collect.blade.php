@@ -60,7 +60,9 @@
 							<td>{{$list->h_area}}方/.\{{$list->number}}人/.\{{$list->pay}}￥</td>
 							<td>{{$list->in_time}}</td>
 							<td>{{$list->out_time}}</td>
-							<td>{{$list->content}}</td>
+							<td>
+                              {{$list->content}}
+                            </td>
 							<td>{{$list->linkman}}:{{$list->u_tel}}</td>
 						</tr>
 					</tbody>

@@ -55,6 +55,7 @@ Route::get('perLook','UserController@perLook');
 
 //Message
 Route::get('message','MessageController@index');
+Route::any('messageInsert','MessageController@aduser');
 
 
 Route::get('long','TypeController@long');
@@ -87,3 +88,11 @@ Route::any('qq','LoginController@qq');    //第三方登录
 
 //底部关于我们
 Route::any('foot/guanyu','FootController@guanyu');
+//我是房客
+Route::any('foot/myfk','FootController@myfk');
+//加入u+
+Route::any('foot/jiaru','FootController@jiaru');
+//服务条款
+Route::any('foot/fuwu','FootController@fw');
+//隐私权条款
+Route::any('foot/yinsi','FootController@yinsi');

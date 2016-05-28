@@ -91,18 +91,9 @@
 
     </div>
 </div>
-<div id="navWrap">
-    <div class="container_24">
-        <div class="grid_7">
-            <div class="siteLogo"><img src="deng_zhu/images/logo.png" alt=""/></div>
-        </div>
-        <div class="grid_17">
-            <div class="nvaBox" style="float: right;">
-                <a href="<?php echo e(URl('register')); ?>" target="_blank">注册</a> 丨 <a href="<?php echo e(URL('/')); ?>" target="_blank">U+网首页</a>
-            </div>
-        </div>
-    </div>
-</div>
+.
+
+<?php echo $__env->make('commonality/foot/header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 
@@ -234,11 +225,15 @@
 
 
 <div class="m-footer-link-list">
-    <a href="http://content.tujia.com/tujiajianjie.htm" target="_blank" class="forst" rel="nofollow">关于我们</a>|
-    <a href="http://content.tujia.com/youkebangzhu.htm" target="_blank" rel="nofollow">我是房客</a>|
-    <a href="http://content.tujia.com/qiyewenhua.htm" target="_blank" rel="nofollow">加入U+</a>|
-    <a href="http://www.tujia.com/SiteMap/UnitDestination" target="_blank">网站地图</a>|
-    <a href="http://maps.baidu.com/" target="_blank">城市地图</a>
+
+
+        <a href="<?php echo e(('foot/guanyu')); ?>"  class="forst" rel="nofollow" target="_blank">关于我们</a>|
+        <a href="<?php echo e(('foot/myfk')); ?>" rel="nofollow" target="_blank">我是房客</a>|
+        <a href="<?php echo e(('foot/jiaru')); ?>"  rel="nofollow" target="_blank">加入U+</a>|
+        <a href="<?php echo e(('foot/fuwu')); ?>" target="_blank">服务条款</a>|
+        <a href="<?php echo e(('foot/yinsi')); ?>" target="_blank">隐私权条款</a>
+
+
 </div>
 
 <script>
