@@ -49,11 +49,11 @@
                                 <a href="{{URL("perLook?id=$v->h_id")}}" class="hvr-curl-bottom-right">详情</a>
                             </div>
                             @if($v->status==1)
-                                通过
+                               审核 通过
                              @elseif($v->status==2)
-                                未通过
+                                审核 未通过
                              @else
-                                未审核
+                                 未审核
                             @endif
                         </div>
                         <div class="service-grd-pos2">

@@ -17,22 +17,55 @@
 <!-- message -->
 <style>
 
+body,div,h2,h3,ul,li,p{margin:0;padding:0;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{list-style-type:none;}
+body{color:#333;font:12px/1.5 \5b8b\4f53;}
+#msgBoxs{width:800px;background:#fff;border-radius:5px;margin:10px auto;padding-top:10px;}
+#msgBoxs form h2{font-weight:400;font:400 18px/1.5 \5fae\8f6f\96c5\9ed1;}
+#msgBoxs form{background:url(img/boxBG.jpg) repeat-x 0 bottom;padding:0 20px 15px;}
+
+
 ul{list-style-type:none;}
 
 #msgBox{width:900px;background:#fff;border-radius:5px;margin:10px auto;padding-top:10px;}
 #msgBox form h2{font-weight:400;font:400 18px/1.5 \5fae\8f6f\96c5\9ed1;}
 #msgBox form{background:url(img/boxBG.jpg) repeat-x 0 bottom;padding:0 20px 15px;}
+
 #userName,#conBox{color:#777;border:1px solid #d0d0d0;border-radius:6px;background:#fff url(img/inputBG.png) repeat-x;padding:3px 5px;font:14px/1.5 arial;}
 #userName.active,#conBox.active{border:1px solid #7abb2c;}
 #userName{height:20px;}
 #conBox{width:448px;resize:none;height:65px;overflow:auto;}
+
+#msgBoxs form div{position:relative;color:#999;margin-top:10px;}
+#msgBoxs img{border-radius:3px;}
+
 #msgBox form div{position:relative;color:#999;margin-top:10px;}
 #msgBox img{border-radius:3px;}
+
 #face{position:absolute;top:0;left:172px;}
 #face img{width:30px;height:30px;cursor:pointer;margin-right:6px;opacity:0.5;filter:alpha(opacity=50);}
 #face img.hover,#face img.current{width:28px;height:28px;border:1px solid #f60;opacity:1;filter:alpha(opacity=100);}
 #sendBtn{border:0;width:112px;height:30px;cursor:pointer;margin-left:10px;background:url(img/btn.png) no-repeat;}
 #sendBtn.hover{background-position:0 -30px;}
+
+#msgBoxs form .maxNum{font:26px/30px Georgia, Tahoma, Arial;padding:0 5px;}
+#msgBoxs .list{padding:10px;}
+#msgBoxs .list h3{position:relative;height:33px;font-size:14px;font-weight:400;background:#e3eaec;border:1px solid #dee4e7;}
+#msgBoxs .list h3 span{position:absolute;left:6px;top:6px;background:#fff;line-height:28px;display:inline-block;padding:0 15px;}
+#msgBoxs .list ul{overflow:hidden;zoom:1;}
+#msgBoxs .list ul li{float:left;clear:both;width:100%;border-bottom:1px dashed #d8d8d8;padding:10px 0;background:#fff;overflow:hidden;}
+#msgBoxs .list ul li.hover{background:#f5f5f5;}
+#msgBoxs .list .userPic{float:left;width:50px;height:50px;display:inline;margin-left:10px;border:1px solid #ccc;border-radius:3px;}
+#msgBoxs .list .content{float:left;width:400px;font-size:14px;margin-left:10px;font-family:arial;word-wrap:break-word;}
+#msgBoxs .list .userName{display:inline;padding-right:5px;}
+#msgBoxs .list .userName a{color:#2b4a78;}
+#msgBoxs .list .msgInfo{display:inline;word-wrap:break-word;}
+#msgBoxs .list .times{color:#889db6;font:12px/18px arial;margin-top:5px;overflow:hidden;zoom:1;}
+#msgBoxs .list .times span{float:left;}
+#msgBoxs .list .times a{float:right;color:#889db6;display:none;}
+
 #msgBox form .maxNum{font:26px/30px Georgia, Tahoma, Arial;padding:0 5px;}
 #msgBox .list{padding:10px;}
 #msgBox .list h3{position:relative;height:33px;font-size:14px;font-weight:400;background:#e3eaec;border:1px solid #dee4e7;}
@@ -48,6 +81,7 @@ ul{list-style-type:none;}
 #msgBox .list .times{color:#889db6;font:12px/18px arial;margin-top:5px;overflow:hidden;zoom:1;}
 #msgBox .list .times span{float:left;}
 #msgBox .list .times a{float:right;color:#889db6;display:none;}
+
 .tr{overflow:hidden;zoom:1;}
 .tr p{float:right;line-height:30px;}
 .tr *{float:left;} 
@@ -182,7 +216,7 @@ EventUtil.addLoadHandler(function ()
 				oUserId:{{$u_id}}
 				// oUserName:oUserName.value,
 			},function(msg){
-                // alert(msg)
+
 				$('.list').html(msg);
 			})
 			var oLi = document.createElement("li");
@@ -364,8 +398,13 @@ EventUtil.addLoadHandler(function ()
 			<h1 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">给我们评论~</h1>
 			<div class="contact-bottom wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<!-- <iframe src="" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+
+				<div style="height:500px;">
+					<div id="msgBoxs">
+
 				<div style="height:400px;">
 					<div id="msgBox">
+
 					<div class="list">
 				        <h3><span>大家在说</span></h3>
 				        <ul class="three">
@@ -381,7 +420,7 @@ EventUtil.addLoadHandler(function ()
 				            </li> 
 				            @endforeach
 				        </ul>
-				       
+
 				    </div>
 				    </div>
 				</div>
