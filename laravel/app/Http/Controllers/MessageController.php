@@ -30,7 +30,7 @@ class MessageController extends Controller
           $users = DB::table('message')
                 ->join("users","message.u_id","=","users.u_id")
                 ->orderBy('m_id','desc')
-                ->limit(5)
+                ->limit(4)
                 ->get();
 
     	// $uer = [
