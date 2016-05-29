@@ -47,11 +47,12 @@ class HomeController extends Controller
     	->orderBy('h_id')
     	->where('house.is_cheap','=','1')
 		->first();
+
     	//特价图片
     	$SpecialImg = DB::table('images')
 		->where('images.h_id','=',$Special->h_id)
 		->first();
-
+        
 		//特价信息
     	$Specialoffer = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
