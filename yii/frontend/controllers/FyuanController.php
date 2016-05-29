@@ -16,6 +16,7 @@ class FyuanController extends \yii\web\Controller
      * 房源列表展示
      */
     public function actionIndex(){
+        //echo Yii::$app->session->get('username');die;
         $sql1="select count(h_id) as count from house";
         $result = Yii::$app->db->createCommand($sql1);
         $m= $result->queryOne();

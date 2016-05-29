@@ -9,20 +9,22 @@
     <!-- Custom Theme files -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //animation-effect -->
+    <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="sel_css/css/mains.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.min.css" rel="stylesheet">
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
     <!-- animation-effect -->
-    <link href="css/animate.min.css" rel="stylesheet">
+
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
-    <!-- //animation-effect -->
-    <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-	<link href="sel_css/css/mains.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="sel_css/js/jquery.js"></script>
+
+    {{--<script type="text/javascript" src="sel_css/js/jquery.js"></script>--}}
     <script type="text/javascript" src="sel_css/js/hhDrop.js"></script>
     <script>
       $(function(){
@@ -140,20 +142,20 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="banner-bottom-grids">
-            <div class="col-md-6 banner-bottom-grid-1 wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <div class="banner-bottom-grid-11">
-                    <img src="houst_img/2.jpg" alt=" " class="img-responsive" />
-                    <div class="banner-bottom-grid-11-pos">
-                        <p><br>地址:{{$boutique->h_address}}&nbsp;&nbsp;&nbsp;&nbsp;面积:{{$boutique->h_area}}平方米<br>可住:{{$boutique->number}}人&nbsp;&nbsp;&nbsp;&nbsp;租金:{{$boutique->pay}}<br>{!!$boutique->content!!}</p>
-                        <div class="more m1">
-                            <a href="{{URL('perLook?id')}}={{$boutique->h_id}}" class="hvr-curl-bottom-right">阅读更多</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="newsletter-bottom-grids">
+            <div class="col-md-6 newsletter-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <img src="houst_img/5.jpg" alt=" " class="img-responsive" />
             </div>
-            <div class="col-md-6 banner-bottom-grid-1 wow fadeInLeftBig" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <h3>精品房</h3>
+            <div class="col-md-6 newsletter-bottom-grid  wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>特价房</h3>
+                <p>地址:{{$Specialoffer[0]->h_address}}</p>
+                <p>面积:{{$Specialoffer[0]->h_area}}平方米</p>
+                <p>可住:{{$Specialoffer[0]->number}}人</p>
+                <p>可住:{{$Specialoffer[0]->pay}}</p>
+                <p>{!!$Specialoffer[0]->content!!}</p>
+                <div class="more">
+                    <a href="{{URL('perLook?id')}}={{$Specialoffer[0]->h_id}}" class="hvr-curl-bottom-right">阅读更多</a>
+                </div>
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -203,9 +205,9 @@
                           <a href="{{URL('act_place?value=南宁')}}">南宁</a>
                         </dd>
                       </dl>
-                      
+
                       <div class="clear"></div>
-                     
+
                       <div class="thLeft thPadT5 tab_select">
                         <dl class="clrfix">
                           <dt>A-G</dt>
@@ -257,7 +259,7 @@
                             <a href="{{URL('act_place?value=中山')}}">中山</a>
                           </dd>
                         </dl>
-                      </div>  
+                      </div>
                     </div>
                 </li>
             </ul>
@@ -310,7 +312,7 @@
 <!-- //通讯底层 -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 <!-- for bootstrap working -->
 <script src="js/bootstrap.js"></script>
