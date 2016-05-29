@@ -21,6 +21,14 @@
     <!-- //animation-effect -->
     <link href='http://fonts.useso.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
     <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="sel_css/css/mains.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="sel_css/js/jquery.js"></script>
+    <script type="text/javascript" src="sel_css/js/hhDrop.js"></script>
+    <script>
+      $(function(){
+        $('#hhDrop00').hhDrop({});
+      })
+    </script>
 </head>
 
 <body>
@@ -152,21 +160,114 @@
     </div>
 </div>
 <!-- //旗下 -->
-<!-- 通讯 -->
+<!-- 根据城市查询 -->
 <div class="newsletter">
     <div class="container">
         <div class="newsletter-info">
-            <h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">Newsletter</h3>
-            <p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">But who has any right to find fault with a man who chooses to enjoy
-                a pleasure that has no annoying consequences</p>
-            <form class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <input type="mail" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}" required="">
-                <input type="submit" value="Send">
-            </form>
+            <h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">U+</h3>
+            <center>
+            <div class="lineSearch" style="background:white;width:320px;">
+            <ul>
+                <li class="thRelative" id="hhDrop00">
+                    <div class="boxSearch">
+                      <span class="key_word">
+                        <b class="size_14"></b>
+                        点击搜索城市
+                      </span>
+                      <em class="ico thLeft ico_shBlue"></em>
+                      <a class="thRight ico btn_search" href="javascript:void(0)"></a>
+                    </div>
+                    <div class="search_form_suggest" style="display:none;">
+                      <h3><a class="ico btn_close thRight" item="close">关闭</a>热门城市</h3>
+                      <dl class="search_hotList">
+                        <dd class="clr_after">
+                          <a href="{{URL('act_place?value=北京')}}">北京</a>
+                          <a href="{{URL('act_place?value=上海')}}">上海</a>
+                          <a href="{{URL('act_place?value=广州')}}">广州</a>
+                          <a href="{{URL('act_place?value=成都')}}">成都</a>
+                          <a href="{{URL('act_place?value=杭州')}}">杭州</a>
+                          <a href="{{URL('act_place?value=南京')}}">南京</a>
+                          <a href="{{URL('act_place?value=深圳')}}">深圳</a>
+                          <a href="{{URL('act_place?value=济南')}}">济南</a>
+                          <a href="{{URL('act_place?value=石家庄')}}">石家庄</a>
+                          <a href="{{URL('act_place?value=武汉')}}">武汉</a>
+                          <a href="{{URL('act_place?value=郑州')}}">郑州</a>
+                          <a href="{{URL('act_place?value=重庆')}}">重庆</a>
+                          <a href="{{URL('act_place?value=福州')}}">福州</a>
+                          <a href="{{URL('act_place?value=西安')}}">西安</a>
+                          <a href="{{URL('act_place?value=长沙')}}">长沙</a>
+                          <a href="{{URL('act_place?value=沈阳')}}">沈阳</a>
+                          <a href="{{URL('act_place?value=天津')}}">天津</a>
+                          <a href="{{URL('act_place?value=哈尔滨')}}">哈尔滨</a>
+                          <a href="{{URL('act_place?value=苏州')}}">苏州</a>
+                          <a href="{{URL('act_place?value=南宁')}}">南宁</a>
+                        </dd>
+                      </dl>
+                      
+                      <div class="clear"></div>
+                     
+                      <div class="thLeft thPadT5 tab_select">
+                        <dl class="clrfix">
+                          <dt>A-G</dt>
+                          <dd class="clr_after">
+                            <a href="{{URL('act_place?value=北京')}}">北京</a>
+                            <a href="{{URL('act_place?value=长沙')}}">长沙</a>
+                            <a href="{{URL('act_place?value=成都')}}">成都</a>
+                            <a href="{{URL('act_place?value=重庆')}}">重庆</a>
+                            <a href="{{URL('act_place?value=福州')}}">福州</a>
+                            <a href="{{URL('act_place?value=广州')}}">广州</a>
+                            <a href="{{URL('act_place?value=贵阳')}}">贵阳</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>H-L</dt>
+                          <dd class="clr_after">
+                            <a href="{{URL('act_place?value=哈尔滨')}}">哈尔滨</a>
+                            <a href="{{URL('act_place?value=杭州')}}">杭州</a>
+                            <a href="{{URL('act_place?value=合肥')}}">合肥</a>
+                            <a href="{{URL('act_place?value=济南')}}">济南</a>
+                            <a href="{{URL('act_place?value=昆明')}}">昆明</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>M-T</dt>
+                          <dd class="clr_after">
+                            <a href="{{URL('act_place?value=南昌')}}">南昌</a>
+                            <a href="{{URL('act_place?value=南京')}}">南京</a>
+                            <a href="{{URL('act_place?value=南宁')}}">南宁</a>
+                            <a href="{{URL('act_place?value=宁波')}}">宁波</a>
+                            <a href="{{URL('act_place?value=青岛')}}">青岛</a>
+                            <a href="{{URL('act_place?value=三亚')}}">三亚</a>
+                            <a href="{{URL('act_place?value=上海')}}">上海</a>
+                            <a href="{{URL('act_place?value=沈阳')}}">沈阳</a>
+                            <a href="{{URL('act_place?value=深圳')}}">深圳</a>
+                            <a href="{{URL('act_place?value=石家庄')}}">石家庄</a>
+                            <a href="{{URL('act_place?value=苏州')}}">苏州</a>
+                            <a href="{{URL('act_place?value=太原')}}">太原</a>
+                            <a href="{{URL('act_place?value=天津')}}">天津</a>
+                          </dd>
+                        </dl>
+                        <dl class="clrfix">
+                          <dt>W-Z</dt>
+                          <dd class="clr_after">
+                            <a href="{{URL('act_place?value=武汉')}}">武汉</a>
+                            <a href="{{URL('act_place?value=厦门')}}">厦门</a>
+                            <a href="{{URL('act_place?value=西安')}}">西安</a>
+                            <a href="{{URL('act_place?value=郑州')}}">郑州</a>
+                            <a href="{{URL('act_place?value=中山')}}">中山</a>
+                          </dd>
+                        </dl>
+                      </div>  
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            </center>
         </div>
     </div>
 </div>
-<!-- //通讯 -->
+<!-- //根据城市查询 -->
 <!-- 通讯底层 -->
 <div class="newsletter-bottom">
     <div class="container">
