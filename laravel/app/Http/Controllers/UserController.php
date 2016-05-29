@@ -200,7 +200,11 @@ class UserController extends Controller
     public function appointment()
     {
         $uId=$_COOKIE['u_id'];
-        $list=DB::table('users')->join("collect","collect.u_id","=","users.u_id")->join("house","house.h_id","=","collect.h_id")->where('users.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+        $list=DB::table('users')
+            ->join("collect","collect.u_id","=","users.u_id")
+            ->join("house","house.h_id","=","collect.h_id")
+            ->where('users.u_id', "$uId")
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
         return view("user/collect",['app'=>$list]);
     }
     //房东修改状态
@@ -270,14 +274,14 @@ class UserController extends Controller
 
     }
 
-    //房源添加列表
+    //房源列表
     public function fyList(){
         $u_id=$_COOKIE['u_id'];
         $arr['list'] = DB::table('house')
             ->join('house_type', 'house.t_id', '=', 'house_type.t_id')
             ->where('u_id','=',$u_id)
             ->orderBy('h_time', 'desc')
-            ->paginate(5);
+            ->paginate(9);
 
         return view("user/fyList",$arr);
     }

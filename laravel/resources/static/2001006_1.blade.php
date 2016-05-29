@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -73,7 +72,8 @@
                                                     </li>
 
                         <li><a href="http://localhost/Ten/laravel/public/events"> 今日更新 </a></li>
-                                                                                       </ul>
+                                                                          <li><a href="http://localhost/Ten/laravel/public/message"> 留言 </a></li>
+                                                                  </ul>
 
                 </nav>
                 <div class="social-icons">
@@ -84,7 +84,7 @@
                         <li><a class="icon-link round dribble" href="#"></a></li>
                         <li><a href="http://localhost/Ten/laravel/public/login"><img src="houst_img/user_center.png" alt=""></a></li>-->
                         <font color="#f0f8ff">欢迎
-                                                                    sunhui
+                                                                    huigege
                                                             登录</font>
                                                     <li><a href="login/loginout" style="color: blue">退出</a></li>
                                                 <li><a href="http://localhost/Ten/laravel/public/register" style="color: blue">注册</a></li>
@@ -94,8 +94,7 @@
                             </a>
                                                         <ul class="dropdown-menu">
                                 <li><a href="http://localhost/Ten/laravel/public/personal">个人信息</a></li>
-                                                                    <li><a href="http://localhost/Ten/laravel/public/fyAdd">房源添加</a></li>
-                                    <li><a href="http://localhost/Ten/laravel/public/fyList">房源列表</a></li>
+                                                                    <li><a href="http://localhost/Ten/laravel/public/appointment">收藏列表</a></li>
                                                             </ul>
                         </li>
                     </ul>
