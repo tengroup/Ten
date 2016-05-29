@@ -114,8 +114,8 @@ class UserController extends Controller
     {
         $uId=Request::get('id');
 
-		
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
+		//echo $_COOKIE['username'];die;
+        /*$oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();*/
 
         $filename= base_path("resources/static/").'2001006_'.$uId.'.blade.php';
         //echo $filename;die;
@@ -124,18 +124,18 @@ class UserController extends Controller
             exit;
         }
 
-        $oneMess=DB::table('house')
+        /*$oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
             ->where('house.h_id', "$uId")
-            ->first();
+            ->first();*/
 
-        $hId=Request::get('id');
-
-
-        $oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+        //$hId=Request::get('id');
 
 
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+        //$oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+
+
+        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
 
         /*$oneMess=DB::table('preplot')
             ->join("house","preplot.h_id","=","house.h_id")
@@ -149,9 +149,13 @@ class UserController extends Controller
         //生成静态页面
         $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img])->__toString();
         file_put_contents($filename,$htmlStrings);
+
         //房屋信息
         $res= DB :: table('house')->where("h_id",$oneMess->h_id)->get();
         return  view("home/single",['list'=>$oneMess,'img'=>$img,'res'=>$res]);
+
+        //var_dump($oneMess);die;
+        return  view("home/single",['list'=>$oneMess,'img'=>$img]);
 
 
     }
