@@ -14,7 +14,7 @@ use App\Task;
  *  @Author:      张龙
  *  @Time         2016-05-17
  */
-
+header("Content-type:text/html;charset=utf8");
 class HomeController extends Controller
 {
     public function index()
@@ -22,7 +22,7 @@ class HomeController extends Controller
     	//热销信息
     	$selling = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
-    	->orderBy('h_id')
+    	->orderBy('h_id','desc')
     	->where('house.is_hot','=','1')
 		->first();
     	//热销图片
@@ -33,8 +33,8 @@ class HomeController extends Controller
 		//精品信息
     	$boutique = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
-    	->orderBy('h_id')
-    	->where('house.is_hot','=','1')
+    	->orderBy('h_id','desc')
+    	->where('house.is_best','=','1')
 		->first();
     	//精品图片
     	$boutiqueImg = DB::table('images')
@@ -44,27 +44,32 @@ class HomeController extends Controller
 		//特价信息
     	$Special = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
-    	->orderBy('h_id')
+    	->orderBy('h_id','desc')
     	->where('house.is_cheap','=','1')
 		->first();
-
+		// var_dump($Special);die;
     	//特价图片
     	$SpecialImg = DB::table('images')
 		->where('images.h_id','=',$Special->h_id)
 		->first();
-        
+
 		//特价信息
     	$Specialoffer = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
-    	->orderBy('h_id')
+    	->orderBy('h_id','desc')
     	->limit(1,2)
     	->where('house.is_cheap','=','1')
 		->get();
+		var_dump($Specialoffer);die;
 		
     	//特价图片
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[0]->h_id)
 		->get();
+		$selling->content = substr($selling->content,0,201).'<a href="#">...</a>';
+		$boutique->content = substr($boutique->content,0,201).'<a href="#">...</a>';
+		$Special->content = substr($Special->content,0,201).'<a href="#">...</a>';
+		$Specialoffer[0]->content = substr($Specialoffer[0]->content,0,201).'<a href="#">...</a>';
     	return view("home/index",array('selling'=>$selling,'sellingImg'=>$sellingImg,'boutique'=>$boutique,'boutiqueImg'=>$boutiqueImg,'Special'=>$Special,'SpecialImg'=>$SpecialImg,'Specialoffer'=>$Specialoffer,'SpecialofferImg'=>$SpecialofferImg));
     }
     
