@@ -66,10 +66,10 @@ class HomeController extends Controller
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[0]->h_id)
 		->get();
-		$selling->content = substr($selling->content,0,201).'<a href="#">...</a>';
-		$boutique->content = substr($boutique->content,0,201).'<a href="#">...</a>';
-		$Special->content = substr($Special->content,0,201).'<a href="#">...</a>';
-		$Specialoffer[0]->content = substr($Specialoffer[0]->content,0,201).'<a href="#">...</a>';
+		$selling->content = substr($selling->content,0,99).'<a href="#">...</a>';
+		$boutique->content = substr($boutique->content,0,99).'<a href="#">...</a>';
+		$Special->content = substr($Special->content,0,99).'<a href="#">...</a>';
+		$Specialoffer[0]->content = substr($Specialoffer[0]->content,0,99).'<a href="#">...</a>';
     	return view("home/index",array('selling'=>$selling,'sellingImg'=>$sellingImg,'boutique'=>$boutique,'boutiqueImg'=>$boutiqueImg,'Special'=>$Special,'SpecialImg'=>$SpecialImg,'Specialoffer'=>$Specialoffer,'SpecialofferImg'=>$SpecialofferImg));
     }
     
