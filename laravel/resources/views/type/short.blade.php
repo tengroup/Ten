@@ -328,7 +328,7 @@
                                     <input type="checkbox" class="" name="" value="" id="c_84641" onclick="addZiRoomCompare('84641','2290','海淀清河8号线永泰庄永泰园3居室-南卧');">
 
                                 </p>
-                                <a href="{{URL("perLook?id=$v->h_id")}}" target="_blank" style="line-height: 20px;"><font color="red">❤ </font> 加入收藏</a>
+                                <a href="javascript:void(0)"  style="line-height: 20px; "  class="toCollect" name="{{$v->h_id}}"><font color="red">❤ </font> 加入收藏</a>
                                 <p class="more"><a href="{{URL("perLook?id")}}={{$v->h_id}}" target="_blank" style="line-height: 20px;">查看更多</a></p>
 
                             </div><!--/priceDetail-->
@@ -368,8 +368,8 @@
                                 <span class="text_l">
 
 
-                                {{$h->h_address}}
-                                    n号线角门西                                </span>
+                               地址： {{$h->h_address}}
+                                   </span>
                 </div>
             </li>
         @endforeach
@@ -402,8 +402,8 @@
                                 <span class="text_l">
 
 
-                                {{$b->h_address}}
-                                    n号线角门西                                </span>
+                                地址：{{$b->h_address}}
+                                 </span>
                 </div>
             </li>
         @endforeach
@@ -443,8 +443,8 @@
                                 <span class="text_l">
 
 
-                                {{$c->h_address}}
-                                    n号线角门西                                </span>
+                               地址： {{$c->h_address}}
+                            </span>
                 </div>
             </li>
         @endforeach
@@ -462,39 +462,23 @@
 </body>
 </html>
 <script type="text/javascript">
-    /* function sub(){
-     var js=$('#date1').val();
-     var start_time=js.substr(0,10);
-     var end_time=js.substr(13,11);
-     var check_name=$('#check_name').val();
-     var url="{{URL('check_time')}}";
-     var data={"start_time":start_time,"end_time":end_time,'check_name':check_name};
-     var str='';
-     $.get(url,data,function(msg){
-     for (var i = 0; i < msg.length; i++) {
-     str += '<div class="col-md-4 service-grid" style="width:350px;float:left;display:block; margin-top:60px;" id="content">';
-     str += '<div class="service-grd wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">';
-     str += '<img src="houst_img/'+msg[i]['photo']+'" alt=" " class="img-responsive" style="width:300px; height:200px;"/>';
-     str += '<div class="service-grd-pos">';
-     str += '<h4>' + msg[i]["h_address"] + '</h4>';
-     str += '<div class="more m2">';
-     str += '<a href="" class="hvr-curl-bottom-right">查看详情</a>';
-     str += '</div></div> <div class="service-grd-pos2">';
-     str += '<p style="font-size: 20px;">';
-     if (msg[i]["is_hot"] == 1) {
-     str+='热销';
-     } else if (msg[i]["is_best"] == 1){
-     str+='精品';
-     } else if (msg[i]["is_cheap"] == 1) {
-     str+='特价';
-     } else{
-     str+'msg[i]["pay"]';
-     }
-     str+='</p></div></div></div><div class="clearfix"> </div>';
-     }
-     $('#content').html(str);
-     },'json')
-     }
-     */
+    //收藏
+    $(".toCollect").click(function(){
+        var url="{{'appointmentAdd'}}";
+        var id=$(this).attr("name")
+
+
+        var data={id:id};
+        $.get(url,data,function(msg){
+            if(msg==0){
+                alert("您已经收藏过该房源了！");
+            }else if(msg==1){
+                alert("您收藏了该房源！");
+            }else{
+                alert("抱歉，您收藏失败！");
+            }
+        });
+    })
+
 
 </script>

@@ -25,7 +25,7 @@ class FyuanController extends \yii\web\Controller
         //echo $pagecount;die;
         isset($_GET['page'])?$page=$_GET['page']:$page=1;
         $start=($page-1)*$num;
-        $sql2="select * from house inner join users on house.u_id=users.u_id inner join house_type on house.t_id=house_type.t_id limit $start,$num";
+        $sql2="select * from house  limit $start,$num";
         //echo $sql2;die;
         $result = Yii::$app->db->createCommand($sql2);
         $data= $result->queryAll();
@@ -103,12 +103,12 @@ class FyuanController extends \yii\web\Controller
      */
     public function actionFy_more(){
         $id=$_GET['id'];
-        $sql="select * from house inner join users on house.u_id=users.u_id inner join house_type on house.t_id=house_type.t_id where h_id=$id";
-
+        $sql="select * from house  inner join house_type on house.t_id=house_type.t_id where h_id=$id";
+        //echo $sql;die;
         $result= Yii::$app->db->createCommand($sql);
         $data=$result->queryOne();
         //图
-        $sqls="select * from images where h_id=$id limit 4";
+        $sqls="select * from images where h_id=$id ";
         $result= Yii::$app->db->createCommand($sqls);
         $res=$result->queryAll();
         //var_dump($res);die;
