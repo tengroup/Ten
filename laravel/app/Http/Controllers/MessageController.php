@@ -25,12 +25,12 @@ class MessageController extends Controller
     	$u_id = $_COOKIE['u_id'];
 		$username = $_COOKIE['username'];
 
-    	$users = DB::table('message')->orderBy('m_id','desc')->limit(5)->join("users","message.u_id","=","users.u_id")->get();
+    	
 
           $users = DB::table('message')
                 ->join("users","message.u_id","=","users.u_id")
                 ->orderBy('m_id','desc')
-                ->limit(3)
+                ->limit(4)
                 ->get();
 
     	// $uer = [

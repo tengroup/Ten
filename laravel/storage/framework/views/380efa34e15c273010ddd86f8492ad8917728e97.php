@@ -329,7 +329,7 @@
                                     <input type="checkbox" class="" name="" value="" id="c_84641" onclick="addZiRoomCompare('84641','2290','海淀清河8号线永泰庄永泰园3居室-南卧');">
 
                                 </p>
-                                <a href="javascript:void(0)" target="_blank" style="line-height: 20px; "  class="toCollect" name="<?php echo e($v->h_id); ?>"><font color="red">❤ </font> 加入收藏</a>
+                                <a href="javascript:void(0)"  style="line-height: 20px; "  class="toCollect" name="<?php echo e($v->h_id); ?>"><font color="red">❤ </font> 加入收藏</a>
                                 <p class="more"><a href="<?php echo e(URL("perLook?id")); ?>=<?php echo e($v->h_id); ?>" target="_blank" style="line-height: 20px;">查看更多</a></p>
 
                             </div><!--/priceDetail-->
@@ -470,7 +470,7 @@
     $(".toCollect").click(function(){
         var url="<?php echo e('appointmentAdd'); ?>";
         var id=$(this).attr("name")
-       
+
 
         var data={id:id};
         $.get(url,data,function(msg){
