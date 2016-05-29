@@ -19,14 +19,10 @@ Route::get('index','HomeController@index');
 Route::get('/','HomeController@index');
 
 
-
-
-
 //events
 Route::get('events','EventsController@index');
 // 更新
 //Route::get('events','EventsController@lists');
-
 
 //personal  个人信息
 Route::get('personal','UserController@personal');
@@ -45,22 +41,18 @@ Route::get('fyList','UserController@fyList');
 
 //appointment  预约列表
 Route::get('appointment','UserController@appointment');
+Route::any('appointmentAdd','UserController@appointmentAdd'); //收藏添加
+Route::any('appointAdd','UserController@appointAdd');   //预约添加
 
-//perLook  查看预约信息
-//appointment  收藏列表
-Route::any('appointmentAdd','UserController@appointmentAdd');
-Route::get('appointment','UserController@appointment');
-
-//perLook  查看详情页面
+//perLook  查看预约列表
 Route::get('perLook','UserController@perLook');
 
 
-//Message
+//Message  评论我们
 Route::get('message','MessageController@index');
 Route::any('messageInsert','MessageController@aduser');
 
 
-Route::get('long','TypeController@long');
 //short  短租
 Route::get('short','TypeController@short');
 //传地址
@@ -90,11 +82,3 @@ Route::any('qq','LoginController@qq');    //第三方登录
 
 //底部关于我们
 Route::any('foot/guanyu','FootController@guanyu');
-//我是房客
-Route::any('foot/myfk','FootController@myfk');
-//加入u+
-Route::any('foot/jiaru','FootController@jiaru');
-//服务条款
-Route::any('foot/fuwu','FootController@fw');
-//隐私权条款
-Route::any('foot/yinsi','FootController@yinsi');

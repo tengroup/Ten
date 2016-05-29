@@ -281,13 +281,29 @@
             </script>
             </ul><!--/detail_room-->
          	<div class="room_btns clearfix">
-         		<a href="javascript:;" class="btn view" id="zreserve" onclick="ZiroomLogin(24432,'BJCP84231043_01')" >
+         		<a href="javascript:;" class="btn view" id="zreserve">
          			<span class="icon"></span>立即预定
          		</a>
              	<a class="btn collect"  id="toCollect">
              		<span class="icon">收藏</span>
              	</a>   
              	<script>
+             		//预定
+             		$("#zreserve").click(function(){
+             			var url="{{'appointAdd'}}";
+             			var id={{$list->h_id}};
+             			var data={id:id};
+             			$.get(url,data,function(msg){
+             				if(msg==0){
+             					alert("您已经预约过该房源了！");
+             				}else if(msg==1){
+             					alert("您预约了该房源！");
+             				}else{
+             					alert("抱歉，您预约失败！");
+             				}
+						});
+             		})
+             		//收藏
              		$("#toCollect").click(function(){
              			var url="{{'appointmentAdd'}}";
              			var id={{$list->h_id}};

@@ -9,10 +9,20 @@ use DB;
 header('Content-type:text/html;charset=utf-8');
 class TypeController extends Controller
 {
+    //公共方法
+    public function pub_all(){
+        //查询最热
+        $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
+        //查询精品
+        $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
+        //查询特价
+        $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
+        return ['hot'=>$hot,'best'=>$best,'cheap'=>$cheap];
+    }
 	//短租
     public function short()
     {
-          //地区传值
+         //地区传值
         $value=Request::get('value')?Request::get('value'):'';
        //查询
         //  $data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('h_address','like',"%$value%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
@@ -20,12 +30,18 @@ class TypeController extends Controller
         //var_dump($data);die;
          //$number=$num[0]->count;
         // $data=DB::select("select * from house where h_address like '%$value%' ORDER by h_id limit 15");
-        $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
-        $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
-        $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
-        return view("type/short",['data'=>$data,'hot'=>$hot,'best'=>$best,'cheap'=>$cheap]);
+       // $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
+        //查询最热
+     //   $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
+//       //查询精品
+    //   $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
+//        //查询特价
+      //  $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
+        $arr=$this->pub_all();
+       return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
    
     }
+
 
     public function check_time()
     {
@@ -55,11 +71,8 @@ class TypeController extends Controller
         //echo $check_name;die;
        //$data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('in_time','<=',"$start_time")->where('out_time','>=',"$end_time")->where('h_address','like',"%$check_name%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
         $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' ORDER  by h_id limit 15");
-        $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 ORDER by h_id limit 3");
-        $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 ORDER by h_id limit 3");
-        $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1 ORDER by h_id limit 3");
-
-        return view("type/short",['data'=>$data,'hot'=>$hot,'best'=>$best,'cheap'=>$cheap]);
+        $arr=$this->pub_all();
+        return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
     }
 
     public function all_sel(){
@@ -81,7 +94,6 @@ class TypeController extends Controller
                 $b_price='';
             }
         }
-
         //echo  $b_price;die;
         $where='';
         if(!empty($s_price) && !empty($b_price)){
@@ -108,14 +120,8 @@ class TypeController extends Controller
         }else{
             $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1  $where");
         }
-        //var_dump($data);die;
-        $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
-        $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
-        $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1 and status=1 ORDER by h_id limit 3");
-
-        //dd($data);
-
-        return view("type/short",['data'=>$data,'hot'=>$hot,'best'=>$best,'cheap'=>$cheap]);
+        $arr=$this->pub_all();
+        return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
         //return redirect('act_place');
     }
 
