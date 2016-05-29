@@ -59,14 +59,15 @@
                             @endif
                         </div>
                         <div class="service-grd-pos2">
-                            <p>${{$v->pay}}/-</p>
+                            <p style="font-size: 18px;">${{$v->pay}}/-</p>
                         </div>
+
                     </div>
                 </div>
            @endforeach
-            <div class="clearfix"> </div>
+                <div class="clearfix"> </div>
         </div>
-
+        <?php echo $list->render(); ?>
     </div>
 </div>
 <!-- //services -->
