@@ -149,7 +149,9 @@ class UserController extends Controller
         //生成静态页面
         $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img])->__toString();
         file_put_contents($filename,$htmlStrings);
-        return  view("home/single",['list'=>$oneMess,'img'=>$img]);
+        //房屋信息
+        $res= DB :: table('house')->where("h_id",$oneMess->h_id)->get();
+        return  view("home/single",['list'=>$oneMess,'img'=>$img,'res'=>$res]);
 
 
     }
