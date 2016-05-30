@@ -2,6 +2,18 @@
 
 namespace frontend\controllers;
 use Yii;
+use yii\data\Pagination;
+use common\models\LoginForm;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResetPasswordForm;
+use frontend\models\SignupForm;
+use frontend\models\ContactForm;
+use frontend\models\User;
+use yii\base\InvalidParamException;
+use yii\web\BadRequestHttpException;
+use yii\web\Controller;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  *  @U+           管理中心文章处理程序文件
@@ -19,63 +31,71 @@ class FdongController extends \yii\web\Controller
      * 右侧
      */
 	public function actionIndex(){
-		$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users");
-        $pos = $comm->queryOne();
-		$tiao = 4;
-		$ye = ceil($pos['count(*)']/$tiao);
-		$page = isset($_GET['p'])?$_GET['p']:1;
-		$limit = ($page-1)*$tiao;
-		$command = Yii::$app->db->createCommand("SELECT * FROM f_users limit $limit,$tiao");
-        $posts = $command->queryAll();
-        $pages = $page+1;
-        $pageos = $page-1;
-        if($pages>$ye){
-        	$pages=$ye;
-        }
-        if($pageos<=1){
-        	$pageos=1;
-        }
+		//查询数据库
+		$query = User::find();
+		// var_dump($query);die;
+		//设置每页显示条数
+		$pages = new Pagination([
+		    'totalCount' => $query->count(),
+		    'pageSize'   => 2,
+		]);
+		//限制记录条数
+		$models = $query->offset($pages->offset)
+		    ->limit($pages->limit)->asArray()->all();
+		    // var_dump($models);die;
+	    return $this->renderPartial('fd_list.html', [
+		    'res' => $models,
+		    'pages' => $pages,
+		]);
 
-        //var_dump($posts);die;
-        return $this->renderPartial('fd_list.html',array('data'=>$posts,'num'=>$pos['count(*)'],'ye'=>$ye,'pages'=>$pages,'pageos'=>$pageos));
 	}
-    
+
+
+
     /**
-     *	ajax搜索、分页
+     *	ajax搜索+分页
      */
     public function actionReplacelist()
     {
-    	$userName = isset($_GET['userName'])?$_GET['userName']:NULL;
+    	$userName = Yii::$app->request->get('userName');
+    	$userName = isset($userName)?$userName:NULL;
+    	//echo $userName;die;
     	if($userName==NULL){
-    		$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users");
-	        $pos = $comm->queryOne();
-			$tiao = 4;
-			$ye = ceil($pos['count(*)']/$tiao);
-			$page = isset($_GET['p'])?$_GET['p']:1;
-			$limit = ($page-1)*$tiao;
-			$command = Yii::$app->db->createCommand("SELECT * FROM f_users limit $limit,$tiao");
+    		//查询数据库
+			$query = User::find();
+			//var_dump($query);die;
+			//设置每页显示条数
+			$pages = new Pagination([
+			    'totalCount' => $query->count(),
+			    'pageSize'   => 2,
+			]);
+			//限制记录条数
+			$models = $query
+			->offset($pages->offset)
+			->limit($pages->limit)
+			->asArray()
+			->all();
 		}else{
-			$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users WHERE u_name like '$userName'");
-	        $pos = $comm->queryOne();
-			$tiao = 4;
-			$ye = ceil($pos['count(*)']/$tiao);
-			$page = isset($_GET['p'])?$_GET['p']:1;
-			$limit = ($page-1)*$tiao;
-			$command = Yii::$app->db->createCommand("SELECT * FROM f_users WHERE u_name like '$userName' limit $limit,$tiao");
+			//查询数据库
+			$query = User::find()->where(['u_name' => $userName]);
+			//设置每页显示条数
+			$pages = new Pagination([
+			    'totalCount' => $query->count(),
+			    'pageSize'   => 2,
+			]);
+			//限制记录条数
+			$models = $query
+			->offset($pages->offset)
+			->limit($pages->limit)
+			->asArray()
+			->all();
 		}
     	//var_dump($userName);die;
-    	
-        $posts = $command->queryAll();
-        $pages = $page+1;
-        $pageos = $page-1;
-        if($pages>$ye){
-        	$pages=$ye;
-        }
-        if($pageos<=1){
-        	$pageos=1;
-        }
-        //var_dump($posts);die;
-        return $this->renderPartial('replacelist.html',array('data'=>$posts,'num'=>$pos['count(*)'],'ye'=>$ye,'pages'=>$pages,'pageos'=>$pageos));
+    	return $this->renderPartial('replacelist.html', [
+		    'res' => $models,
+		    'pages' => $pages,
+		]);
+        
     }
 
     /**
@@ -83,99 +103,89 @@ class FdongController extends \yii\web\Controller
      */
     public function actionDeletelist()
     {
-    	$userName = isset($_GET['userName'])?$_GET['userName']:NULL;
+    	$userName = Yii::$app->request->get('userName');
+    	$userName = isset($userName)?$userName:NULL;
     	$userId = Yii::$app->request->get('userId');
     	//echo $userId;
-    	$delAll = Yii::$app->db->createCommand()->delete('f_users', array('u_id' => $userId))->execute();
-    	if ($delAll) {
-    		$userName = isset($_GET['userName'])?$_GET['userName']:NULL;
+    	if ($userId!='') {
+    		
 	    	if($userName==NULL){
-	    		$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users");
-		        $pos = $comm->queryOne();
-				$tiao = 4;
-				$ye = ceil($pos['count(*)']/$tiao);
-				$page = isset($_GET['p'])?$_GET['p']:1;
-				$limit = ($page-1)*$tiao;
-				$command = Yii::$app->db->createCommand("SELECT * FROM f_users limit $limit,$tiao");
+		    	$customer = user::findOne($userId);
+				$customer->delete();
+		    		//查询数据库
+				$query = User::find();
+				//var_dump($query);die;
+				//设置每页显示条数
+				$pages = new Pagination([
+				    'totalCount' => $query->count(),
+				    'pageSize'   => 2,
+				]);
+				//限制记录条数
+				$models = $query
+				->offset($pages->offset)
+				->limit($pages->limit)
+				->asArray()
+				->all();
 			}else{
-				$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users WHERE u_name like '$userName'");
-		        $pos = $comm->queryOne();
-				$tiao = 4;
-				$ye = ceil($pos['count(*)']/$tiao);
-				$page = isset($_GET['p'])?$_GET['p']:1;
-				$limit = ($page-1)*$tiao;
-				$command = Yii::$app->db->createCommand("SELECT * FROM f_users WHERE u_name like '$userName' limit $limit,$tiao");
+				//查询数据库
+				$customer = user::findOne($userId);
+				$customer->delete();
+				$query = User::find()->where(['u_name' => $userName]);
+				//设置每页显示条数
+				$pages = new Pagination([
+				    'totalCount' => $query->count(),
+				    'pageSize'   => 2,
+				]);
+				//限制记录条数
+				$models = $query
+				->offset($pages->offset)
+				->limit($pages->limit)
+				->asArray()
+				->all();
 			}
-	    	//var_dump($userName);die;
 	    	
-	        $posts = $command->queryAll();
-	        $pages = $page+1;
-	        $pageos = $page-1;
-	        if($pages>$ye){
-	        	$pages=$ye;
-	        }
-	        if($pageos<=1){
-	        	$pageos=1;
-	        }
-	        //var_dump($posts);die;
-	        return $this->renderPartial('replacelist.html',array('data'=>$posts,'num'=>$pos['count(*)'],'ye'=>$ye,'pages'=>$pages,'pageos'=>$pageos));
-    		# code...
+	        return $this->renderPartial('replacelist.html', [
+			    'res' => $models,
+			    'pages' => $pages,
+			]);
+	        
     	} else {
-    		$userName = isset($_GET['userName'])?$_GET['userName']:NULL;
+	    	//echo $userName;die;
 	    	if($userName==NULL){
-	    		$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users");
-		        $pos = $comm->queryOne();
-				$tiao = 4;
-				$ye = ceil($pos['count(*)']/$tiao);
-				$page = isset($_GET['p'])?$_GET['p']:1;
-				$limit = ($page-1)*$tiao;
-				$command = Yii::$app->db->createCommand("SELECT * FROM f_users limit $limit,$tiao");
+	    		//查询数据库
+				$query = User::find();
+				//var_dump($query);die;
+				//设置每页显示条数
+				$pages = new Pagination([
+				    'totalCount' => $query->count(),
+				    'pageSize'   => 2,
+				]);
+				//限制记录条数
+				$models = $query
+				->offset($pages->offset)
+				->limit($pages->limit)
+				->asArray()
+				->all();
 			}else{
-				$comm = Yii::$app->db->createCommand("SELECT count(*) from f_users WHERE u_name like '$userName'");
-		        $pos = $comm->queryOne();
-				$tiao = 4;
-				$ye = ceil($pos['count(*)']/$tiao);
-				$page = isset($_GET['p'])?$_GET['p']:1;
-				$limit = ($page-1)*$tiao;
-				$command = Yii::$app->db->createCommand("SELECT * FROM f_users WHERE u_name like '$userName' limit $limit,$tiao");
+				//查询数据库
+				$query = User::find()->where(['u_name' => $userName]);
+				//设置每页显示条数
+				$pages = new Pagination([
+				    'totalCount' => $query->count(),
+				    'pageSize'   => 2,
+				]);
+				//限制记录条数
+				$models = $query
+				->offset($pages->offset)
+				->limit($pages->limit)
+				->asArray()
+				->all();
 			}
-	    	//var_dump($userName);die;
 	    	
-	        $posts = $command->queryAll();
-	        $pages = $page+1;
-	        $pageos = $page-1;
-	        if($pages>$ye){
-	        	$pages=$ye;
-	        }
-	        if($pageos<=1){
-	        	$pageos=1;
-	        }
-	        //var_dump($posts);die;
-	        return $this->renderPartial('replacelist.html',array('data'=>$posts,'num'=>$pos['count(*)'],'ye'=>$ye,'pages'=>$pages,'pageos'=>$pageos));
-    		# code...
+	        return $this->renderPartial('replacelist.html', [
+			    'res' => $models,
+			    'pages' => $pages,
+			]);
     	}
-    	
-    	// Customer::deleteAll('age > :age AND gender = :gender', [':age' => 20, ':gender' => 'M']);
-
-    }
-
-    public function actionCheck_lock(){
-        $u_id=$_GET['u_id'];
-        $lock=$_GET['lock'];
-        if($lock==0){
-            $sql="update f_users set u_status=1 where u_id=$u_id";
-            $result = Yii::$app->db->createCommand($sql);
-            $re= $result->query();
-            if($re){
-                echo 1;
-            }
-        }else{
-            $sql="update f_users set u_status=0 where u_id=$u_id";
-            $result = Yii::$app->db->createCommand($sql);
-            $re= $result->query();
-            if($re){
-                echo 0;
-            }
-        }
     }
 }
