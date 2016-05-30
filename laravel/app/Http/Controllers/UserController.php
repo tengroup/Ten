@@ -118,10 +118,10 @@ class UserController extends Controller
 
         $filename= base_path("resources/static/").'2001006_'.$hId.'.blade.php';
         //echo $filename;die;
-//        if(file_exists($filename) ){
-//            echo file_get_contents($filename);
-//            exit;
-//        }
+        if(file_exists($filename) ){
+            echo file_get_contents($filename);
+            exit;
+        }
 
         $oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
@@ -157,11 +157,11 @@ class UserController extends Controller
         $t_id=$arr->t_id;
         //$sql="select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3";
         $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3");
-        
+
 
         //生成静态页面
-//        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res,'data'=>$data])->__toString();
-//        file_put_contents($filename,$htmlStrings);
+        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res,'data'=>$data])->__toString();
+        file_put_contents($filename,$htmlStrings);
 
 
         
