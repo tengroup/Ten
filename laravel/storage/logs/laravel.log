@@ -9107,7 +9107,59 @@ Stack trace:
 #36 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #37 D:\PHPstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #38 {main}  
+<<<<<<< HEAD
+[2016-05-30 02:53:57] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+' in D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:55
+Stack trace:
+#0 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(55): PDO->__construct('mysql:host=127....', 'root', 'root', Array)
+#1 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#2 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(864): call_user_func(Object(Closure))
+#5 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(732): Illuminate\Database\Connection->getPdo()
+#6 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(621): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(342): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#8 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1461): Illuminate\Database\Connection->select('select * from `...', Array, true)
+#9 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1447): Illuminate\Database\Query\Builder->runSelect()
+#10 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Query\Builder->get(Array)
+#11 D:\PHPstudy\WWW\Ten\laravel\app\Http\Controllers\HomeController.php(28): Illuminate\Database\Query\Builder->first()
+#12 [internal function]: App\Http\Controllers\HomeController->index()
+#13 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(78): call_user_func_array(Array, Array)
+#14 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(146): Illuminate\Routing\Controller->callAction('index', Array)
+#15 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(94): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\HomeController), Object(Illuminate\Routing\Route), 'index')
+#16 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(96): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#21 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(54): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\HomeController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'index')
+#22 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Route.php(174): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'index')
+#23 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Route.php(140): Illuminate\Routing\Route->runController(Object(Illuminate\Http\Request))
+#24 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Router.php(724): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#31 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#32 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#34 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#35 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#38 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#40 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#42 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 D:\PHPstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 {main}  
+=======
 >>>>>>> 8d5938109032fb7502e3e46a7a75e624de913bb5
+<<<<<<< HEAD
 [2016-05-30 02:51:10] local.ERROR: exception 'InvalidArgumentException' with message 'View [commonality.qq] not found.' in E:\phpstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:137
 Stack trace:
 #0 E:\phpstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('commonality.qq', Array)
@@ -9538,3 +9590,6 @@ Stack trace:
 #36 E:\phpstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #37 E:\phpstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #38 {main}  
+=======
+>>>>>>> e25f22be690e6b33e9d7c071a99aa218da41fccb
+>>>>>>> 7b61ea79a906a152a7b81e3242e9cffaa44c8a7e
