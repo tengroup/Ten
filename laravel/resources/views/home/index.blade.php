@@ -53,21 +53,21 @@
                 <ul id="flexiselDemo1">
                     <li>
                         <div class="banner-info1-grid">
-                            <a href=""><img src="houst_img/1.jpg" alt=" " class="img-responsive" /></a>
+                            <a href="{{'hot?is_hot=1'}}"><img src="houst_img/1.jpg" alt=" " class="img-responsive" /></a>
                             <h3>热销</h3>
                             <p>全优的生活配套，环境绝佳优美，月租量遥遥领先</p>
                         </div>
                     </li>
                     <li>
                         <div class="banner-info1-grid">
-                            <a href=""><img src="houst_img/2.jpg" alt=" " class="img-responsive" /></a>
+                            <a href="{{'best?is_best=1'}}"><img src="houst_img/2.jpg" alt=" " class="img-responsive" /></a>
                             <h3>精品</h3>
                             <p>无论是长途旅行还是繁忙的工作的归回，你都可以舒服地躺在沙发上，安静的坐在书房里，享受属于自己的闲暇时光。看到这个温暖的屋子，你会恋上它。</p>
                         </div>
                     </li>
                     <li>
                         <div class="banner-info1-grid">
-                            <a href=""><img src="houst_img/5.jpg" alt=" " class="img-responsive" /></a>
+                            <a href="{{'cheap?is_cheap=1'}}"><img src="houst_img/5.jpg" alt=" " class="img-responsive" /></a>
                             <h3>特价</h3>
                             <p>感恩回馈新老租客,我们特此推出最新最详细折扣最低的特价房信息</p>
                         </div>

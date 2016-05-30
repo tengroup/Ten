@@ -410,10 +410,6 @@
     </ul>
 
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 6521c61cfef927f6f7ebf6e26d326d7378e0efb5
 <div class="area">
     <div class="title">
         <span class="line"></span>
