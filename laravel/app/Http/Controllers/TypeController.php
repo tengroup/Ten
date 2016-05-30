@@ -27,12 +27,14 @@ class TypeController extends Controller
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
         //查询特价
         $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
-        return ['hot'=>$hot,'best'=>$best,'cheap'=>$cheap];
+        //查询房屋数量
+        $num=DB::select(" select count(*) as count from house inner join house_type on house.t_id=house_type.t_id where status=1");
+        return ['hot'=>$hot,'best'=>$best,'cheap'=>$cheap,'num'=>$num[0]->count];
     }
 	//短租
     public function short()
     {
-         //地区传值
+        //地区传值
         $value=Request::get('value')?Request::get('value'):'';
         //查询 时间和 关键字
         $time=Request::get('dates')?Request::get('dates'):'';
@@ -90,7 +92,7 @@ class TypeController extends Controller
      //   $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and h_address like '%$value%' and in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' ORDER by h_id limit 15");
 
         $arr=$this->pub_all();
-       return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
+       return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap'],'num'=>$arr['num']]);
    
     }
 

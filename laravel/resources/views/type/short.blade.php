@@ -255,7 +255,7 @@
 
     </div>
 
-    <div class="hasBeenSelected clearfix"><span id="time-num">共计<font>  </font>家房屋</span>
+    <div class="hasBeenSelected clearfix"><span id="time-num" style="font-size: 15px;">共计<font><?php echo $num?></font>家房屋</span>
         <div style="float:right;margin-right: 200px;" class="eliminateCriteria">【清空】 </div>
         <dl>
             <dt>已选条件：</dt>
