@@ -26,7 +26,7 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+@include ("commonality.head")
 
 
 
@@ -545,7 +545,7 @@
 <!-- //typography-page -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');v
+@include('commonality.foot')
 
 
 

@@ -67,14 +67,14 @@
         <div class="main-box">
 
             <div class="my-form-wrap">
-                <form action="{{URL('registerpro')}}" autocomplete="off" id="registerForm" method="post" onsubmit="return checkall()"><input id="RefUrl" name="RefUrl" type="hidden" value="https://passport.tujia.com/PortalSite/Register/" />
+                <form action="{{URL('registerpro')}}" autocomplete="off" id="" method="post" onsubmit="return checkall()"><input id="RefUrl" name="RefUrl" type="hidden" value="https://passport.tujia.com/PortalSite/Register/" />
                     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                     <input id="Source" name="Source" type="hidden" value="" />
                     <input id="EncryptMobile" name="EncryptMobile" type="hidden" value="" />
                     <div class="control-group">
                         <label class="controls-label" for="Mobile"><b>*</b>手机号：</label>
                         <div class="controls">
-                            <input class="ipt-text" data-val="true" data-val-regex="您输入的手机号格式不正确" data-val-regex-pattern="^1\d{10,10}$" data-val-required="手机号不能为空" id="Mobile" maxlength="11" name="Mobile" type="text" value="" /> <span id="errorMsgMobile"></span>
+                            <input class="ipt-text" data-val="true"  maxlength="11" id="u_tel" name="Mobile" type="text" value="" /> <span id="s_tel"></span>
 
 
                         </div>
@@ -107,7 +107,7 @@
                     <div class="control-group">
                         <label class="controls-label" for="Mobile"><b>*</b>真实姓名：</label>
                         <div class="controls">
-                            <input class="ipt-text" data-val="true" data-val-regex="您输入的格式不正确" data-val-regex-pattern="^[\u4e00-\u9fa5]{2,5}$" data-val-required="真实姓名不能为空" id="real_name" maxlength="11" name="real_name" type="text" value="" /> <span id="s_realname"></span>
+                            <input class="ipt-text"   id="real_name" maxlength="11" name="real_name" type="text" value="" /> <span id="s_realname"></span>
 
                         </div>
                     </div>
@@ -136,14 +136,14 @@
                     <div class="control-group">
                         <label class="controls-label" for="Password"><b>*</b>登录密码：</label>
                         <div class="controls">
-                            <input class="ipt-text" data-val="true" data-val-length="请输入长度为6到16的密码" data-val-length-max="16" data-val-length-min="6" data-val-required="请输入密码" id="Password" name="Password" type="password" /><span id="s_pwd"></span>
+                            <input class="ipt-text"  id="Password" name="Password" type="password" /><span id="s_pwd"></span>
                         </div>
                     </div>
 
                     <div class="control-group">
                         <label class="controls-label"><b>*</b>确认密码：</label>
                         <div class="controls">
-                            <input class="ipt-text" data-val="true" data-val-equalto="两次输入的密码必须一致" data-val-equalto-other="*.Password" data-val-length="请输入长度为6到16的密码" data-val-length-max="16" data-val-length-min="6" id="Repwd" name="Repwd" type="password" /><span id="s_pwd1"></span>
+                            <input class="ipt-text"  id="Password1" name="Repwd" type="password" /><span id="s_pwd1"></span>
                         </div>
                     </div>
 
@@ -267,6 +267,28 @@
         $("#control-group").attr("style",'display:black')
         $("#tel_yzm").attr("style",'display:black')
     })
+
+    //手机号验证
+    function u_tel(){
+        var u_tel=$('#u_tel').val()
+        //alert(u_tel)
+        var reg=/^1\d{10}$/;
+        if(u_tel!=''){
+            if(reg.test(u_tel)){
+                $("#s_tel").html("")
+                return true;
+            }else{
+                $("#s_tel").html("<font color='#ff4500'><img src='deng_zhu/images/msgicon.jpg'/>您输入的手机号不正确</font>");
+                return false;
+            }
+        }else{
+            $("#s_tel").html("<font color='#ff4500'><img src='deng_zhu/images/msgicon.jpg'/>请输入手机号</font>");
+            return false;
+        }
+
+    }
+    $("#u_tel").keyup(u_tel);
+
     //用户名的验证
     function u_name(){
         var name=$('#u_name').val()
@@ -309,7 +331,7 @@
     //验证昵称
     function pet_name(){
     var pet_name=$('#pet_name').val()
-    var reg=/^.{3,10}$/;
+    var reg=/^.{2,10}$/;
     if(pet_name!=''){
         if(reg.test(pet_name)){
             $("#s_petname").html("")
@@ -324,6 +346,43 @@
     }
     }
     $("#pet_name").keyup(pet_name)
+
+
+    //验证密码
+    function Password(){
+        var Password=$('#Password').val()
+        var reg=/^\w{6,16}$/;
+        if(Password!=''){
+            if(reg.test(Password)){
+                $("#s_pwd").html("")
+                return true;
+            }else{
+                $("#s_pwd").html("<font color='#ff4500'><img src='deng_zhu/images/msgicon.jpg'/>请输入长度为6到16的密码</font>");
+                return false;
+            }
+        }else{
+            $("#s_pwd").html("<font color='#ff4500'><img src='deng_zhu/images/msgicon.jpg'/>请输入密码</font>");
+            return false;
+        }
+    }
+    $("#Password").keyup(Password)
+
+    //确认密码
+    function Password1(){
+        var Password1=$('#Password1').val()
+        var Password=$('#Password').val()
+        var reg=/^\w{6,16}$/;
+        if(Password1==Password){
+            $("#s_pwd1").html("")
+            return true;
+
+        }else{
+            $("#s_pwd1").html("<font color='#ff4500'><img src='deng_zhu/images/msgicon.jpg'/>确认密码与密码不一致</font>");
+            return false;
+        }
+    }
+    $("#Password1").keyup(Password1)
+
 
 
     //验证真实姓名
@@ -343,10 +402,11 @@
             return false;
         }
     }
+    $("#real_name").keyup(real_name)
 
 
     function checkall(){
-        if( u_name() &  id_card() & pet_name()  &  real_name()){
+        if( u_name() &  id_card() & pet_name()  &  real_name() & u_tel() & Password()  & Password1()){
             return true;
         }else{
             return false;

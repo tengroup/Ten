@@ -15,7 +15,7 @@ use yii\filters\VerbFilter;
 
 
 /*
- *  @U+           管理中心文章处理程序文件
+ *  @U+           管理用户登录退出
  *  @Login：       登陆管理
  *  @Author:      孙辉
  *  @Time         2016-05-17

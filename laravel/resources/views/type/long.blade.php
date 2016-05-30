@@ -26,7 +26,7 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+@include ("commonality.head")
 
 
 <!-- banner1 -->
@@ -161,7 +161,7 @@
 <!-- //services -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 

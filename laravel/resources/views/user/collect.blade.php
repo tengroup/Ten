@@ -87,7 +87,7 @@
 <!-- //typography-page -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');v
+@include('commonality.foot')
 
 
 

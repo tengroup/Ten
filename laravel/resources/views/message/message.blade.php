@@ -349,7 +349,7 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+@include ("commonality.head")
 
 <!-- banner1 -->
 <div class="banner1">
@@ -374,7 +374,7 @@
                                         <div class="userPic"><img src="{{$k->m_img}}" /></div>
                                         <div class="content">
                                             <div class="userName"><a href="javascript:;">{{$k->u_name}}</a>:</div>
-                                            <div class="msgInfo">{{$k->m_content}}</div>
+                                            <div class="msgInfo">{!!$k->m_content!!}</div>
                                             <div class="times"><span>{{$k->m_time}}</span>
                                             </div>
                                         </div>
@@ -424,7 +424,7 @@
 
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 

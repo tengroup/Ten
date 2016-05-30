@@ -13,6 +13,7 @@ class TypeController extends Controller
     public function pub_all(){
         //查询最热
         $hot=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_hot=1 and status=1 ORDER by h_id limit 3");
+        //var_dump($hot);die;
         //查询精品
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
         //查询特价

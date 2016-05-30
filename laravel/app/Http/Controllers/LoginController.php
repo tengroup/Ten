@@ -39,7 +39,6 @@ class LoginController extends Controller
     //注册页面接值进行入库
     public function registerPro(){
 
-
         $tel=Request::get('Mobile');
         $u_name=Request::get('u_name');
         $id_card=Request::get('id_card');
@@ -56,14 +55,20 @@ class LoginController extends Controller
                     'pet_name'=>$pet_name,'real_name'=>$real_name,'u_email'=>$email,'reg_time'=>$reg_time)
             );
             DB::table('users')->where('u_id','=',$id)->update(array('u_points'=>100));
+            setcookie('username',$u_name);
+            setcookie('u_id',$id);
+            setcookie('status',10);
+            return redirect('/');
         }else{
-            DB::table("f_users")->insert(
+            $id=DB::table("f_users")->insertGetId(
                 array('u_name'=>$u_name,'u_pwd'=>$password,'u_tel'=>$tel,'u_card'=>$id_card,
                     'pet_name'=>$pet_name,'real_name'=>$real_name,'u_email'=>$email,'reg_time'=>$reg_time)
             );
+            setcookie('username',$u_name);
+            setcookie('u_id',$id);
+            setcookie('status',1);
+            return redirect('/');
         }
-
-        return redirect('login');
     }
 
 
@@ -113,14 +118,30 @@ class LoginController extends Controller
             if($arr->u_pwd==$pwd){
                 //判断登录人是房东还是客户  将登陆时间入库
                 if($status==1){
-                    DB::table("f_users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                    //echo 123;die;
+                    //判断账号是否锁定
+                    if($arr->u_status==1){
+                        DB::table("f_users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                        setcookie("username",$username);
+                        setcookie("u_id",$arr->u_id);
+                        //echo $_COOKIE['status'];die;
+                        return redirect('/');
+                    }else{
+                        echo "<script>alert('您的账号已锁定');location.href='login'</script>";
+                    }
+
                 }else{
-                    DB::table("users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                    if($arr->u_status==1){
+                        DB::table("users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
+                        setcookie("username",$username);
+                        setcookie("u_id",$arr->u_id);
+                        //echo $_COOKIE['status'];die;
+                        return redirect('/');
+                    }else{
+                        echo "<script>alert('您的账号已锁定');location.href='login'</script>";
+                    }
                 }
-                setcookie("username",$username);
-                setcookie("u_id",$arr->u_id);
-                //echo $_COOKIE['status'];die;
-                return redirect('/');
+
             }else{
                 echo "<script>alert('您输入的密码不正确');location.href='login'</script>";
             }

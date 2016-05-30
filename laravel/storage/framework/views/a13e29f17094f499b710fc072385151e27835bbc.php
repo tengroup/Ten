@@ -138,6 +138,22 @@
                 <?php endif; ?>
 			</div>
 
+                <!--入住时间、、退房时间-->
+                <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <span class="input-group-addon" id="basic-addon1">in_Time</span>
+                    <?php if(!empty($list->in_time)): ?>
+                        <input placeholder="可住时间" class="inline laydate-icon" id="start" name="in_time"style="width:200px; margin-right:10px;" value="<?php echo e($list->in_time); ?>">
+                    <?php else: ?>
+                        <input placeholder="可住时间" class="inline laydate-icon" id="start" name="in_time"style="width:200px; margin-right:10px;" >
+                    <?php endif; ?>
+                    <span class="input-group-addon" id="basic-addon1">Out_time</span>
+                    <?php if(!empty($list->out_time)): ?>
+                    <input placeholder="可离开时间" class="inline laydate-icon" id="end" style="width:200px;" name="out_time" value="<?php echo e($list->out_time); ?>">
+                    <?php else: ?>
+                        <input placeholder="可离开时间" class="inline laydate-icon" id="end" style="width:200px;" name="out_time" >
+                    <?php endif; ?>
+                </div>
+
             <!--租金"-->
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms"  data-wow-delay="300ms">
 				<span class="input-group-addon">$</span>

@@ -5476,6 +5476,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1464334131.299
     'REQUEST_TIME' => 1464334131
 ]
+<<<<<<< HEAD
 2016-05-29 21:11:52 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'else' (T_ELSE)' in G:\phpStudy\WWW\Ten\yii\frontend\views\fdong\fd_list.html:342
 Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
@@ -7269,10 +7270,313 @@ $_SERVER = [
     'HTTP_CONNECTION' => 'close'
     'HTTP_COOKIE' => 'PHPSESSID=svu25aj767p17tml5fiijfhln6; _csrf=f417d67a5d50c1db41001cad7732ded008fde69ab2dcb480181cc87159eb62c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pHa8wHvylgV6Q4zg7lxAwRB1s_sKvg78%22%3B%7D; CNZZDATA155540=cnzz_eid%3D1475444524-1464524471-%26ntime%3D1464524471'
     'HTTP_REFERER' => 'http://www.shop.com/Ten/yii/frontend/web/index.php?r=fdong/index'
+=======
+2016-05-29 19:00:27 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: login/' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login', Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-29 19:00:27 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][info][application] $_GET = [
+    'r' => 'login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'm36t1usgusmv6sbmq908g1ul12'
+    '_csrf' => 'efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1980'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/?r=login'
+    'QUERY_STRING' => 'r=login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51344'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=m36t1usgusmv6sbmq908g1ul12; _csrf=efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464519627.6033
+    'REQUEST_TIME' => 1464519627
+]
+2016-05-29 19:12:15 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 19:12:15 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'm36t1usgusmv6sbmq908g1ul12'
+    '_csrf' => 'efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75\";}'
+    'CNZZDATA155540' => 'cnzz_eid=1049741396-1464518617-http%3A%2F%2Fwww.sunhui.com%2F&ntime=1464518617'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1968'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51529'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=m36t1usgusmv6sbmq908g1ul12; _csrf=efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75%22%3B%7D; CNZZDATA155540=cnzz_eid%3D1049741396-1464518617-http%253A%252F%252Fwww.sunhui.com%252F%26ntime%3D1464518617'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=fyuan/fy_more&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464520335.6428
+    'REQUEST_TIME' => 1464520335
+]
+2016-05-29 19:28:07 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 19:28:07 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'm36t1usgusmv6sbmq908g1ul12'
+    '_csrf' => 'efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75\";}'
+    'CNZZDATA155540' => 'cnzz_eid=1049741396-1464518617-http%3A%2F%2Fwww.sunhui.com%2F&ntime=1464518617'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1980'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51655'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=m36t1usgusmv6sbmq908g1ul12; _csrf=efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75%22%3B%7D; CNZZDATA155540=cnzz_eid%3D1049741396-1464518617-http%253A%252F%252Fwww.sunhui.com%252F%26ntime%3D1464518617'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=fyuan/fy_more&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464521287.0882
+    'REQUEST_TIME' => 1464521287
+]
+2016-05-29 19:35:43 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 19:35:43 [127.0.0.1][-][m36t1usgusmv6sbmq908g1ul12][info][application] $_GET = [
+    'r' => 'fyuan/fy_more'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'm36t1usgusmv6sbmq908g1ul12'
+    '_csrf' => 'efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75\";}'
+    'CNZZDATA155540' => 'cnzz_eid=1049741396-1464518617-http%3A%2F%2Fwww.sunhui.com%2F&ntime=1464518617'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1944'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/fy_more&id=1'
+    'QUERY_STRING' => 'r=fyuan/fy_more&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51735'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=m36t1usgusmv6sbmq908g1ul12; _csrf=efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75%22%3B%7D; CNZZDATA155540=cnzz_eid%3D1049741396-1464518617-http%253A%252F%252Fwww.sunhui.com%252F%26ntime%3D1464518617'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464521743.3103
+    'REQUEST_TIME' => 1464521743
+]
+2016-05-29 19:43:07 [127.0.0.1][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 19:43:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/sh'
+    'act' => 'pass'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'm36t1usgusmv6sbmq908g1ul12'
+    '_csrf' => 'efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75\";}'
+    'CNZZDATA155540' => 'cnzz_eid=1049741396-1464518617-http%3A%2F%2Fwww.sunhui.com%2F&ntime=1464518617'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1800'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/sh&act=pass&id=2'
+    'QUERY_STRING' => 'r=fyuan/sh&act=pass&id=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '51849'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'PHPSESSID=m36t1usgusmv6sbmq908g1ul12; _csrf=efde437121d3bc77fcc7131c21718f5cc233093af4c64f503df58369719bdc7aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DUxi_o9sUJcx-9rBGFbKcy9ijvjwxs75%22%3B%7D; CNZZDATA155540=cnzz_eid%3D1049741396-1464518617-http%253A%252F%252Fwww.sunhui.com%252F%26ntime%3D1464518617'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=fyuan/index'
+>>>>>>> a1580a7795272589bf2e1046569007e3fbcce302
     'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
     'HTTP_ACCEPT' => '*/*'
+<<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
     'HTTP_HOST' => 'www.shop.com'
     'FCGI_ROLE' => 'RESPONDER'
@@ -8074,4 +8378,568 @@ $_SERVER = [
     'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1464529264.3371
     'REQUEST_TIME' => 1464529264
+=======
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464522187.7397
+    'REQUEST_TIME' => 1464522187
+]
+2016-05-29 20:50:49 [127.0.0.1][-][7otjpdlu2et5ukqok2ha8ba677][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 20:50:49 [127.0.0.1][-][7otjpdlu2et5ukqok2ha8ba677][info][application] $_GET = [
+    'r' => 'fdong/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fdong/index'
+    'QUERY_STRING' => 'r=fdong/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52986'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_REFERER' => 'http://www.sunhui.com/Ten/yii/frontend/web/index.php?r=user/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526249.152
+    'REQUEST_TIME' => 1464526249
+]
+2016-05-29 20:54:33 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'yii' has no effect' in E:\phpstudy\WWW\Ten\yii\frontend\views\fyuan\fy_list.html:54
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'E:\\phpstudy\\WWW...', 54, Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(325): yii\base\View::renderPhpFile()
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\phpstudy\\WWW...', Array)
+#3 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\phpstudy\\WWW...', Array, Object(frontend\controllers\FyuanController))
+#4 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php(402): yii\base\View->render('fy_list.html', Array, Object(frontend\controllers\FyuanController))
+#5 E:\phpstudy\WWW\Ten\yii\frontend\controllers\FyuanController.php(43): yii\base\Controller->renderPartial('fy_list.html', Array)
+#6 [internal function]: frontend\controllers\FyuanController->actionIndex()
+#7 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#10 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('fyuan/index', Array)
+#11 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-05-29 20:54:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53023'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526473.2188
+    'REQUEST_TIME' => 1464526473
+]
+2016-05-29 20:54:33 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'PDOException' with message 'You cannot serialize or unserialize PDO instances' 
+
+in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 [internal function]: PDO->__sleep()
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#3 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#4 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#5 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#7 {main}
+2016-05-29 20:54:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53023'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526473.2188
+    'REQUEST_TIME' => 1464526473
+]
+2016-05-29 20:54:37 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'The use statement with non-compound name 'yii' has no effect' in E:\phpstudy\WWW\Ten\yii\frontend\views\fyuan\fy_list.html:54
+Stack trace:
+#0 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(325): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'E:\\phpstudy\\WWW...', 54, Array)
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(325): yii\base\View::renderPhpFile()
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\phpstudy\\WWW...', Array)
+#3 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\phpstudy\\WWW...', Array, Object(frontend\controllers\FyuanController))
+#4 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php(402): yii\base\View->render('fy_list.html', Array, Object(frontend\controllers\FyuanController))
+#5 E:\phpstudy\WWW\Ten\yii\frontend\controllers\FyuanController.php(43): yii\base\Controller->renderPartial('fy_list.html', Array)
+#6 [internal function]: frontend\controllers\FyuanController->actionIndex()
+#7 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#10 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('fyuan/index', Array)
+#11 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\phpstudy\WWW\Ten\yii\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-05-29 20:54:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53025'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526477.8261
+    'REQUEST_TIME' => 1464526477
+]
+2016-05-29 20:54:37 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'PDOException' with message 'You cannot serialize or unserialize PDO instances' 
+
+in E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 [internal function]: PDO->__sleep()
+#1 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#2 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#3 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#4 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#5 E:\phpstudy\WWW\Ten\yii\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#7 {main}
+2016-05-29 20:54:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53025'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526477.8261
+    'REQUEST_TIME' => 1464526477
+]
+2016-05-29 20:54:55 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Namespace declaration statement has to be the very first statement in the script' in E:\phpstudy\WWW\Ten\yii\frontend\views\fyuan\fy_list.html:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 20:54:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53030'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526495.4231
+    'REQUEST_TIME' => 1464526495
+]
+2016-05-29 20:54:57 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Namespace declaration statement has to be the very first statement in the script' in E:\phpstudy\WWW\Ten\yii\frontend\views\fyuan\fy_list.html:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 20:54:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53032'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526497.1572
+    'REQUEST_TIME' => 1464526497
+]
+2016-05-29 20:56:22 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Namespace declaration statement has to be the very first statement in the script' in E:\phpstudy\WWW\Ten\yii\frontend\views\fyuan\fy_list.html:56
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 20:56:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1988'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53039'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526582.154
+    'REQUEST_TIME' => 1464526582
+]
+2016-05-29 20:59:17 [127.0.0.1][-][7otjpdlu2et5ukqok2ha8ba677][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'Module 'memcache' already loaded' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-29 20:59:17 [127.0.0.1][-][7otjpdlu2et5ukqok2ha8ba677][info][application] $_GET = [
+    'r' => 'fyuan/index'
+]
+
+$_COOKIE = [
+    'ace_settings' => '{\"sidebar-collapsed\":-1}'
+    'PHPSESSID' => '7otjpdlu2et5ukqok2ha8ba677'
+    '_csrf' => '5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8\";}'
+    'CNZZDATA155540' => 'cnzz_eid=297611751-1464524471-&ntime=1464524471'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\TortoiseSVN\\bin;C:\\ProgramData\\ComposerSetup\\bin;E:\\phpstudy\\php55n;E:\\TortoiseGit\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1952'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=fyuan/index'
+    'QUERY_STRING' => 'r=fyuan/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53060'
+    'SCRIPT_FILENAME' => 'E:/phpstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.sunhui.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'ace.settings=%7B%22sidebar-collapsed%22%3A-1%7D; PHPSESSID=7otjpdlu2et5ukqok2ha8ba677; _csrf=5272e16a7973113e538f4e96460f0073a15e063a72635dee373cae077b1b1933a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228UkM2MzzqmfNT-CrbDBWqZ62lN1mXiT8%22%3B%7D; CNZZDATA155540=cnzz_eid%3D297611751-1464524471-%26ntime%3D1464524471'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'www.sunhui.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464526757.158
+    'REQUEST_TIME' => 1464526757
+>>>>>>> a1580a7795272589bf2e1046569007e3fbcce302
 ]

@@ -112,24 +112,27 @@ class UserController extends Controller
     //查看详情页面
     public function perLook()
     {
-        $uId=Request::get('id');
+        $hId=Request::get('id');
 
-		
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();
+		//echo $_COOKIE['username'];die;
+        /*$oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();*/
 
-        $filename= base_path("resources/static/").'2001006_'.$uId.'.blade.php';
+        $filename= base_path("resources/static/").'2001006_'.$hId.'.blade.php';
         //echo $filename;die;
         if(file_exists($filename) ){
             echo file_get_contents($filename);
             exit;
         }
 
-        $oneMess=DB::table('house')
+        /*$oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
             ->where('house.h_id', "$uId")
-            ->first();
+            ->first();*/
 
-        $hId=Request::get('id');
+        //$hId=Request::get('id');
+
+
+        //$oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
 
 
         $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
@@ -139,13 +142,23 @@ class UserController extends Controller
             ->join("f_users","f_users.u_id","=","house.u_id")
             ->where('house.h_id', "$hId")->first();*/
 
+
         //var_dump($oneMess);die;
         $img=DB::table("images")->where("h_id",$oneMess->h_id)->get();
         //var_dump($img);die;
+
+        //房屋信息
+        $res= DB :: table('house')->where("h_id",$oneMess->h_id)->get();
+        //var_dump($res);die;
+
         //生成静态页面
-        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img])->__toString();
+        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res])->__toString();
         file_put_contents($filename,$htmlStrings);
-        return  view("home/single",['list'=>$oneMess,'img'=>$img]);
+        
+        return  view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res]);
+
+        //var_dump($oneMess);die;
+        //return  view("home/single",['list'=>$oneMess,'img'=>$img]);
 
 
     }
@@ -171,11 +184,36 @@ class UserController extends Controller
             }
         }
     }
+    //添加预约
+    public function appointAdd()
+    {
+        $hId=Request::get('id');
+        $uId=$_COOKIE['u_id'];
+        $data = DB::table('preplot')->where('u_id', $uId)->where('h_id', $hId)->get();
+        if($data){
+            echo 0;
+        }else{
+            $time=date("Y-m-d",time());
+            $type = DB::table('preplot')->insert(array(
+                'h_id' => $hId,
+                'u_id' => $uId
+                ));
+            if($type==1){
+                echo 1;
+            }else{
+                echo 2;
+            }
+        }
+    }
     //查看收藏列表
     public function appointment()
     {
         $uId=$_COOKIE['u_id'];
-        $list=DB::table('users')->join("collect","collect.u_id","=","users.u_id")->join("house","house.h_id","=","collect.h_id")->where('users.u_id', "$uId")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
+        $list=DB::table('users')
+            ->join("collect","collect.u_id","=","users.u_id")
+            ->join("house","house.h_id","=","collect.h_id")
+            ->where('users.u_id', "$uId")
+            ->paginate($perPage = 3, $columns = ['*'], $pageName = 'page', $page = null);
         return view("user/collect",['app'=>$list]);
     }
     //房东修改状态
@@ -211,7 +249,7 @@ class UserController extends Controller
         $arr=Request::all();
 
         $file =Request::file('files');
-        //var_dump($file );die;
+        //var_dump($arr );die;
         unset($arr['video']);
         unset($arr['files']);
         $arr['is_hot']=Request::get("is_hot");
@@ -238,7 +276,6 @@ class UserController extends Controller
             DB::table("house")->where('h_id','=',$h_id)->update(['photo'=>$newName]);
 
 
-
             return redirect("fyAdd");
         }else{
             echo "<script>alert('添加失败哦');location.href='fyAdd'</script>";
@@ -246,14 +283,14 @@ class UserController extends Controller
 
     }
 
-    //房源添加列表
+    //房源列表
     public function fyList(){
         $u_id=$_COOKIE['u_id'];
         $arr['list'] = DB::table('house')
             ->join('house_type', 'house.t_id', '=', 'house_type.t_id')
             ->where('u_id','=',$u_id)
             ->orderBy('h_time', 'desc')
-            ->paginate(5);
+            ->paginate(9);
 
         return view("user/fyList",$arr);
     }

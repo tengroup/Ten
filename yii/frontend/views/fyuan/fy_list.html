@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Bootstrap表单组件 - Bootstrap后台管理系统模版Ace下载</title>
+		<title>房源列表</title>
 		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
 		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,7 +52,6 @@
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
 		<div class="navbar navbar-default" id="navbar">
 			<script type="text/javascript">
@@ -87,6 +86,7 @@
 									<a href="#">
 										<i class="icon-cog"></i>
 										Settings
+                                        <?php echo \Yii::$app->session->get('username')?>
 									</a>
 								</li>
 
@@ -345,7 +345,7 @@
 										<tbody>
 											<tr id="tr_<?php echo $v['h_id']?>">
 							                  <td><input type="checkbox" name="xz[]" id="<?php echo $v['h_id']?>"/><?php echo $v['h_id']?></td>
-							                  <td><?php echo $v['u_name']?></td>
+							                  <td><?php echo $v['linkman']?></td>
 							                  <td ><a href="index.php?r=fyuan/fy_more&id=<?php echo $v['h_id']?>" style="color:red;"><?php echo $v['h_address']?></a></td>
 
 							                  <td id="hot_<?php echo $v['h_id']?>"><a href="javascript:void(0)" onclick="check_hot(this)" id="<?php echo $v['h_id']?>" title="<?php echo $v['is_hot']?>"><?php if($v['is_hot']==0){ ?>
