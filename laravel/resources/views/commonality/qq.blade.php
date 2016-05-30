@@ -26,9 +26,5 @@
     </div>
     <div class="floatDbg"></div>
 </div>
-
-
-
-
 </body>
 </html>
