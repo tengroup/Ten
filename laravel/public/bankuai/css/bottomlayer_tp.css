@@ -1,0 +1,140 @@
+﻿/*��ҳ�б�ҳapp���ظ��㿪ʼ*/
+.app-open {
+	position:fixed;
+	z-index:99999;
+	left:0;
+	bottom:0;
+	height:180px;
+	width:100%;
+	min-width:1190px;
+}
+.app-open .box-background {
+	position:absolute;
+	z-index:1;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background:#051223;
+	opacity:0.95;
+	filter:alpha(opacity=95);
+}
+.app-open .box-inner {
+	position:relative;
+	width:1190px;
+	margin:0 auto;
+	height:100%;
+	z-index:2;
+}
+.app-open .background-img {
+	position:absolute;
+	bottom:0;
+	left:0;
+	z-index:0;
+	padding-left:440px;
+}
+.app-open .background-img img.float_l_img{
+	/*width:332px;*/
+	position:absolute;
+	top:8px;
+	left:20px;
+}
+@media \0screen\,screen\9 {
+		.float_r{
+			position:relative;
+			left:0;
+			top:0;
+			width:674px;
+			background-color:#ccc;
+			opacity: 0.3;
+			filter: Alpha(opacity = 30);
+			*zoom: 1;
+			height:180px;
+			line-height:180px;
+		}
+	}
+.float_r{
+	position:relative;
+	left:0;
+	top:0;
+	width:674px;
+	background-color:rgba(204,204,204,0.3);
+	height:180px;
+	line-height:180px;
+}
+.float_r_img{
+	vertical-align: middle;
+}
+.app-open .btn-close {
+	position:absolute;
+	z-index:1;
+	top:15px;
+	right:24px;
+	height:36px;
+	cursor:pointer;
+	transition:all 300ms;
+	-webkit-transition:all 300ms;
+}
+.app-open .btn-close img {
+	width:36px;
+}
+.app-open .btn-close:hover {
+	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+}
+.app-close {
+	position:fixed;
+	z-index:99999;
+	left:0;
+	bottom:0px;
+}
+.app-close .background-img {
+	cursor:pointer;
+}
+.app-close .background-img img {
+	width:124px;
+}
+.float_r_App{
+	margin:0 8px;
+	text-align: center;
+}
+.float_r_App strong{
+	display:block;
+	font-size:14px;
+	line-height:16px;
+	color:#f3f4f5;
+	margin-top:28px;
+	font-weight: normal;
+	min-height: 32px;
+}
+.float_r_App img{
+	margin-top:6px;
+	vertical-align:top;
+	width:90px;
+}
+.downLoad{
+	margin-left:8px;
+	margin-right:0;
+}
+.downLoad a{
+	display:block;
+	width:100px;
+	text-align:center;
+	line-height:32px;
+	height:32px;
+	background:#7f868f;
+	margin:6px 0 8px;
+	color:#fff;
+	border-radius: 2px;
+}
+.float_r_text{
+	padding-left:296px;
+	width:378px;
+	background-image:url(../images/bj_red.png);
+	background-repeat: no-repeat;
+	background-position:12px 10px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+	/*��ҳ�б�ҳapp���ظ������*/

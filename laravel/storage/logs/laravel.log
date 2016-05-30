@@ -8214,6 +8214,11 @@ Stack trace:
 #0 {main}  
 >>>>>>> 2cc958ee7ba722b20a1c1ac52d9c984a309c9b84
 >>>>>>> 68f40d43800b256b493819ac1e0d27afbd726ef7
+<<<<<<< HEAD
+[2016-05-30 01:52:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in E:\phpstudy\WWW\Ten\laravel\app\Http\Controllers\HomeController.php:71
+Stack trace:
+#0 {main}  
+=======
 [2016-05-30 01:53:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\PHPstudy\WWW\Ten\laravel\app\Http\Controllers\HomeController.php:71
 Stack trace:
 #0 {main}  
@@ -9102,6 +9107,7 @@ Stack trace:
 #36 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #37 D:\PHPstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #38 {main}  
+<<<<<<< HEAD
 [2016-05-30 02:53:57] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
 ' in D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:55
 Stack trace:
@@ -9151,3 +9157,6 @@ Stack trace:
 #43 D:\PHPstudy\WWW\Ten\laravel\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #44 D:\PHPstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #45 {main}  
+=======
+>>>>>>> 8d5938109032fb7502e3e46a7a75e624de913bb5
+>>>>>>> e25f22be690e6b33e9d7c071a99aa218da41fccb

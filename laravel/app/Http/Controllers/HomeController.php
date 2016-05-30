@@ -70,6 +70,7 @@ class HomeController extends Controller
 		// var_dump($selling);die;
 
 
+
     	//特价图片
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[1]->h_id)
