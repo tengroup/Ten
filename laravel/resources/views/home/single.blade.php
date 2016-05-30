@@ -86,12 +86,10 @@
 		<p class="en">About The Room<span class="y">●</span></p>
 	</div>
 	<div class="aboutRoom gray-6">
-	        @foreach($res as $key=>$val)
+	        @foreach($resd as $key=>$val)
 			<h3 class="fb"><strong>编号：</strong>{{$val->h_id}}</h3>
-			<p><strong>周边：</strong>{{$val->content}}
+			<p><strong>描述：</strong>{{$val->content}}
 			</p>
-		<br/>
-			<p><strong>交通：</strong>{{$val->traffic}}</p>
 	        @endforeach
 	</div><!--/aboutRoom-->
 	<div class="title">
