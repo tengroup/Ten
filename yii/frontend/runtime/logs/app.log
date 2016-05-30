@@ -10155,3 +10155,722 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1464576143.6349
     'REQUEST_TIME' => 1464576143
 ]
+2016-05-30 10:43:17 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:43:17 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/edit'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2100'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'QUERY_STRING' => 'r=user/edit&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54143'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576197.4182
+    'REQUEST_TIME' => 1464576197
+]
+2016-05-30 10:43:31 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:43:31 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2100'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54155'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576211.5498
+    'REQUEST_TIME' => 1464576211
+]
+2016-05-30 10:44:08 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:44:08 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2100'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54172'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576248.2753
+    'REQUEST_TIME' => 1464576248
+]
+2016-05-30 10:45:32 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:45:32 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2064'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54208'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576332.523
+    'REQUEST_TIME' => 1464576332
+]
+2016-05-30 10:45:47 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:45:47 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2064'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54224'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576347.8199
+    'REQUEST_TIME' => 1464576347
+]
+2016-05-30 10:47:17 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:47:17 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2064'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54233'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576437.348
+    'REQUEST_TIME' => 1464576437
+]
+2016-05-30 10:48:00 [::1][-][ss38t798si7jfk3fdli9gi1do6][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 34828 bytes' 
+
+in D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\PHPstudy\\WWW...', 86, Array)
+#1 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\PHPstudy\\WWW...', Array)
+#3 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\PHPstudy\WWW\Ten\yii\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2016-05-30 10:48:00 [::1][-][ss38t798si7jfk3fdli9gi1do6][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_COOKIE = [
+    'bdshare_firstime' => '1458739077639'
+    '__gads' => 'ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA'
+    '__qca' => 'P0-1473911194-1458739078570'
+    'Hm_lvt_e9e114d958ea263de46e080563e254c4' => '1459222715,1459231275,1459249447'
+    '_ga' => 'GA1.1.1326652932.1459303547'
+    'ECS' => [
+        'visit_times' => '159'
+        'username' => '肖肖'
+        'user_id' => '6'
+        'password' => '96e79218965eb72c92a549dd5a330112'
+    ]
+    'iweb_safecode' => 'c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU/MDJgMj4/NmQ/Y2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg'
+    'Hm_lvt_5f036dd99455cb8adc9de73e2f052f72' => '1461370162'
+    'pgv_pvi' => '1120817152'
+    'Hm_lvt_2e66c26c9d62324132291faf1862cfa5' => '1462265159'
+    'sgsa_id' => 'localhost|1462272805540612'
+    '__utma' => '111872281.1326652932.1459303547.1462272806.1462272806.1'
+    '__utmz' => '111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '8u08_2132_saltkey' => 'P7Re536e'
+    '8u08_2132_lastvisit' => '1462318939'
+    '8u08_2132_ulastactivity' => '624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5+z83JzC'
+    '8u08_2132_auth' => 'ae68yoPhyskIJIjdvOS+7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN/eqKWqLp3SG8SEMXAyWU+5rGmjwFiN'
+    '8u08_2132_lastcheckfeed' => '1|1462322594'
+    '8u08_2132_nofavfid' => '1'
+    'oMCh_2132_saltkey' => 'wPt5XpWa'
+    'oMCh_2132_lastvisit' => '1462324056'
+    'oMCh_2132_ulastactivity' => '4884kDfPii191FC/aCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC'
+    'oMCh_2132_auth' => '6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF'
+    'oMCh_2132_lastcheckfeed' => '1|1462327712'
+    'oMCh_2132_nofavfid' => '1'
+    'CNZZDATA155540' => 'cnzz_eid=941099602-1463658870-&ntime=1464572710'
+    'curType' => ' '
+    'countError' => '0'
+    'is_captcha' => '0'
+    'mapType' => ' '
+    'PHPSESSID' => 'ss38t798si7jfk3fdli9gi1do6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Acer\\abFiles\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;F:\\server\\mysql\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\server\\php5;D:\\phpstudy\\php54n;D:\\TortoiseGit-1.8.9.0-64bit\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/PHPstudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2064'
+    'SCRIPT_NAME' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_URI' => '/Ten/yii/frontend/web/index.php?r=user/index'
+    'QUERY_STRING' => 'r=user/index'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54257'
+    'SCRIPT_FILENAME' => 'D:/PHPstudy/WWW/Ten/yii/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/PHPstudy/WWW'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_COOKIE' => 'bdshare_firstime=1458739077639; __gads=ID=20d4280c9cc5683c:T=1458739077:S=ALNI_MZiC2RztBKL4tan06ubr-IVeU7wQA; __qca=P0-1473911194-1458739078570; Hm_lvt_e9e114d958ea263de46e080563e254c4=1459222715,1459231275,1459249447; _ga=GA1.1.1326652932.1459303547; ECS[visit_times]=159; iweb_safecode=c5b5695651NDAwMzM4MDAwMDYzPT8wZzE0NDcwM2w6YzU%2FMDJgMj4%2FNmQ%2FY2M4PjJkZGM1NDVlZThtMDkzOWQ7OTJgODRlNg; Hm_lvt_5f036dd99455cb8adc9de73e2f052f72=1461370162; pgv_pvi=1120817152; Hm_lvt_2e66c26c9d62324132291faf1862cfa5=1462265159; sgsa_id=localhost|1462272805540612; __utma=111872281.1326652932.1459303547.1462272806.1462272806.1; __utmz=111872281.1462272806.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); 8u08_2132_saltkey=P7Re536e; 8u08_2132_lastvisit=1462318939; 8u08_2132_ulastactivity=624fAv3xfHLJssuwozlRM9hZbK4W2bml06JBtYmW5fBM5%2Bz83JzC; 8u08_2132_auth=ae68yoPhyskIJIjdvOS%2B7RBUmELVtKgerMjgTuwRnoV6hXuCWXnSZN%2FeqKWqLp3SG8SEMXAyWU%2B5rGmjwFiN; 8u08_2132_lastcheckfeed=1%7C1462322594; 8u08_2132_nofavfid=1; oMCh_2132_saltkey=wPt5XpWa; oMCh_2132_lastvisit=1462324056; oMCh_2132_ulastactivity=4884kDfPii191FC%2FaCvnoqJBHyU7avlHlrumYqx8VUpZRWtYQhVC; oMCh_2132_auth=6f9fSFv4zT8EDRwTTR71T11tbr0PiCPjkptKAkxjeUSv4La04BrjbCkpe9N67tT7lGMpUE4TWqC9Df91B0GF; oMCh_2132_lastcheckfeed=1%7C1462327712; oMCh_2132_nofavfid=1; ECS[username]=%E8%82%96%E8%82%96; ECS[user_id]=6; ECS[password]=96e79218965eb72c92a549dd5a330112; CNZZDATA155540=cnzz_eid%3D941099602-1463658870-%26ntime%3D1464572710; curType=%20; countError=0; is_captcha=0; mapType=%20; PHPSESSID=ss38t798si7jfk3fdli9gi1do6'
+    'HTTP_REFERER' => 'http://localhost/Ten/yii/frontend/web/index.php?r=user/edit&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_HOST' => 'localhost'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/Ten/yii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464576480.3392
+    'REQUEST_TIME' => 1464576480
+]
