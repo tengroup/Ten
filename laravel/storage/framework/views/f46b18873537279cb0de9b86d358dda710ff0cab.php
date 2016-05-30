@@ -26,7 +26,7 @@
 <body>
 
 <!--引用公用头部信息-->
-<?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <!-- banner1 -->
 	<div class="banner1">
@@ -95,7 +95,7 @@
 <!-- //events -->
 
 <!--引用底部公用信息-->
-<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 

@@ -50,7 +50,9 @@ class MessageController extends Controller
     {
 
     	// $oUserName=Request::get('oUserName');
-    	$oConBox=Request::get('oConBox');
+    	$oConBox=htmlspecialchars(Request::get('oConBox')) ;
+        //echo $oConBox;die;
+
     	$oUserImg=Request::get('oUserImg');
     	$oUserId=Request::get('oUserId');
     	$data = date('Y-m-d H:i:s',time());

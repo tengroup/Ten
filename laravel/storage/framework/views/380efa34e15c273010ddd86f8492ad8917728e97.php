@@ -413,16 +413,7 @@
     </ul>
 
 </div>
-<div class="m-cont row-cont" >
-    <div class="share-cont">
-        <a class="a-btn" target="_blank" href="http://www.tujia.com/Account/BeginShare?state=SinaWeiBo&amp;unitID=48676"><i class="icon-sian"></i>分享</a>
-        <a class="a-btn" href="javascript:void(0);" id="shareWeixin"><i class="icon-wixin"></i>分享</a>
-        <a class="addFavorite a-btn last-btn " id="favorite" data-page="unitdetail" onclick="_gaq.push(['_trackEvent', 'pcDetail', '点赞']);" unitid="48676" href="javascript:void(0);">
-            <i class="icon-chevron"></i>
-            <span id="txtdianzan">点赞</span>
-        </a>
-    </div>
-</div>
+
 <div class="area">
     <div class="title">
         <span class="line"></span>

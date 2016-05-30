@@ -21,6 +21,9 @@
         new WOW().init();
     </script>
     <!-- //animation-effect -->
+
+    <link rel="stylesheet" type="text/css" href="cz/css/common.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.ziroom.com/static/2015/css/list.min.css?20160323"/>
     </head>
 
 <body>
@@ -40,32 +43,56 @@
     <div class="container">
         <h1 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">短租房屋信息</h1>
         <div class="service-grids">
-            @foreach($list as $k=>$v)
-                <div class="col-md-4 service-grid" style="margin-bottom: 100px">
-                    <div class="service-grd wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <img src="houst_img/{{$v->photo}}" alt=" " class="img-responsive" />
-                        <div class="service-grd-pos" >
-                            <h4>Click on View Details</h4>
+
+
+            <div class="area">
+                <div class="title">
+                    <span class="line"></span>
+                    <h2 class="cn"><span class="s"></span><span class="t" id="recommendation">短租房屋信息</span><span class="y2">●</span><span class="y">●</span></h2>
+                    
+                </div>
+
+                <!--推荐房源-->
+                <ul class="imgInfo_list clearfix" id="imgInfo_list_1">
+                    @foreach($list as $k=>$v)
+                        <li class="no_note " style="margin-left: 80px;">
+                            <div class="imgInfo_show">
+                                <a href="{{URL("perLook?id=$v->h_id")}}" class="hvr-curl-bottom-right">
+                                    <img src="houst_img/{{$v->photo}}" alt=" " class="img-responsive" />
+                                 </a>
+                            </div>
+                            <div class="clearfix info_sction">
+                                <span class="text_r">￥<i><span style="color: red;font-size: 25px">{{$v->pay}}</span></i>/月 </span>
+                            </div>
+                            <div class="clearfix gray-6">
+                                <!--<span class="text_l">[丰台马家堡] 10号线角门西</span>-->
+                                <span class="text_l">
+                                    @if($v->status==1)
+                                        审核 通过
+                                    @elseif($v->status==2)
+                                        审核 未通过
+                                    @else
+                                        未审核
+                                    @endif
+                                 </span>
+                            </div>
                             <div class="more m2">
                                 <a href="{{URL("fyAdd?h_id")}}={{$v->h_id}}" class="hvr-curl-bottom-right">修改</a>
                                 <a href="{{URL("perLook?id=$v->h_id")}}" class="hvr-curl-bottom-right">详情</a>
                             </div>
-                            @if($v->status==1)
-                               审核 通过
-                             @elseif($v->status==2)
-                                审核 未通过
-                             @else
-                                 未审核
-                            @endif
-                        </div>
-                        <div class="service-grd-pos2">
-                            <p style="font-size: 18px;">${{$v->pay}}/-</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-           @endforeach
-                <div class="clearfix"> </div>
+
+                        </li>
+                    @endforeach
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
 
         </div>
         <?php echo $list->render(); ?>

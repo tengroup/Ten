@@ -82,3 +82,12 @@ Route::any('qq','LoginController@qq');    //第三方登录
 
 //底部关于我们
 Route::any('foot/guanyu','FootController@guanyu');
+//底部我是方可
+Route::any('foot/myfk','FootController@myfk');
+//底部加入U+
+Route::any('foot/jiaru','FootController@guanyu');
+//底部服务条款
+Route::any('foot/fuwu','FootController@fw');
+//底部隐私权
+Route::any('foot/yinsi','FootController@yinsi');
+
