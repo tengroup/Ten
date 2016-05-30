@@ -61,7 +61,9 @@ Route::get('act_place','TypeController@short');
 Route::any('check_time','TypeController@short');
 Route::post('all_sel','TypeController@short');
 Route::get('more','TypeController@check_more');
-
+Route::get('hot','TypeController@hot');
+Route::get('best','TypeController@best');
+Route::get('cheap','TypeController@cheap');
 
 //register
 Route::get('register','LoginController@register');

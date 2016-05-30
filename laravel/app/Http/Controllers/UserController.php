@@ -7,9 +7,11 @@ use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
 use Illuminate\View\View;
 
-/**
+/*
  *
- *
+ * $Author:孙辉
+ * $Id:UserController.php
+ * 2016-05-21 8:26
  */
 class UserController extends Controller
 {
@@ -265,7 +267,8 @@ class UserController extends Controller
         $arr['is_hot']=Request::get("is_hot");
         $arr['is_best']=Request::get("is_best");
         $arr['is_cheap']=Request::get("is_cheap");
-        $arr['h_time']=date("Y-m-d H:i:s",time());
+        $arr['h_time']=date("Y-m-d");
+        //echo $arr['h_time'];die;
         $arr['u_id']=$_COOKIE['u_id'];
        //var_dump($arr);die;
         $h_id=DB::table("house")->insertGetId($arr);

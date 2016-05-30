@@ -13,7 +13,7 @@
           </tr>
         </thead>
         
-        <?php foreach ($data as $k=>$v){ ?>
+        <?php foreach ($res as $k=>$v){ ?>
         <tbody>
           <tr>
             <td><?php echo $v['u_id']  ?></td>
@@ -36,12 +36,20 @@
         <?php } ?>
       </table>
       <!--分页 start-->
-          <div class="pull-left">共<i><?php echo $num;?></i>条记录</div>
+      <?php
+        use yii\widgets\LinkPager;
+      ?>
           <div class="pull-right">
-              <a class="pre" href="javascript:void(0);" value="<?php echo $pageos; ?>">上一页</a>
-              <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"?>
-                <a class="after" href="javascript:void(0);" value="<?php echo $pages; ?>">下一页</a>
-            </div>
+                          
+            <i class="pre" href="javascript:void(0);" >&nbsp;</i>
+                           
+            <?php
+              echo LinkPager::widget(['pagination'=>$pages]);
+              
+            ?>
+            <i class="after" href="javascript:void(0);">&nbsp;</i>
+             
+          </div> 
             <!--分页 end-->
     </div><!-- /.table-responsive -->
   </div><!-- /span -->
