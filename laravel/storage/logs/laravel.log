@@ -10985,3 +10985,6 @@ Stack trace:
 #39 E:\phpstudy\WWW\Ten\laravel\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #40 {main}  
 >>>>>>> 56d4c9b91e42845712e60e4783b43129ee498586
+[2016-05-30 11:09:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in G:\phpStudy\WWW\Ten\laravel\app\Http\Controllers\TypeController.php:18
+Stack trace:
+#0 {main}  

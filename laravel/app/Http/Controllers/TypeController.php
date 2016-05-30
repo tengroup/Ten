@@ -15,10 +15,7 @@ use DB;
  * $Id:TypeController.php
  * 2016-05-21 8:26
  */
-<<<<<<< HEAD
-=======
 
->>>>>>> 277d231535a75f1374f3f513949ceefcf0467a64
 class TypeController extends Controller
 {
     //公共方法
