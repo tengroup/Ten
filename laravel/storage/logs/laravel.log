@@ -8214,3 +8214,6 @@ Stack trace:
 #0 {main}  
 >>>>>>> 2cc958ee7ba722b20a1c1ac52d9c984a309c9b84
 >>>>>>> 68f40d43800b256b493819ac1e0d27afbd726ef7
+[2016-05-30 01:52:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in E:\phpstudy\WWW\Ten\laravel\app\Http\Controllers\HomeController.php:71
+Stack trace:
+#0 {main}  
