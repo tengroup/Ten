@@ -96,7 +96,7 @@
 <!--引用底部公用信息-->
 @include('commonality.foot')
 
-
+@include ("commonality.qq")
 
 
 <!-- for bootstrap working -->

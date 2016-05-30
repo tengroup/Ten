@@ -14,6 +14,12 @@
     <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="sel_css/css/mains.css" rel="stylesheet" type="text/css" />
     <link href="css/animate.min.css" rel="stylesheet">
+
+
+    <link href="bankuai/css/index.css" rel="stylesheet">
+    <link href="bankuai/css/public_element.css" rel="stylesheet">
+    <link href="bankuai/css/new_calendar.css" rel="stylesheet" type="text/css">
+
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
@@ -36,7 +42,7 @@
 <body>
 
 @include ("commonality.head");
-
+@include ("commonality.qq")
 
 <!-- 横幅 -->
 <div class="banner">
@@ -104,7 +110,7 @@
 </div>
 <!-- //横幅 -->
 <!-- 旗下 -->
-<div class="banner-bottom">
+<!--<div class="banner-bottom">
     <div class="container">
         <div class="banner-bottom-grids">
             <div class="col-md-5 banner-bottom-grid wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -160,8 +166,29 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- //旗下 -->
+
+<!--板块-->
+
+<div class="index-box">
+    <div class="index-box-tit t-center">
+        <h1 class="mb5">热门短租城市</h1>
+        <span class="f18">和你在另一个地方遇见美好</span>
+    </div>
+    <ul class="city">
+        <li><img src="bankuai/picture/beijing.jpg"><a href="/beijing/" target="_blank">北京</a></li>
+        <li><img src="bankuai/picture/shanghai.jpg"><a href="/shanghai/" target="_blank">上海</a></li>
+        <li><img src="bankuai/picture/chengdu.jpg"><a href="/chengdu/" target="_blank">成都</a></li>
+        <li><img src="bankuai/picture/qingdao.jpg"><a href="/qingdao/" target="_blank">青岛</a></li>
+        <li><img src="bankuai/picture/chongqing.jpg"><a href="/chongqing/" target="_blank">重庆</a></li>
+        <li><img src="bankuai/picture/xian.jpg"><a href="/xian/" target="_blank">西安</a></li>
+        <li><img src="bankuai/picture/hangzhou.jpg"><a href="/hangzhou/" target="_blank">杭州</a></li>
+        <li><img src="bankuai/picture/xiamen.jpg"><a href="/xiamen/" target="_blank">厦门</a></li>
+    </ul>
+</div>
+
+
 <!-- 根据城市查询 -->
 <div class="newsletter">
     <div class="container">
