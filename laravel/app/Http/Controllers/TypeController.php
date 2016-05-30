@@ -7,7 +7,10 @@ use Illuminate\Session;
 use Illuminate\Contracts\Cookie;
 use DB;
 /*
+<<<<<<< HEAD
+=======
  *
+>>>>>>> 277d231535a75f1374f3f513949ceefcf0467a64
  * $Author:赵文杰
  * $Id:TypeController.php
  * 2016-05-21 8:26
