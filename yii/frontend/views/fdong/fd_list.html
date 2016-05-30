@@ -321,6 +321,7 @@
 													<th>房东邮箱</th>
 													<th>房东电话</th>
 													<th>房东昵称</th>
+                                                    <th>状态</th>
 													<th>操作</th>
 												</tr>
 											</thead>
@@ -333,16 +334,41 @@
 													<td><?php echo $v['u_email']  ?></td>
 													<td><?php echo $v['u_tel']  ?></td>
 													<td class="hidden-480">
-														<span class="label label-sm label-warning">
 															<?php echo $v['pet_name']  ?>
-														</span>
 													</td>
-
-													<td>
+                                                    <td id="td_<?php echo $v['u_id'] ?>">
+                                                        <a href="javascript:void(0)" onclick="check_lock(this)" id="<?php echo $v['u_id'] ?>" title="<?php echo $v['u_status'] ?>"> <?php if($v['u_status']==0){
+                                                       echo "<font color='red'>锁定</font>";
+                                                       }else{
+                                                        echo "<font color='green'>未锁定</font>";
+                                                       }
+                                                       ?></a>
+                                                    </td>
+                                                    <td>
 														<a class="deleteName" href="javascript:void(0);" value="<?php echo $v['u_id']  ?>">
 														<i class="icon-trash bigger-120"></i>
 														</a>
 													</td>
+                                                    <script>
+                                                        function check_lock(obj){
+                                                            var str='';
+                                                            var u_id=obj.id;
+                                                            var lock=obj.title;
+                                                            var url="index.php?r=fdong/check_lock";
+                                                            var data={'u_id':u_id,'lock':lock};
+                                                            $.get(url,data,function(msg){
+                                                                if(msg==1){
+                                                                   // str='<a href="javascript:void(0)" onclick="check_lock(this)"  title="1"  id="'+u_id+'" >锁定</a>';
+                                                                   // alert(str);
+                                                                   $("#td_"+u_id).html('<a href="javascript:void(0)" onclick="check_lock(this)"  title="1"  id="'+u_id+'" ><font color="green">未锁定</font></a>');
+                                                                }else{
+                                                                   // str='<a href="javascript:void(0)" onclick="check_lock(this)" title="0"  id="'+u_id+'" >未锁定</a>';
+                                                                   // alert(str);
+                                                                    $("#td_"+u_id).html('<a href="javascript:void(0)" onclick="check_lock(this)" title="0" id="'+u_id+'" ><font color="red">锁定</font></a>');
+                                                                }
+                                                            })
+                                                        }
+                                                    </script>
 												</tr>
 											</tbody>
 											<?php } ?>

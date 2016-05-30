@@ -145,7 +145,7 @@
             </div>
             <script type="text/javascript" src="sel_css/js/dateRange.js"></script>
             <link rel="stylesheet" type="text/css" href="sel_css/css/dateRange.css"/>
-            <form action="{{URL("check_time")}}" method="get">
+            <form action="{{URL("check_time")}}" method="post">
                 <div style="width:500px;margin:0 auto;">
                     <div class="ta_date" id="div_date1" style="margin-left: -100px;">
                         <input type="text" class="date_title" id="date1" name="dates" placeholder="可选择时间段"  style="height:26px;" size="30px"/>
@@ -409,16 +409,6 @@
         @endforeach
     </ul>
 
-</div>
-<div class="m-cont row-cont" >
-    <div class="share-cont">
-        <a class="a-btn" target="_blank" href="http://www.tujia.com/Account/BeginShare?state=SinaWeiBo&amp;unitID=48676"><i class="icon-sian"></i>分享</a>
-        <a class="a-btn" href="javascript:void(0);" id="shareWeixin"><i class="icon-wixin"></i>分享</a>
-        <a class="addFavorite a-btn last-btn " id="favorite" data-page="unitdetail" onclick="_gaq.push(['_trackEvent', 'pcDetail', '点赞']);" unitid="48676" href="javascript:void(0);">
-            <i class="icon-chevron"></i>
-            <span id="txtdianzan">点赞</span>
-        </a>
-    </div>
 </div>
 <div class="area">
     <div class="title">

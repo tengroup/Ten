@@ -158,4 +158,24 @@ class FdongController extends \yii\web\Controller
     	// Customer::deleteAll('age > :age AND gender = :gender', [':age' => 20, ':gender' => 'M']);
 
     }
+
+    public function actionCheck_lock(){
+        $u_id=$_GET['u_id'];
+        $lock=$_GET['lock'];
+        if($lock==0){
+            $sql="update f_users set u_status=1 where u_id=$u_id";
+            $result = Yii::$app->db->createCommand($sql);
+            $re= $result->query();
+            if($re){
+                echo 1;
+            }
+        }else{
+            $sql="update f_users set u_status=0 where u_id=$u_id";
+            $result = Yii::$app->db->createCommand($sql);
+            $re= $result->query();
+            if($re){
+                echo 0;
+            }
+        }
+    }
 }
