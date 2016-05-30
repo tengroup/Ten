@@ -19,6 +19,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+
     	//热销信息
     	$selling = DB::table('house')
     	->join('house_type','house.t_id','=','house_type.t_id')
@@ -66,7 +67,7 @@ class HomeController extends Controller
 		// var_dump($Specialoffer);die;
 
 
-		// var_dump($Specialoffer);die;
+		// var_dump($selling);die;
 
 
 
@@ -74,10 +75,13 @@ class HomeController extends Controller
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[1]->h_id)
 		->get();
-		$selling->content = substr($selling->content,0,95).'<a href="{{URL(perLook?id)}}={{$selling->h_id}}">...</a>';
-		$boutique->content = substr($boutique->content,0,95).'<a href="{{URL(perLook?id)}}={{$boutique->h_id}}">...</a>';
-		$Special->content = substr($Special->content,0,95).'<a href="{{URL(perLook?id)}}={{$Special->h_id}}">...</a>';
-		$Specialoffer[1]->content = substr($Specialoffer[1]->content,0,95).'<a href="{{URL(perLook?id)}}={{$Specialoffer->h_id}}">...</a>';
+       // var_dump($SpecialofferImg);die;
+
+        /*$selling->content = substr($selling->content,0,95).'<a href="{{URL(perLook?id)}}={{$selling->h_id}}">...</a>';
+        //var_dump($selling);die;
+        $boutique->content = substr($boutique->content,0,95).'<a href="{{URL(perLook?id)}}={{$boutique->h_id}}">...</a>';
+        $Special->content = substr($Special->content,0,95).'<a href="{{URL(perLook?id)}}={{$Special->h_id}}">...</a>';
+        $Specialoffer[1]->content = substr($Specialoffer[1]->content,0,95).'<a href="{{URL(perLook?id)}}={{$Specialoffer->h_id}}">...</a>';*/
     	return view("home/index",array('selling'=>$selling,'sellingImg'=>$sellingImg,'boutique'=>$boutique,'boutiqueImg'=>$boutiqueImg,'Special'=>$Special,'SpecialImg'=>$SpecialImg,'Specialoffer'=>$Specialoffer,'SpecialofferImg'=>$SpecialofferImg));
     }
     

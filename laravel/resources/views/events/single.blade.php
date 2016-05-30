@@ -13,3 +13,4 @@
          联系方式:{{$v->phone}}<br>
          联系人:{{$v->linkman}}<br>
 @endforeach
+@include ("commonality.qq")
