@@ -6,7 +6,11 @@ use Request;
 use Illuminate\Session;
 use Illuminate\Contracts\Cookie;
 use DB;
-header('Content-type:text/html;charset=utf-8');
+/*
+ * $Author:赵文杰
+ * $Id:TypeController.php
+ * 2016-05-21 8:26
+ */
 class TypeController extends Controller
 {
     //公共方法
