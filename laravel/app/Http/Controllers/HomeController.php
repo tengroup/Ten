@@ -62,14 +62,13 @@ class HomeController extends Controller
 		->get();
 
 		//var_dump($Specialoffer);die;
-<<<<<<< HEAD
-		// var_dump($Specialoffer);die;
-=======
 
 		// var_dump($Specialoffer);die;
 
-		
->>>>>>> 5111c14295169469478d9ad06f46cbc49681a20e
+
+		// var_dump($Specialoffer);die;
+
+
     	//特价图片
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[1]->h_id)
