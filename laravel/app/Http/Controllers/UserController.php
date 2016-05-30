@@ -118,10 +118,10 @@ class UserController extends Controller
 
         $filename= base_path("resources/static/").'2001006_'.$hId.'.blade.php';
         //echo $filename;die;
-        if(file_exists($filename) ){
-            echo file_get_contents($filename);
-            exit;
-        }
+//        if(file_exists($filename) ){
+//            echo file_get_contents($filename);
+//            exit;
+//        }
 
         $oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
@@ -152,13 +152,20 @@ class UserController extends Controller
 
         //房屋信息
         $res= DB :: table('house')->where("h_id",$oneMess->h_id)->get();
-        //var_dump($res);die;
+
+        $arr=DB::table('house')->where("h_id",$oneMess->h_id)->first();
+        $t_id=$arr->t_id;
+        //$sql="select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3";
+        $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3");
+        
 
         //生成静态页面
-        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res])->__toString();
-        file_put_contents($filename,$htmlStrings);
+//        $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res,'data'=>$data])->__toString();
+//        file_put_contents($filename,$htmlStrings);
+
+
         
-        return  view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res]);
+        return  view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res,'data'=>$data]);
 
         //var_dump($oneMess);die;
         //return  view("home/single",['list'=>$oneMess,'img'=>$img]);
