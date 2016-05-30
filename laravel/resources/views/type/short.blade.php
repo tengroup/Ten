@@ -43,7 +43,7 @@
 
 <!--引用公用头部信息-->
 @include ("commonality.head")<br/>
-
+@include ("commonality.qq")
 <!-- banner1 -->
 {{--<div class="banner1">--}}
 {{--<div class="container">--}}

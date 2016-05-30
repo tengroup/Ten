@@ -36,7 +36,7 @@
 <body>
 
 @include ("commonality.head");
-
+@include ("commonality.qq")
 
 <!-- 横幅 -->
 <div class="banner">

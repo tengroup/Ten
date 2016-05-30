@@ -42,7 +42,7 @@
 
 <!--引用公用头部信息-->
 @include ("commonality.head")
-
+@include ("commonality.qq")
     <div class="area clearfix" style="margin-top:50px ">
 
         <!--焦点图开始-->
