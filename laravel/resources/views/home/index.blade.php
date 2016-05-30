@@ -112,7 +112,7 @@
                 <p>地址:{{$selling->h_address}}</p>
                 <p>面积:{{$selling->h_area}}平方米</p>
                 <p>可住:{{$selling->number}}人</p>
-                <p>租金:{{$selling->number}}</p>
+                <p>租金:{{$selling->pay}}</p>
                 <p>{!!$selling->content!!}</p>
                 <div class="more">
                     <a href="{{URL('perLook?id')}}={{$selling->h_id}}" class="hvr-curl-bottom-right">阅读更多</a>

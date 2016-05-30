@@ -60,16 +60,20 @@ class HomeController extends Controller
     	->limit(1,2)
     	->where('house.is_cheap','=','1')
 		->get();
+<<<<<<< HEAD
 		//var_dump($Specialoffer);die;
+=======
+		// var_dump($Specialoffer);die;
+>>>>>>> 37ae4f1dc656b8dedd829b8167f3ce8cc77222b6
 		
     	//特价图片
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[0]->h_id)
 		->get();
-		$selling->content = substr($selling->content,0,201).'<a href="#">...</a>';
-		$boutique->content = substr($boutique->content,0,201).'<a href="#">...</a>';
-		$Special->content = substr($Special->content,0,201).'<a href="#">...</a>';
-		$Specialoffer[0]->content = substr($Specialoffer[0]->content,0,201).'<a href="#">...</a>';
+		$selling->content = substr($selling->content,0,95).'<a href="{{URL(act_place?value='.$selling->h_id.')}}">...</a>';
+		$boutique->content = substr($boutique->content,0,95).'<a href="{{URL(act_place?value='.$boutique->h_id.')}}">...</a>';
+		$Special->content = substr($Special->content,0,95).'<a href="{{URL(act_place?value='.$Special->h_id.')}}">...</a>';
+		$Specialoffer[0]->content = substr($Specialoffer[0]->content,0,95).'<a href="{{URL(act_place?value='.$Specialoffer[0]->h_id.')}}">...</a>';
     	return view("home/index",array('selling'=>$selling,'sellingImg'=>$sellingImg,'boutique'=>$boutique,'boutiqueImg'=>$boutiqueImg,'Special'=>$Special,'SpecialImg'=>$SpecialImg,'Specialoffer'=>$Specialoffer,'SpecialofferImg'=>$SpecialofferImg));
     }
     
