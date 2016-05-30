@@ -42,8 +42,8 @@
 
 <!--引用公用头部信息-->
 @include ("commonality.head")
-    
-    <div class="area clearfix">
+
+    <div class="area clearfix" style="margin-top:50px ">
 
         <!--焦点图开始-->
          <div class="room_detail_left">

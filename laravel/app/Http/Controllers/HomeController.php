@@ -65,15 +65,19 @@ class HomeController extends Controller
 
 		// var_dump($Specialoffer);die;
 
+
+		// var_dump($Specialoffer);die;
+
 		
+
     	//特价图片
     	$SpecialofferImg = DB::table('images')
 		->where('images.h_id','=',$Specialoffer[1]->h_id)
 		->get();
-		$selling->content = substr($selling->content,0,95).'<a href="{{URL(act_place?value='.$selling->h_id.')}}">...</a>';
-		$boutique->content = substr($boutique->content,0,95).'<a href="{{URL(act_place?value='.$boutique->h_id.')}}">...</a>';
-		$Special->content = substr($Special->content,0,95).'<a href="{{URL(act_place?value='.$Special->h_id.')}}">...</a>';
-		$Specialoffer[1]->content = substr($Specialoffer[1]->content,0,95).'<a href="{{URL(act_place?value='.$Specialoffer[1]->h_id.')}}">...</a>';
+		$selling->content = substr($selling->content,0,95).'<a href="{{URL(perLook?id)}}={{$selling->h_id}}">...</a>';
+		$boutique->content = substr($boutique->content,0,95).'<a href="{{URL(perLook?id)}}={{$boutique->h_id}}">...</a>';
+		$Special->content = substr($Special->content,0,95).'<a href="{{URL(perLook?id)}}={{$Special->h_id}}">...</a>';
+		$Specialoffer[1]->content = substr($Specialoffer[1]->content,0,95).'<a href="{{URL(perLook?id)}}={{$Specialoffer->h_id}}">...</a>';
     	return view("home/index",array('selling'=>$selling,'sellingImg'=>$sellingImg,'boutique'=>$boutique,'boutiqueImg'=>$boutiqueImg,'Special'=>$Special,'SpecialImg'=>$SpecialImg,'Specialoffer'=>$Specialoffer,'SpecialofferImg'=>$SpecialofferImg));
     }
     

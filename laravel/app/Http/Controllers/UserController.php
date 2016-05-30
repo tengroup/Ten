@@ -113,7 +113,6 @@ class UserController extends Controller
     public function perLook()
     {
         $hId=Request::get('id');
-
 		//echo $_COOKIE['username'];die;
         /*$oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$uId")->first();*/
 
@@ -124,10 +123,10 @@ class UserController extends Controller
             exit;
         }
 
-        /*$oneMess=DB::table('house')
+        $oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
-            ->where('house.h_id', "$uId")
-            ->first();*/
+            ->where('house.h_id', $hId)
+            ->first();
 
         //$hId=Request::get('id');
 
@@ -135,7 +134,11 @@ class UserController extends Controller
         //$oneMess=DB::table('house')->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
 
 
-        $oneMess=DB::table('preplot')->join("house","preplot.h_id","=","house.h_id")->join("f_users","f_users.u_id","=","house.u_id")->where('house.h_id', "$hId")->first();
+        /*$oneMess=DB::table('preplot')
+            ->join("house","preplot.h_id","=","house.h_id")
+            ->join("f_users","f_users.u_id","=","house.u_id")
+            ->where('house.h_id', "$hId")
+            ->first();*/
 
         /*$oneMess=DB::table('preplot')
             ->join("house","preplot.h_id","=","house.h_id")

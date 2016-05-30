@@ -41,9 +41,9 @@
 <body>
 
 <!--引用公用头部信息-->
-<?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
-    
-    <div class="area clearfix">
+<?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+    <div class="area clearfix" style="margin-top:50px ">
 
         <!--焦点图开始-->
          <div class="room_detail_left">
@@ -86,11 +86,12 @@
 		<p class="en">About The Room<span class="y">●</span></p>
 	</div>
 	<div class="aboutRoom gray-6">
-		<h3 class="fb"><strong>编号：</strong> BJCP84231043_01</h3>
-		<p><strong>周边：</strong>从小区北门出，步行2分钟即可到达汤立路，路边有多家便利店和好适口等多种快餐店；如果你觉得还不够可以沿着汤立路向北步行10分钟就是龙德广场，汉拿山，家乐福，万达影城，还有优衣库哦；如果你觉得大商场里面的东西太贵？不要担心，龙德广场旁边就是明珠百货，里面各种生活用品各种价位都有，满足你的所有需求，不过在明珠百货里面购物砍价一定要狠哦！
-		</p>
-	<br/>
-		<p><strong>描述：</strong><?php echo e($list->content); ?></p>
+	        <?php foreach($resd as $key=>$val): ?>
+			<h3 class="fb"><strong>编号：</strong><?php echo e($val->h_id); ?></h3>
+			<p><strong>描述：</strong><?php echo e($val->content); ?>
+
+			</p>
+	        <?php endforeach; ?>
 	</div><!--/aboutRoom-->
 	<div class="title">
 		<span class="line"></span>
@@ -243,9 +244,10 @@
          </div><!--room_detail_left-->
          <div class="room_detail_right">
             <div class="room_name">
-            	<h2>立城苑3居室-01卧</h2>         	
+            	<h2><?php echo e($list->h_address); ?></h2>
             	<p class="pr">
-            		[朝阳立水桥]5号线立水桥
+                    <?php echo e($list->h_address); ?>
+
             		<span class="price">
 	            		<b></b>
 	            		<span class="room_price">￥<?php echo e($list->pay); ?></span>
@@ -260,20 +262,20 @@
             </p>
             <ul class="detail_room">
             	<li><b></b>面积： <?php echo e($list->h_area); ?>㎡</li>
-                <li><b></b>朝向： 南</li>
-            	<li><b></b>户型： 3室1厅<span class="icons">合</span></li>
-            	<li><b></b>楼层： 7/13层</li>
+                <?php /*<li><b></b>朝向： 南</li>*/ ?>
+            	<li><b></b>户型：别墅</li>
+            	<?php /*<li><b></b>楼层： 7/13层</li>*/ ?>
 
-                <li class="last">
-                 	<b></b>交通：
-            		<span class="lineList" id="lineList">距5号线立水桥279米
-            			<span class="box">
-                         <p>距13号线立水桥279米</p>
-                         <p>距5号线立水桥南1149米</p>
-                         <p class="last">距5号线天通苑南1529米</p>
-                    	</span>                           
-                    </span>
-            	</li>
+                <?php /*<li class="last">*/ ?>
+                 	<?php /*<b></b>交通：*/ ?>
+            		<?php /*<span class="lineList" id="lineList">距5号线立水桥279米*/ ?>
+            			<?php /*<span class="box">*/ ?>
+                         <?php /*<p>距13号线立水桥279米</p>*/ ?>
+                         <?php /*<p>距5号线立水桥南1149米</p>*/ ?>
+                         <?php /*<p class="last">距5号线天通苑南1529米</p>*/ ?>
+                    	<?php /*</span>*/ ?>
+                    <?php /*</span>*/ ?>
+            	<?php /*</li>*/ ?>
             <script>
                 if($('#lineList .box').size()==0){
                     $('#lineList').addClass('lineListnone');
@@ -344,7 +346,7 @@
 			         </div>
 					<div class="txt">
 						<span class="icon yinLeft"></span>
-						<p>我是U+管家<?php echo e($list->real_name); ?>，一直秉承着客户至上的理念，认真的帮助客户租住适合的房屋，期待您加入我们的大家庭。</p>
+						<p>我是U+管家：<?php echo e($list->real_name); ?>，<?php echo e($list->u_lang); ?></p>
 						<p class="org pr">U家(U+管家)：<?php echo e($list->real_name); ?> <span class="icon yinRight"></span></p>
 					</div>
 				</div>
@@ -357,7 +359,7 @@
 			                  <li><a href="/zhuanti/azcn/index.html#1" target="_blank">房屋质量问题无责换租<b></b></a></li>
 			                  <li><a href="/zhuanti/azcn/index.html#2" target="_blank">退租押金三个工作日返还</a></li>
 			            </ul>
-			            <ul class="bottom_list clearfix">
+			            <!-- <ul class="bottom_list clearfix">
 			              <li class="fuwu">
 			                <p class="in">
 			                  <a href="/zhuanti/azcn/index.html#11" target="_blank">双周保洁</a>
@@ -392,7 +394,7 @@
 			                  安全
 			                </p>
 			              </li>
-			            </ul>
+			            </ul> -->
 		            </dd>
 		        </dl>
 	        </div><!--/con-->
@@ -1192,7 +1194,7 @@ function leaveMessage(collect_id,is_whole){
 
 
 <!--引用底部公用信息-->
-<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 
