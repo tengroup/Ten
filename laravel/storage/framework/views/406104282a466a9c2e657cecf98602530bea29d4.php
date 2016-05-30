@@ -54,7 +54,7 @@
                          <?php foreach($img as $k=>$v): ?>
                         <li>
                         	<span class="woshi"></span>
-                        	<a href="houst_img/<?php echo e($v->img); ?>"  class="pirobox_t6">
+                        	<a href=" " class="pirobox_t6">
                             <img src="houst_img/<?php echo e($v->img); ?>" class="loadImgError" width="620" height="470"/>
 	                        </a>
 	                    </li>
@@ -196,49 +196,27 @@
 	</div>
 	<div class="title">
 		<span class="line"></span>
-		<h2 class="cn"><span class="s"></span>推荐房源<span class="y">●</span></h2>
+		<h2 class="cn"><span class="s"></span>类似房源<span class="y">●</span></h2>
 		<p class="en">Recommend Room<span class="y">●</span></p>
 	</div>
 
 
 	<!--推荐房源-->
 	<ul class="imgInfo_list clearfix">
+        <?php foreach($data as $v): ?>
 		 <li class="no_note ">
 			<div class="imgInfo_show">
-				<a href="/z/vr/60098172.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160413104002961_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/buding-up.jpg'"/></a>
+				<a href="javascript:void(0)" target="_blank"><img class="" alt="" src="picture/v460x300_20160413104002961_f.jpg"/></a>
 			</div>
 			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/60098172.html" target="_blank">东辰小区3居室-03卧</a></span>
-				<span class="text_r">￥<i>2030</i>/月</span>
+				<span class="text_l limit_w"><a href="/z/vr/60098172.html" target="_blank"><?php echo e($v->h_address); ?></a></span>
+				<span class="text_r">￥<i><?php echo e($v->pay); ?></i>/月</span>
 			</div>
 			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]13号线立水桥</span>
+				<span class="text_l"><?php echo e($v->h_address); ?></span>
 			</div>
 		</li>
-		<li class="no_note ">
-			<div class="imgInfo_show">
-				<a href="/z/vr/60118752.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160510110318738_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/mumian-up.jpg'"/></a>
-			</div>
-			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/60118752.html" target="_blank">东辰小区3居室-02卧</a></span>
-				<span class="text_r">￥<i>2030</i>/月</span>
-			</div>
-			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]13号线立水桥</span>
-			</div>
-		</li>
-		<li class="no_note pad_none">
-			<div class="imgInfo_show">
-				<a href="/z/vr/81525.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160507171729863_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/></a>
-			</div>
-			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/81525.html" target="_blank">佳运园一期3居室-03卧</a></span>
-				<span class="text_r">￥<i>69</i>/月</span>
-			</div>
-			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]5号线立水桥南</span>
-			</div>
-		</li>
+    <?php endforeach; ?>
 	</ul>
 	<!--推荐房源-->
          </div><!--room_detail_left-->
