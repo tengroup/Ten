@@ -78,7 +78,7 @@
                                     <a href="<?php echo e(URL('act_place?value=杭州')); ?>">杭州</a>
                                     <a href="<?php echo e(URL('act_place?value=南京')); ?>">南京</a>
                                     <a href="<?php echo e(URL('act_place?value=深圳')); ?>">深圳</a>
-                                    <a href="<?php echo e(URL('act_place?value=石家庄')); ?>">石家庄</a>
+                                    <a href="<?php echo e(URL('act_place?value=青岛')); ?>">青岛</a>
                                     <a href="<?php echo e(URL('act_place?value=武汉')); ?>">武汉</a>
                                     <a href="<?php echo e(URL('act_place?value=郑州')); ?>">郑州</a>
                                     <a href="<?php echo e(URL('act_place?value=重庆')); ?>">重庆</a>
@@ -93,7 +93,7 @@
                                 <input type="text" class="input_city" item="key">
                                 <button class="btn" type="button" item="commit"></button>
                                 <div class="search_city_result" item="result" style="display:;">
-                                    <a href="<?php echo e(URL('act_place?value=广州')); ?>">广州</a> 没有匹配城市
+                                    <a href="<?php echo e(URL('act_place?value=广州')); ?>">广州</a> 匹配城市
                                 </div>
                             </div>
 

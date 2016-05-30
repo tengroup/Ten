@@ -6,8 +6,9 @@ use DB,Request;
 
 
 /*
+ * 底部信息
  * $Author:huigege
- * $Id:EventsController.php 2016-05-27 8:26 dongmengtao
+ * $Id:FootController.php 2016-05-27 8:26 dongmengtao
  */
 
 class FootController extends Controller

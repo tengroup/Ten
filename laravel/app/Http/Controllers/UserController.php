@@ -7,9 +7,11 @@ use Cookie;
 use DB,Input,Redirect,url,Validator,Request;
 use Illuminate\View\View;
 
-/**
+/*
  *
- *
+ * $Author:孙辉
+ * $Id:UserController.php
+ * 2016-05-21 8:26
  */
 class UserController extends Controller
 {

@@ -298,7 +298,7 @@
 </div>
 <!-- //根据城市查询 -->
 <!-- 通讯底层 -->
-<div class="newsletter-bottom">
+<!--<div class="newsletter-bottom">
     <div class="container">
         <div class="newsletter-bottom-grids">
             <div class="col-md-6 newsletter-bottom-grid wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -335,7 +335,7 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- //通讯底层 -->
 
 <!--引用底部公用信息-->
