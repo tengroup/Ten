@@ -145,7 +145,7 @@
             </div>
             <script type="text/javascript" src="sel_css/js/dateRange.js"></script>
             <link rel="stylesheet" type="text/css" href="sel_css/css/dateRange.css"/>
-            <form action="<?php echo e(URL("check_time")); ?>" method="get">
+            <form action="<?php echo e(URL("check_time")); ?>" method="post">
                 <div style="width:500px;margin:0 auto;">
                     <div class="ta_date" id="div_date1" style="margin-left: -100px;">
                         <input type="text" class="date_title" id="date1" name="dates" placeholder="可选择时间段"  style="height:26px;" size="30px"/>
@@ -413,7 +413,10 @@
     </ul>
 
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5111c14295169469478d9ad06f46cbc49681a20e
 <div class="area">
     <div class="title">
         <span class="line"></span>

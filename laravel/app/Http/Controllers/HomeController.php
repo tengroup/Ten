@@ -68,6 +68,10 @@ class HomeController extends Controller
 
 		// var_dump($Specialoffer);die;
 
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 68f40d43800b256b493819ac1e0d27afbd726ef7
 
     	//特价图片
     	$SpecialofferImg = DB::table('images')
