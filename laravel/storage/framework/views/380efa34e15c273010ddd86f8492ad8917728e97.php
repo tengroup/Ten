@@ -43,7 +43,7 @@
 
 <!--引用公用头部信息-->
 <?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?><br/>
-
+<?php echo $__env->make("commonality.qq", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <!-- banner1 -->
 <?php /*<div class="banner1">*/ ?>
 <?php /*<div class="container">*/ ?>
