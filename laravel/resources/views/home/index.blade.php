@@ -177,14 +177,14 @@
         <span class="f18">和你在另一个地方遇见美好</span>
     </div>
     <ul class="city">
-        <li><img src="bankuai/picture/beijing.jpg"><a href="/beijing/" target="_blank">北京</a></li>
-        <li><img src="bankuai/picture/shanghai.jpg"><a href="/shanghai/" target="_blank">上海</a></li>
-        <li><img src="bankuai/picture/chengdu.jpg"><a href="/chengdu/" target="_blank">成都</a></li>
-        <li><img src="bankuai/picture/qingdao.jpg"><a href="/qingdao/" target="_blank">青岛</a></li>
-        <li><img src="bankuai/picture/chongqing.jpg"><a href="/chongqing/" target="_blank">重庆</a></li>
-        <li><img src="bankuai/picture/xian.jpg"><a href="/xian/" target="_blank">西安</a></li>
-        <li><img src="bankuai/picture/hangzhou.jpg"><a href="/hangzhou/" target="_blank">杭州</a></li>
-        <li><img src="bankuai/picture/xiamen.jpg"><a href="/xiamen/" target="_blank">厦门</a></li>
+        <li><img src="bankuai/picture/beijing.jpg"><a href="{{URL('act_place?value=北京')}}" target="_blank">北京</a></li>
+        <li><img src="bankuai/picture/shanghai.jpg"><a href="{{URL('act_place?value=上海')}}" target="_blank">上海</a></li>
+        <li><img src="bankuai/picture/chengdu.jpg"><a href="{{URL('act_place?value=成都')}}" target="_blank">成都</a></li>
+        <li><img src="bankuai/picture/qingdao.jpg"><a href="{{URL('act_place?value=青岛')}}" target="_blank">青岛</a></li>
+        <li><img src="bankuai/picture/chongqing.jpg"><a href="{{URL('act_place?value=重庆')}}" target="_blank">重庆</a></li>
+        <li><img src="bankuai/picture/xian.jpg"><a href="{{URL('act_place?value=西安')}}" target="_blank">西安</a></li>
+        <li><img src="bankuai/picture/hangzhou.jpg"><a href="{{URL('act_place?value=杭州')}}" target="_blank">杭州</a></li>
+        <li><img src="bankuai/picture/xiamen.jpg"><a href="{{URL('act_place?value=厦门')}}" target="_blank">厦门</a></li>
     </ul>
 </div>
 
