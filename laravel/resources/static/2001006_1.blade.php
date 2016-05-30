@@ -41,9 +41,97 @@
 <body>
 
 <!--引用公用头部信息-->
-<?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-<?php echo $__env->make("commonality.qq", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-    <div class="area clearfix" style="margin-top:50px ">
+<!-- 导航条 -->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a class="navbar-brand" href="http://www.sunhui.com/Ten/laravel/public/index">
+                        U+
+                        <!-- <img src="images/u+.jpg" alt="U+"> -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                <nav class="cl-effect-13" id="cl-effect-13">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/index" class="active">首页</a></li>
+                        <li role="presentation" class="dropdown">
+                                                                                                                    <a href="http://www.sunhui.com/Ten/laravel/public/short"> 我要租房  </a>
+                                                                                            
+                                                    </li>
+
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/events"> 今日更新 </a></li>
+                                                                                       </ul>
+
+                </nav>
+                <div class="social-icons">
+                    <ul>
+                        <!--<li><a class="icon-link round facebook" href="#"></a></li>
+                        <li><a class="icon-link round p" href="#"></a></li>
+                        <li><a class="icon-link round twitter" href="#"></a></li>
+                        <li><a class="icon-link round dribble" href="#"></a></li>
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/login"><img src="houst_img/user_center.png" alt=""></a></li>-->
+                        <font color="#f0f8ff">欢迎
+                                                                    sunhui
+                                                            登录</font>
+                                                    <li><a href="login/loginout" style="color: blue">退出</a></li>
+                                                <li><a href="http://www.sunhui.com/Ten/laravel/public/register" style="color: blue">注册</a></li>
+                        <li role="presentation" class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: blue">
+                                用户中心 <span class="caret"></span>
+                            </a>
+                                                        <ul class="dropdown-menu">
+                                <li><a href="http://www.sunhui.com/Ten/laravel/public/personal">个人信息</a></li>
+                                                                    <li><a href="http://www.sunhui.com/Ten/laravel/public/fyAdd">房源添加</a></li>
+                                    <li><a href="http://www.sunhui.com/Ten/laravel/public/fyList">房源列表</a></li>
+                                                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+<!-- 导航条 --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery右侧可隐藏在线QQ客服</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body style="height:3000px">
+
+<div id="rightArrow"><a href="javascript:;" title="在线客户"></a></div>
+<div id="floatDivBoxs">
+    <div class="floatDtt">在线客服</div>
+    <div class="floatShadow">
+        <ul class="floatDqq">
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=1653162261&Site=sc.chinaz.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;客服小宋</a></li>
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=547696050&Site=sc.chinaz.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;产品经理</a></li>
+            <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=547696050&Site=sc.chinaz.com&Menu=yes"><img src="images/qq.png" align="absmiddle">&nbsp;&nbsp;技术总监</a></li>
+        </ul>
+        <div class="floatDtxt">热线电话</div>
+        <div class="floatDtel"><img src="images/online_phone.jpg" width="155" height="45" alt=""></div>
+            </div>
+    <div class="floatDbg"></div>
+</div>
+</body>
+</html>    <div class="area clearfix" style="margin-top:50px ">
 
         <!--焦点图开始-->
          <div class="room_detail_left">
@@ -51,30 +139,74 @@
                  <div class="lof-main-outer" id="cao">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-                         <?php foreach($img as $k=>$v): ?>
-                        <li>
+                                                 <li>
                         	<span class="woshi"></span>
-                        	<a href="houst_img/<?php echo e($v->img); ?>"  class="pirobox_t6">
-                            <img src="houst_img/<?php echo e($v->img); ?>" class="loadImgError" width="620" height="470"/>
+                        	<a href="houst_img/2016-05-27/8669212b150b4c2e205ac81b2e1e405c.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-27/8669212b150b4c2e205ac81b2e1e405c.jpg" class="loadImgError" width="620" height="470"/>
 	                        </a>
 	                    </li>
-                        <?php endforeach; ?>
-                    </ul>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-27/e6b076cd8f18f8bd1443defe43ad8b5f.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-27/e6b076cd8f18f8bd1443defe43ad8b5f.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-27/3bb35ba11a5e4d16ae5fedabf1d9b4bb.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-27/3bb35ba11a5e4d16ae5fedabf1d9b4bb.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-27/7baebcd54b881ddf8464a409c56bd017.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-27/7baebcd54b881ddf8464a409c56bd017.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                                <li>
+                        	<span class="woshi"></span>
+                        	<a href="houst_img/2016-05-27/b1e97654e8f1b0b097d185270153a931.jpg"  class="pirobox_t6">
+                            <img src="houst_img/2016-05-27/b1e97654e8f1b0b097d185270153a931.jpg" class="loadImgError" width="620" height="470"/>
+	                        </a>
+	                    </li>
+                                            </ul>
                 <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
             </div><!--lof-main-outer -->
                 <div class="lof-navigator-wapper">
 					<div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                     <div class="lof-navigator-outer" >
                   		<ul class="lof-navigator">
-                        <?php foreach($img as $k=>$v): ?>
-                            <li>
+                                                    <li>
                                 <div class="lidiv">
-                                    <img src="houst_img/<?php echo e($v->img); ?>" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <img src="houst_img/2016-05-27/8669212b150b4c2e205ac81b2e1e405c.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
                                     <div class="bor_act"></div>
                                 </div>
                             </li>
-                            <?php endforeach; ?>
-                        </ul>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-27/e6b076cd8f18f8bd1443defe43ad8b5f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-27/3bb35ba11a5e4d16ae5fedabf1d9b4bb.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-27/7baebcd54b881ddf8464a409c56bd017.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="lidiv">
+                                    <img src="houst_img/2016-05-27/b1e97654e8f1b0b097d185270153a931.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'" />
+                                    <div class="bor_act"></div>
+                                </div>
+                            </li>
+                                                    </ul>
                     </div><!--lof-navigator-outer -->
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
                 </div>
@@ -86,13 +218,15 @@
 		<p class="en">About The Room<span class="y">●</span></p>
 	</div>
 	<div class="aboutRoom gray-6">
-	        <?php foreach($resd as $key=>$val): ?>
-			<h3 class="fb"><strong>编号：</strong><?php echo e($val->h_id); ?></h3>
-			<p><strong>描述：</strong><?php echo e($val->content); ?>
-
+	        			<h3 class="fb"><strong>编号：</strong>1</h3>
+			<p><strong>描述：</strong>*房子是2室1厅1厨1卫1阳台的舒适好户型，装修风格大气温馨，卧室内部是全木地板，房间南北通透，宜居舒适。
+*屋内设施齐全：电视、空调、洗衣机、WIFI、冰箱、24小时热水、餐桌以及锅碗瓢盆&hellip;&hellip;一应俱全！
+*屋内共有两个房间，均为可睡2人的1.8米双人床、主卧有一个单独的衣帽间, 次卧有大壁橱, 行李衣服完全可以轻松收纳，在此小住可谓完全的舒适自在~关上房门，可尽享私密空间哦。
+*厨房、客厅设施的齐全，您可以看电视、上网、下厨做一顿大餐，饭后闲聊，这一切就像在您自己家里一样，；
+*我为您提供免费的洗发水、沐浴露、纸巾、拖鞋。但是牙具、毛巾、护肤品等请自备。
+*额，如若还要有其他啥我没提到的，您可以在线与我沟通咨询哟。
 			</p>
-	        <?php endforeach; ?>
-	</div><!--/aboutRoom-->
+	        	</div><!--/aboutRoom-->
 	<div class="title">
 		<span class="line"></span>
 		<h2 class="cn"><span class="s"></span>房屋配置<span class="y">●</span></h2>
@@ -244,13 +378,12 @@
          </div><!--room_detail_left-->
          <div class="room_detail_right">
             <div class="room_name">
-            	<h2><?php echo e($list->h_address); ?></h2>
+            	<h2>刘家佐</h2>
             	<p class="pr">
-                    <?php echo e($list->h_address); ?>
-
+                    刘家佐
             		<span class="price">
 	            		<b></b>
-	            		<span class="room_price">￥<?php echo e($list->pay); ?></span>
+	            		<span class="room_price">￥1000000</span>
 	            		<span class="gray-6">(每月)</span>
                     </span>
                 </p>
@@ -261,22 +394,10 @@
            		<span class="style">风格1.0 原味</span>
             </p>
             <ul class="detail_room">
-            	<li><b></b>面积： <?php echo e($list->h_area); ?>㎡</li>
-                <?php /*<li><b></b>朝向： 南</li>*/ ?>
-            	<li><b></b>户型：别墅</li>
-            	<?php /*<li><b></b>楼层： 7/13层</li>*/ ?>
-
-                <?php /*<li class="last">*/ ?>
-                 	<?php /*<b></b>交通：*/ ?>
-            		<?php /*<span class="lineList" id="lineList">距5号线立水桥279米*/ ?>
-            			<?php /*<span class="box">*/ ?>
-                         <?php /*<p>距13号线立水桥279米</p>*/ ?>
-                         <?php /*<p>距5号线立水桥南1149米</p>*/ ?>
-                         <?php /*<p class="last">距5号线天通苑南1529米</p>*/ ?>
-                    	<?php /*</span>*/ ?>
-                    <?php /*</span>*/ ?>
-            	<?php /*</li>*/ ?>
-            <script>
+            	<li><b></b>面积： 200㎡</li>
+                            	<li><b></b>户型：别墅</li>
+            	
+                                 	            		            			                                                                                               	                                	            <script>
                 if($('#lineList .box').size()==0){
                     $('#lineList').addClass('lineListnone');
                 }
@@ -292,8 +413,8 @@
              	<script>
              		//预定
              		$("#zreserve").click(function(){
-             			var url="<?php echo e('appointAdd'); ?>";
-             			var id=<?php echo e($list->h_id); ?>;
+             			var url="appointAdd";
+             			var id=1;
              			var data={id:id};
              			$.get(url,data,function(msg){
              				if(msg==0){
@@ -307,8 +428,8 @@
              		})
              		//收藏
              		$("#toCollect").click(function(){
-             			var url="<?php echo e('appointmentAdd'); ?>";
-             			var id=<?php echo e($list->h_id); ?>;
+             			var url="appointmentAdd";
+             			var id=1;
              			var data={id:id};
              			$.get(url,data,function(msg){
              				if(msg==0){
@@ -346,8 +467,8 @@
 			         </div>
 					<div class="txt">
 						<span class="icon yinLeft"></span>
-						<p>我是U+管家：<?php echo e($list->real_name); ?>，<?php echo e($list->u_lang); ?></p>
-						<p class="org pr">U家(U+管家)：<?php echo e($list->real_name); ?> <span class="icon yinRight"></span></p>
+						<p>我是U+管家：孙辉，</p>
+						<p class="org pr">U家(U+管家)：孙辉 <span class="icon yinRight"></span></p>
 					</div>
 				</div>
 				<dl class="chengnuo">
@@ -991,14 +1112,32 @@ function leaveMessage(collect_id,is_whole){
                  <div class="lof-main-outer">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
                      <ul class="lof-main-wapper">
-                         <?php foreach($img as $k=>$v): ?>
-                            <li>
-                                <a href="house_img/<?php echo e($v->img); ?>"  class="pirobox_t6">
-                                   <img src="house_img/<?php echo e($v->img); ?>" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                                     <li>
+                                <a href="house_img/2016-05-27/8669212b150b4c2e205ac81b2e1e405c.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-27/8669212b150b4c2e205ac81b2e1e405c.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
                                 </a>
                             </li>
-                          <?php endforeach; ?>
-                     </ul>
+                                                      <li>
+                                <a href="house_img/2016-05-27/e6b076cd8f18f8bd1443defe43ad8b5f.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-27/e6b076cd8f18f8bd1443defe43ad8b5f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-27/3bb35ba11a5e4d16ae5fedabf1d9b4bb.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-27/3bb35ba11a5e4d16ae5fedabf1d9b4bb.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-27/7baebcd54b881ddf8464a409c56bd017.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-27/7baebcd54b881ddf8464a409c56bd017.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                                      <li>
+                                <a href="house_img/2016-05-27/b1e97654e8f1b0b097d185270153a931.jpg"  class="pirobox_t6">
+                                   <img src="house_img/2016-05-27/b1e97654e8f1b0b097d185270153a931.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-loading.jpg'" />
+                                </a>
+                            </li>
+                                               </ul>
                     <div onclick="return false" href="javascript:;" class="lof-next icon icon-next"></div><!--lof-next -->
                  </div><!--lof-main-outer -->
 
@@ -1194,7 +1333,88 @@ function leaveMessage(collect_id,is_whole){
 
 
 <!--引用底部公用信息-->
-<?php echo $__env->make('commonality.foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- 页脚 -->
+<!--<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>cumque nihil impedit</h3>
+                <div class="footer-grd-left">
+                    <img src="houst_img/6.jpg" class="img-responsive" alt=" " />
+                </div>
+                <div class="footer-grd-left">
+                    <p>Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus
+                        id quod maxime placeat facere possimus, omnis voluptas assumenda
+                        est, omnis dolor repellendus</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>voluptas assumenda</h3>
+                <ul>
+                    <li><a href="#">doloribus asperiores</a></li>
+                    <li><a href="#">Itaque earum rerum</a></li>
+                    <li><a href="#">deserunt mollitia</a></li>
+                    <li><a href="#">facilis est et expedita</a></li>
+                    <li><a href="#">occaecati cupiditate</a></li>
+                    <li><a href="#">deserunt mollitia laborum</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>deserunt mollitia</h3>
+                <ul>
+                    <li><a href="#">doloribus asperiores</a></li>
+                    <li><a href="#">Itaque earum rerum</a></li>
+                    <li><a href="#">deserunt mollitia</a></li>
+                    <li><a href="#">facilis est et expedita</a></li>
+                    <li><a href="#">occaecati cupiditate</a></li>
+                    <li><a href="#">deserunt mollitia laborum</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3>Flickr Posts</h3>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(4).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(5).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(6).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="clearfix"> </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(6).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(5).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="footer-grd">
+                    <a href="#"><img src="houst_img/(4).jpg" class="img-responsive" alt=" " /></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+
+<div class="footer-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" >
+    <div class="container">
+        <a href="foot/guanyu" target="_blank" class="forst" rel="nofollow">关于我们</a>|
+        <a href="foot/myfk" target="_blank" rel="nofollow">我是房客</a>|
+        <a href="foot/jiaru" target="_blank" rel="nofollow">加入U+</a>|
+        <a href="foot/fuwu" target="_blank">服务条款</a>|
+        <a href="foot/yinsi" target="_blank">隐私权条款</a>
+    </div>
+</div>
+<!-- //页脚 -->
 
 
 
@@ -1222,8 +1442,8 @@ function leaveMessage(collect_id,is_whole){
         var lat =$mapSearchText.attr('data-lat');
 
 
-        //alert(<?php echo e($list->x_postion); ?>)
-        var point=new BMap.Point(<?php echo e($list->x_postion); ?>,<?php echo e($list->y_postion); ?>);
+        //alert(114.755301)
+        var point=new BMap.Point(114.755301,38.288893);
     var marker=new BMap.Marker(point);
     map1.centerAndZoom(point,14);
     map1.addOverlay(marker);

@@ -6,7 +6,7 @@
 
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
 </head>
 <body style="height:3000px">
 

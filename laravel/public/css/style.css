@@ -416,6 +416,7 @@ nav.cl-effect-13 a {
 	min-height:300px;
 }
 .newsletter{
+    margin-top: 130px;
 	background:url(../houst_img/3.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
