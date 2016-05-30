@@ -1,22 +1,17 @@
 ﻿@charset "utf-8";
 /*2015-10-22*/
-body,h1,h2,h3,h4,h5,h6,p,blockquote,dl,dt,dd,ul,ol,li,a,span,i,b,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
-body,button,input,select,textarea,li,div,ul,h4{font-family:"Hiragino Sans GB",Arial, Verdana, Tahoma,"微软雅黑"  !important; font-size:14px;} 
-body{color:#777776;background:#fff;}
-*{margin:0;padding:0;}
+
 address,em,i{font-style:normal;}
 div,table,form,input,button,select,textarea,fieldset,legend{outline:none;border:none;}
 ul,ol{list-style:none outside none;}
-a{text-decoration:none;cursor: pointer;outline:none;color:#322c27}
-a:hover{text-decoration: none;}
 img{border:0;}
 b{font-weight:normal;}
 input, button, textarea, select, optgroup, option, pre {border: 0 none;font-size: inherit;font-style: inherit;font-weight: inherit; outline:none;}
 /*body{min-width:1190px;}*/
-.clearfloat{zoom:1} 
+.clearfloat{zoom:1}
 .clearfix:before, .clearfix:after {content: " ";display: block;height: 0;overflow: hidden;visibility: hidden;width: 0;}
 
-.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 li{list-style: none;}
 .relave{position:relative;left:0;top:0;}
 .asote{position:absolute;}
@@ -78,114 +73,12 @@ li{list-style: none;}
 .cff7043{color:#ff7043;}
 .cfff{color:#fff !important;}
 
-/* 登录弹窗  Start*/
-.loginbox{display: none;width: 363px;border: 1px solid #c7c7c7;box-shadow: 0 2px 13px #4C4C4C;overflow: hidden;background-color: #fff;}
-.login-type{position:relative;height: 60px;background-color: #f5f6fa;text-align: center;line-height: 60px;overflow: hidden;font-size: 16px;color: #666;}
-.login-colse,.phone-icon,.checkingbtn,.password-icon,.user-icon,.sendnumber,.verification-icon{background-image: url(../images/login_icon.png);background-repeat: no-repeat;}
-.login-colse{position: absolute;top: 0;right: 0;display: block;width: 33px;height: 33px;background-color: #e6e7eb;background-position: 12px 11px;}
-.login-input{margin: 20px auto;width: 278px;height:270px;}
-.input,.logincheckbox,.largeinputbox,.dinput{position: relative;}
-.input,.logincheckbox,.largeinputbox{width: 276px;}
-.largeinputbox{height: 38px;}
-.input,.dinput{height: 36px;border: 1px solid #ccc;border-radius: 2px;-moz-box-shadow:51px 3px 4px #ededed inset; inset;-webkit-box-shadow:1px 3px 4px #ededed inset; inset;box-shadow:1px 3px 4px #ededed inset;}
-.dinput{width: 128px;}
-.checkingbtn,.phone-icon,.password-icon,.user-icon,.checking-time,.errorprompt,.verification-icon{display: block;position: absolute;}
-.checkingbtn{top:0;right:0;width: 36px;height: 36px;background-position: 7px -82px;}
-.phone-icon,.password-icon,.user-icon,.verification-icon{top: 11px;left: 10px;width: 15px;height: 15px;}
-.phone-icon{background-position: 1px -23px;}
-.password-icon{background-position: 1px -42px;}
-.user-icon{background-position: 0px -62px;}
-.verification-icon{background-position: -21px 0px;}
-.checking-time{top: 8px;right: -37px;width: 29px;height:20px;color: #ff8a01;font-style: normal;}
-.errorprompt{bottom: -27px;right: 11px;color: #e93332; top:48px;}
-.errorprompt, .otherwaytitle, .otherwaytitle a{font-size: 12px;}
-.dlargeinput,.dsmallinput{height: 36px;line-height: 36px;color: #4d4d4d;margin-left: 35px;}
-.dlargeinput{width: 200px;}
-.dsmallinput{width: 90px;}
-.otherwaytitle{color: #919399;}
-.otherwaytitle a{color: #52a5cc;}
-.otherwaytitle a:hover{text-decoration:underline;}
-.otherway{overflow: hidden;width: 364px;}
-.otherway li a{background-image: url(../images/loginfooter_icon.png);background-repeat: no-repeat;}
-.otherway li{overflow:hidden;float: left;}
-.otherway li a{display: block;width: 91px;height: 60px;color: #b8bbc2;overflow: hidden;line-height: 97px;text-align: center;background-color: #f0f1f5;}
-.otherway li a:hover{color: #88898f;background-color: #e9eaf0;}
-.otherway li a.phoneway{background-position: 32px 9px;}
-.otherway li a.phoneway:hover,.otherway li a.phoneway_current{background-position: -28px 9px;}
-.otherway li a.mayiway{background-position: 32px -49px;}
-.otherway li a.mayiway:hover,.otherway li a.mayiway_current{background-position: -28px -49px;}
-.otherway li a.qqway{background-position: 32px -101px;}
-.otherway li a.qqway:hover,.otherway li a.qqway_current{background-position: -27px -101px;}
-.otherway li a.sinaway{background-position: 32px -156px;}
-.otherway li a.sinaway:hover,.otherway li a.sinaway_current{background-position: -29px -156px;}
-.otherway li a.phoneway_current,
-.otherway li a.mayiway_current,
-.otherway li a.qqway_current,
-.otherway li a.sinaway_current{background-color: #e1e2e6;color: #88898f;}
-.logincheckbox {color: #666;display: block; overflow: hidden;}
-.logincheckbox font{ font-size:14px; color:#ff8800;}
-.selectcheckbox{float: left;margin: 5px 6px 0 12px;}
-.forget{color: #52a5cc;}
-.yz-code,.sendnumber{width: 130px;height: 38px;}
-.fl{float:left;}
-.fr{float:right;}
-.sendnumber{background-position: 0px -88px;cursor: pointer;}
-.sendnumber:hover{background-position: 0 -129px;}
-.small-top{margin-top: 22px;}
-.large-top{margin-top: 10px;}
-.defaultsend{color: #4D4D4D;}
-.sending{color: #ff8a00;}
-.n-hint{color: #999; margin-top: 7px;}
-/* 登录按钮 */
-.btn-wrap{overflow: hidden;}
-.btn-wrap a{background-image: url(../images/btnbg.png);}
-.btn-wrap a{display: block;margin: 0 auto;height: 38px;line-height: 38px;border: #49bd00 solid 1px;color: #fff;text-align: center;background-position: 0 0;background-repeat: repeat-x;border-radius: 2px;font-size: 16px;}
-.btn-wrap a:hover{background-position: 0 -40px;}
-.btn-large{width: 262px;}
-.btnpdt10{padding-top: 10px;}
-.btnpdt20{padding-top: 20px;}
-/* 登录弹窗  End*/
 
 
 /*头部*/
-.header{
-	box-sizing:border-box;
-	background:#fff;
-	padding-left:362px;
-	height:60px;
-	width:100%;
-	min-width:1190px;
-	border-bottom:1px solid #dce0e0;	
-}
-.head_cnt{
-	width:100%;
-}
-.search{
-	position:absolute;
-	left:21px;
-	top:17px;
-	width:28px;
-	height:28px;
-	background:url(../images/bj.png) no-repeat;
-	background-position:0 -100px;
-}
 
-#inpt{
-	width:30%;
-	height:59px;
-	border-left:1px solid #dce0e0;	
-	color:#322c27;
-	padding: 15px 0 15px 67px;
-    box-sizing: border-box; 
-    line-height:29px;
-}
-.head_left{
-	left:14px;
-	top:6px;
-	width:350px;
-	height:54px;
-	background:url(../images/head.png) no-repeat;
-}
+
+
 
 .index_head_bar{position: absolute;width: 100%;min-width:1190px;top: 0;z-index:99;height:199px;top: 0;background:url(../images/top_bar_bg.png) repeat-x;}
 .nav_R{color:#fff;padding:10px 23px 0 0;z-index:9;}
