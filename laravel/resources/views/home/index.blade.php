@@ -53,23 +53,23 @@
                 <ul id="flexiselDemo1">
                     <li>
                         <div class="banner-info1-grid">
-                            <img src="houst_img/1.jpg" alt=" " class="img-responsive" />
-                            <h3>最美房子1</h3>
-                            <p>房屋是住人或存放东西的建筑物。房屋是家庭的基体，房屋是人类生存的寄托，在这里人们可以避自在的生活。</p>
+                            <a href="{{'hot?is_hot=1'}}"><img src="houst_img/1.jpg" alt=" " class="img-responsive" /></a>
+                            <h3>热销</h3>
+                            <p>全优的生活配套，环境绝佳优美，月租量遥遥领先</p>
                         </div>
                     </li>
                     <li>
                         <div class="banner-info1-grid">
-                            <img src="houst_img/2.jpg" alt=" " class="img-responsive" />
-                            <h3>最美房子2</h3>
-                            <p>房屋是住人或存放东西的建筑物。房屋是家庭的基体，房屋是人类生存的寄托，在这里人们可以避开自在的生活。</p>
+                            <a href="{{'best?is_best=1'}}"><img src="houst_img/2.jpg" alt=" " class="img-responsive" /></a>
+                            <h3>精品</h3>
+                            <p>无论是长途旅行还是繁忙的工作的归回，你都可以舒服地躺在沙发上，安静的坐在书房里，享受属于自己的闲暇时光。看到这个温暖的屋子，你会恋上它。</p>
                         </div>
                     </li>
                     <li>
                         <div class="banner-info1-grid">
-                            <img src="houst_img/3.jpg" alt=" " class="img-responsive" />
-                            <h3>最美房子3</h3>
-                            <p>房屋是住人或存放东西的建筑物。房屋是家庭的基体，房屋是人类生存的寄托，在这里人们可以避由自在的生活。</p>
+                            <a href="{{'cheap?is_cheap=1'}}"><img src="houst_img/5.jpg" alt=" " class="img-responsive" /></a>
+                            <h3>特价</h3>
+                            <p>感恩回馈新老租客,我们特此推出最新最详细折扣最低的特价房信息</p>
                         </div>
                     </li>
                 </ul>
@@ -177,14 +177,14 @@
         <span class="f18">和你在另一个地方遇见美好</span>
     </div>
     <ul class="city">
-        <li><img src="bankuai/picture/beijing.jpg"><a href="/beijing/" target="_blank">北京</a></li>
-        <li><img src="bankuai/picture/shanghai.jpg"><a href="/shanghai/" target="_blank">上海</a></li>
-        <li><img src="bankuai/picture/chengdu.jpg"><a href="/chengdu/" target="_blank">成都</a></li>
-        <li><img src="bankuai/picture/qingdao.jpg"><a href="/qingdao/" target="_blank">青岛</a></li>
-        <li><img src="bankuai/picture/chongqing.jpg"><a href="/chongqing/" target="_blank">重庆</a></li>
-        <li><img src="bankuai/picture/xian.jpg"><a href="/xian/" target="_blank">西安</a></li>
-        <li><img src="bankuai/picture/hangzhou.jpg"><a href="/hangzhou/" target="_blank">杭州</a></li>
-        <li><img src="bankuai/picture/xiamen.jpg"><a href="/xiamen/" target="_blank">厦门</a></li>
+        <li><img src="bankuai/picture/beijing.jpg"><a href="{{URL('act_place?value=北京')}}" target="_blank">北京</a></li>
+        <li><img src="bankuai/picture/shanghai.jpg"><a href="{{URL('act_place?value=上海')}}" target="_blank">上海</a></li>
+        <li><img src="bankuai/picture/chengdu.jpg"><a href="{{URL('act_place?value=成都')}}" target="_blank">成都</a></li>
+        <li><img src="bankuai/picture/qingdao.jpg"><a href="{{URL('act_place?value=青岛')}}" target="_blank">青岛</a></li>
+        <li><img src="bankuai/picture/chongqing.jpg"><a href="{{URL('act_place?value=重庆')}}" target="_blank">重庆</a></li>
+        <li><img src="bankuai/picture/xian.jpg"><a href="{{URL('act_place?value=西安')}}" target="_blank">西安</a></li>
+        <li><img src="bankuai/picture/hangzhou.jpg"><a href="{{URL('act_place?value=杭州')}}" target="_blank">杭州</a></li>
+        <li><img src="bankuai/picture/xiamen.jpg"><a href="{{URL('act_place?value=厦门')}}" target="_blank">厦门</a></li>
     </ul>
 </div>
 
@@ -298,7 +298,7 @@
 </div>
 <!-- //根据城市查询 -->
 <!-- 通讯底层 -->
-<div class="newsletter-bottom">
+<!--<div class="newsletter-bottom">
     <div class="container">
         <div class="newsletter-bottom-grids">
             <div class="col-md-6 newsletter-bottom-grid wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -335,7 +335,7 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- //通讯底层 -->
 
 <!--引用底部公用信息-->

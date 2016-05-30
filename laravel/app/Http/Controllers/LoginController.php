@@ -8,6 +8,7 @@ use DB,Input,Redirect,url,Validator,Request;
 use Builder;
 
 /*
+ *
  * $Author:孙辉
  * $Id:LoginController.php
  * 2016-05-21 8:26

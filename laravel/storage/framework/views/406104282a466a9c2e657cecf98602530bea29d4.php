@@ -42,7 +42,7 @@
 
 <!--引用公用头部信息-->
 <?php echo $__env->make("commonality.head", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
+<?php echo $__env->make("commonality.qq", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <div class="area clearfix" style="margin-top:50px ">
 
         <!--焦点图开始-->
@@ -54,7 +54,7 @@
                          <?php foreach($img as $k=>$v): ?>
                         <li>
                         	<span class="woshi"></span>
-                        	<a href="houst_img/<?php echo e($v->img); ?>"  class="pirobox_t6">
+                        	<a href=" " class="pirobox_t6">
                             <img src="houst_img/<?php echo e($v->img); ?>" class="loadImgError" width="620" height="470"/>
 	                        </a>
 	                    </li>
@@ -169,76 +169,40 @@
 		</tr>
 		<tr class="bg">
 			<td><span class="txt">月付</span></td>
-			<td>￥2560/月</td>
-			<td>￥2560/月</td>
-			<td>￥3072元/年</td>
+            <?php foreach($resd as $k): ?>
+			<td>￥<?php echo e($k->pay); ?>/月</td>
+			<td>￥<?php echo e($k->deposit); ?>/月</td>
+
+			<td>----</td>
 		</tr>
-		<tr>
-			<td><span class="txt">季付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2916元/年</td>
-		</tr>
-		<tr class="bg">
-			<td><span class="txt">半年付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2479元/年</td>
-		</tr>
-		<tr>
-			<td><span class="txt">年付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2041元/年</td>
-		</tr>
+            <?php endforeach; ?>
+
 	</table>
 	<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>
 	</div>
 	<div class="title">
 		<span class="line"></span>
-		<h2 class="cn"><span class="s"></span>推荐房源<span class="y">●</span></h2>
+		<h2 class="cn"><span class="s"></span>类似房源<span class="y">●</span></h2>
 		<p class="en">Recommend Room<span class="y">●</span></p>
 	</div>
 
 
 	<!--推荐房源-->
 	<ul class="imgInfo_list clearfix">
+        <?php foreach($data as $v): ?>
 		 <li class="no_note ">
 			<div class="imgInfo_show">
-				<a href="/z/vr/60098172.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160413104002961_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/buding-up.jpg'"/></a>
+				<a href="javascript:void(0)" target="_blank"><img class="" alt="" src="picture/v460x300_20160413104002961_f.jpg"/></a>
 			</div>
 			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/60098172.html" target="_blank">东辰小区3居室-03卧</a></span>
-				<span class="text_r">￥<i>2030</i>/月</span>
+				<span class="text_l limit_w"><a href="/z/vr/60098172.html" target="_blank"><?php echo e($v->h_address); ?></a></span>
+				<span class="text_r">￥<i><?php echo e($v->pay); ?></i>/月</span>
 			</div>
 			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]13号线立水桥</span>
+				<span class="text_l"><?php echo e($v->h_address); ?></span>
 			</div>
 		</li>
-		<li class="no_note ">
-			<div class="imgInfo_show">
-				<a href="/z/vr/60118752.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160510110318738_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/mumian-up.jpg'"/></a>
-			</div>
-			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/60118752.html" target="_blank">东辰小区3居室-02卧</a></span>
-				<span class="text_r">￥<i>2030</i>/月</span>
-			</div>
-			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]13号线立水桥</span>
-			</div>
-		</li>
-		<li class="no_note pad_none">
-			<div class="imgInfo_show">
-				<a href="/z/vr/81525.html" target="_blank"><img class="" alt="" src="picture/v460x300_20160507171729863_f.jpg" onerror="this.src='http://www.ziroom.com/static/images/slist_1207/yuanwei-up.jpg'"/></a>
-			</div>
-			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/81525.html" target="_blank">佳运园一期3居室-03卧</a></span>
-				<span class="text_r">￥<i>69</i>/月</span>
-			</div>
-			<div class="clearfix gray-6">
-				<span class="text_l">[昌平立水桥]5号线立水桥南</span>
-			</div>
-		</li>
+    <?php endforeach; ?>
 	</ul>
 	<!--推荐房源-->
          </div><!--room_detail_left-->

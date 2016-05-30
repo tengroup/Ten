@@ -6,7 +6,13 @@ use Request;
 use Illuminate\Session;
 use Illuminate\Contracts\Cookie;
 use DB;
-header('Content-type:text/html;charset=utf-8');
+/*
+ *
+ * $Author:赵文杰
+ * $Id:TypeController.php
+ * 2016-05-21 8:26
+ */
+
 class TypeController extends Controller
 {
     //公共方法
@@ -86,7 +92,45 @@ class TypeController extends Controller
     }
 
 
-//    public function check_time()
+    //查询热销
+    public function hot(){
+        $is_hot=Request::get("is_hot");
+        $arr=DB::table('house')
+            ->join("house_type",'house.t_id','=','house_type.t_id')
+            ->where('is_hot','=','1')
+            ->where("status",'=','1')
+            ->orderBy('receive_time', 'desc')
+            ->paginate(6);
+        return view('type/cheak',['list'=>$arr,'is_hot'=>$is_hot]);
+    }
+
+    //查询精品
+    public function best(){
+        $is_best=Request::get("is_best");
+        $arr=DB::table('house')
+            ->join("house_type",'house.t_id','=','house_type.t_id')
+            ->where('is_best','=','1')
+            ->where("status",'=','1')
+            ->orderBy('receive_time', 'desc')
+            ->paginate(6);
+        return view('type/cheak',['list'=>$arr,'is_best'=>$is_best]);
+    }
+
+
+    //查询特价
+    public function cheap(){
+        $is_cheap=Request::get("is_cheap");
+        $arr=DB::table('house')
+            ->join("house_type",'house.t_id','=','house_type.t_id')
+            ->where('is_cheap','=','1')
+            ->where("status",'=','1')
+            ->orderBy('receive_time', 'desc')
+            ->paginate(6);
+        return view('type/cheak',['list'=>$arr,'is_cheap'=>$is_cheap]);
+    }
+
+
+    //    public function check_time()
 //    {
 //       //接收时间和 关键字查询
 //      // $time=Request::get('dates');
@@ -149,5 +193,6 @@ class TypeController extends Controller
 //        $arr=$this->pub_all();
 //        return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
 //    }
+
 
 }

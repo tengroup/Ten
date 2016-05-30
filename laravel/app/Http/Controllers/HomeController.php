@@ -11,7 +11,6 @@ use App\Task;
 /**
  *  @U+           处理程序文件
  *  @Home：       首页
- *  @Author:      张龙
  *  @Time         2016-05-17
  */
 header("Content-type:text/html;charset=utf8");

@@ -309,6 +309,7 @@
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
+
 						<div id="list">
 							<div class="row">
 								<div class="col-xs-12">
@@ -321,12 +322,11 @@
 													<th>房东邮箱</th>
 													<th>房东电话</th>
 													<th>房东昵称</th>
-                                                    <th>状态</th>
 													<th>操作</th>
 												</tr>
 											</thead>
 											
-											<?php foreach ($data as $k=>$v){ ?>
+											<?php foreach ($res as $k=>$v){ ?>
 											<tbody>
 												<tr>
 													<td><?php echo $v['u_id']  ?></td>
@@ -334,52 +334,34 @@
 													<td><?php echo $v['u_email']  ?></td>
 													<td><?php echo $v['u_tel']  ?></td>
 													<td class="hidden-480">
+														<span class="label label-sm label-warning">
 															<?php echo $v['pet_name']  ?>
+														</span>
 													</td>
-                                                    <td id="td_<?php echo $v['u_id'] ?>">
-                                                        <a href="javascript:void(0)" onclick="check_lock(this)" id="<?php echo $v['u_id'] ?>" title="<?php echo $v['u_status'] ?>"> <?php if($v['u_status']==0){
-                                                       echo "<font color='red'>锁定</font>";
-                                                       }else{
-                                                        echo "<font color='green'>未锁定</font>";
-                                                       }
-                                                       ?></a>
-                                                    </td>
-                                                    <td>
+
+													<td>
 														<a class="deleteName" href="javascript:void(0);" value="<?php echo $v['u_id']  ?>">
 														<i class="icon-trash bigger-120"></i>
 														</a>
 													</td>
-                                                    <script>
-                                                        function check_lock(obj){
-                                                            var str='';
-                                                            var u_id=obj.id;
-                                                            var lock=obj.title;
-                                                            var url="index.php?r=fdong/check_lock";
-                                                            var data={'u_id':u_id,'lock':lock};
-                                                            $.get(url,data,function(msg){
-                                                                if(msg==1){
-                                                                   // str='<a href="javascript:void(0)" onclick="check_lock(this)"  title="1"  id="'+u_id+'" >锁定</a>';
-                                                                   // alert(str);
-                                                                   $("#td_"+u_id).html('<a href="javascript:void(0)" onclick="check_lock(this)"  title="1"  id="'+u_id+'" ><font color="green">未锁定</font></a>');
-                                                                }else{
-                                                                   // str='<a href="javascript:void(0)" onclick="check_lock(this)" title="0"  id="'+u_id+'" >未锁定</a>';
-                                                                   // alert(str);
-                                                                    $("#td_"+u_id).html('<a href="javascript:void(0)" onclick="check_lock(this)" title="0" id="'+u_id+'" ><font color="red">锁定</font></a>');
-                                                                }
-                                                            })
-                                                        }
-                                                    </script>
 												</tr>
 											</tbody>
 											<?php } ?>
 										</table>
 										<!--分页 start-->
-								        <div class="pull-left">共<i><?php echo $num;?></i>条记录</div>
-								        <div class="pull-right">
-								            <a class="pre" href="javascript:void(0);" value="<?php echo $pageos; ?>">上一页</a>
-								            <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"?>
-								              <a class="after" href="javascript:void(0);" value="<?php echo $pages; ?>">下一页</a>
-							            </div>
+								        
+								         <div class="pull-right">
+								         <?php
+											use yii\widgets\LinkPager;
+										?>
+								            <i class="pre" href="javascript:void(0);" >&nbsp;</i>
+								           
+								            <?php
+												echo LinkPager::widget(['pagination'=>$pages]);
+												
+											?>
+								              <i class="after" href="javascript:void(0);">&nbsp;</i>
+							            </div> 
 							            <!--分页 end-->
 									</div><!-- /.table-responsive -->
 								</div><!-- /span -->
@@ -481,50 +463,11 @@
 
 
 <script>
+
 /*
 *ajax功能模块
 */
-  //分页
-  $(document).on('click','.abiao',function(){
-  var abiao = $(this).text();
-  var userName = $('.nav-search-input').val();
-  //alert(abiao)
-  $.get("index.php?r=fdong/replacelist",{
-    userName:userName,
-    p:abiao
-  },function(data){
-    //alert(data);
-    $("#list").html(data);
-  })
-})
-  //上一页
-  $(document).on('click','.pre',function(){
-  var pre = $(this).attr('value');
-  var userName = $('.nav-search-input').val();
-  //alert(pre)
-  //alert(pre)
-  $.get("index.php?r=fdong/replacelist",{
-    userName:userName,
-    p:pre
-  },function(data){
-    //alert(data);
-    $("#list").html(data);
-  })
-})
-  //下一页
-  $(document).on('click','.after',function(){
-  var after = $(this).attr('value');
-  var userName = $('.nav-search-input').val();
-  //alert(after)
-  //alert(after)
-  $.get("index.php?r=fdong/replacelist",{
-    userName:userName,
-    p:after
-  },function(data){
-    //alert(data);
-    $("#list").html(data);
-  })
-})
+  
   //查询
   $(document).on('click','.btn01',function(){
   var userName = $('.nav-search-input').val();
