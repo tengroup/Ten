@@ -58,8 +58,8 @@ Route::get('short','TypeController@short');
 //传地址
 Route::get('act_place','TypeController@short');
 //传时间判断
-Route::get('check_time','TypeController@check_time');
-Route::post('all_sel','TypeController@all_sel');
+Route::any('check_time','TypeController@short');
+Route::post('all_sel','TypeController@short');
 Route::get('more','TypeController@check_more');
 
 

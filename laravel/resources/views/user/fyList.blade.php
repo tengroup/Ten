@@ -49,7 +49,7 @@
                 <div class="title">
                     <span class="line"></span>
                     <h2 class="cn"><span class="s"></span><span class="t" id="recommendation">短租房屋信息</span><span class="y2">●</span><span class="y">●</span></h2>
-                    
+
                 </div>
 
                 <!--推荐房源-->

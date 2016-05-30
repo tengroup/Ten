@@ -148,11 +148,11 @@
             </div>
             <div class="col-md-6 newsletter-bottom-grid  wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <h3>特价房</h3>
-                <p>地址:{{$Specialoffer[0]->h_address}}</p>
-                <p>面积:{{$Specialoffer[0]->h_area}}平方米</p>
-                <p>可住:{{$Specialoffer[0]->number}}人</p>
-                <p>可住:{{$Specialoffer[0]->pay}}</p>
-                <p>{!!$Specialoffer[0]->content!!}</p>
+                <p>地址:{{$Specialoffer[1]->h_address}}</p>
+                <p>面积:{{$Specialoffer[1]->h_area}}平方米</p>
+                <p>可住:{{$Specialoffer[1]->number}}人</p>
+                <p>可住:{{$Specialoffer[1]->pay}}</p>
+                <p>{!!$Specialoffer[1]->content!!}</p>
                 <div class="more">
                     <a href="{{URL('perLook?id')}}={{$Specialoffer[0]->h_id}}" class="hvr-curl-bottom-right">阅读更多</a>
                 </div>
