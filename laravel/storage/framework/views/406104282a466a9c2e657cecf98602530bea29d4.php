@@ -169,28 +169,14 @@
 		</tr>
 		<tr class="bg">
 			<td><span class="txt">月付</span></td>
-			<td>￥2560/月</td>
-			<td>￥2560/月</td>
-			<td>￥3072元/年</td>
+            <?php foreach($resd as $k): ?>
+			<td>￥<?php echo e($k->pay); ?>/月</td>
+			<td>￥<?php echo e($k->deposit); ?>/月</td>
+
+			<td>----</td>
 		</tr>
-		<tr>
-			<td><span class="txt">季付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2916元/年</td>
-		</tr>
-		<tr class="bg">
-			<td><span class="txt">半年付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2479元/年</td>
-		</tr>
-		<tr>
-			<td><span class="txt">年付</span></td>
-			<td>￥2430/月</td>
-			<td>￥2430/月</td>
-			<td>￥2041元/年</td>
-		</tr>
+            <?php endforeach; ?>
+
 	</table>
 	<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>
 	</div>
