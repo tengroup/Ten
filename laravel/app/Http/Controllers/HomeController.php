@@ -60,7 +60,7 @@ class HomeController extends Controller
     	->limit(1,2)
     	->where('house.is_cheap','=','1')
 		->get();
-		//var_dump($Specialoffer);die;
+		// var_dump($Specialoffer);die;
 		
     	//特价图片
     	$SpecialofferImg = DB::table('images')
