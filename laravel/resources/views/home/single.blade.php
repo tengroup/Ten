@@ -41,7 +41,7 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+@include ("commonality.head")
     
     <div class="area clearfix">
 
@@ -1194,7 +1194,7 @@ function leaveMessage(collect_id,is_whole){
 
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 

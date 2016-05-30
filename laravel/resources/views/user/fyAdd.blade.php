@@ -138,6 +138,22 @@
                 @endif
 			</div>
 
+                <!--入住时间、、退房时间-->
+                <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <span class="input-group-addon" id="basic-addon1">in_Time</span>
+                    @if(!empty($list->in_time))
+                        <input placeholder="可住时间" class="inline laydate-icon" id="start" name="in_time"style="width:200px; margin-right:10px;" value="{{$list->in_time}}">
+                    @else
+                        <input placeholder="可住时间" class="inline laydate-icon" id="start" name="in_time"style="width:200px; margin-right:10px;" >
+                    @endif
+                    <span class="input-group-addon" id="basic-addon1">Out_time</span>
+                    @if(!empty($list->out_time))
+                    <input placeholder="可离开时间" class="inline laydate-icon" id="end" style="width:200px;" name="out_time" value="{{$list->out_time}}">
+                    @else
+                        <input placeholder="可离开时间" class="inline laydate-icon" id="end" style="width:200px;" name="out_time" >
+                    @endif
+                </div>
+
             <!--租金"-->
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms"  data-wow-delay="300ms">
 				<span class="input-group-addon">$</span>
@@ -239,7 +255,7 @@
 <!-- //typography-page -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 <!-- for bootstrap working -->

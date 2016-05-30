@@ -41,10 +41,10 @@
         <h1 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">短租房屋信息</h1>
         <div class="service-grids">
             @foreach($list as $k=>$v)
-                <div class="col-md-4 service-grid">
+                <div class="col-md-4 service-grid" style="margin-bottom: 100px">
                     <div class="service-grd wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <img src="houst_img/{{$v->photo}}" alt=" " class="img-responsive" />
-                        <div class="service-grd-pos">
+                        <div class="service-grd-pos" >
                             <h4>Click on View Details</h4>
                             <div class="more m2">
                                 <a href="{{URL("fyAdd?h_id")}}={{$v->h_id}}" class="hvr-curl-bottom-right">修改</a>
@@ -61,11 +61,12 @@
                         <div class="service-grd-pos2">
                             <p style="font-size: 18px;">${{$v->pay}}/-</p>
                         </div>
-
+                        <div class="clearfix"> </div>
                     </div>
                 </div>
            @endforeach
                 <div class="clearfix"> </div>
+
         </div>
         <?php echo $list->render(); ?>
     </div>
@@ -73,7 +74,7 @@
 <!-- //services -->
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 

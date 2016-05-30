@@ -118,6 +118,7 @@ class LoginController extends Controller
             if($arr->u_pwd==$pwd){
                 //判断登录人是房东还是客户  将登陆时间入库
                 if($status==1){
+                    //echo 123;die;
                     //判断账号是否锁定
                     if($arr->u_status==1){
                         DB::table("f_users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);

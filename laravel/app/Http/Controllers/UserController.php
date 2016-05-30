@@ -246,7 +246,7 @@ class UserController extends Controller
         $arr=Request::all();
 
         $file =Request::file('files');
-        //var_dump($file );die;
+        //var_dump($arr );die;
         unset($arr['video']);
         unset($arr['files']);
         $arr['is_hot']=Request::get("is_hot");

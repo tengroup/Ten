@@ -349,7 +349,7 @@
 <body>
 
 <!--引用公用头部信息-->
-@include ("commonality.head");
+@include ("commonality.head")
 
 <!-- banner1 -->
 <div class="banner1">
@@ -424,7 +424,7 @@
 
 
 <!--引用底部公用信息-->
-@include('commonality.foot');
+@include('commonality.foot')
 
 
 
