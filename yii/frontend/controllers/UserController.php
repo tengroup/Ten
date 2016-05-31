@@ -6,8 +6,9 @@ use frontend\models\User;
 use yii\web\Request;
 
 /*
- *   $Author: dongmegntao
- *   $Id: UserController.php 2016-05-21 8:26 dongmengtao
+ *   @Author: dongmegntao
+ *   @class: UserController.php
+ *  @time: 2016-05-21 8:26
  */
 
 class UserController extends \yii\web\Controller
