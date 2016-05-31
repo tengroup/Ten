@@ -149,13 +149,13 @@
                         </div>
                     </div>
 
-                    <div class="control-group t-control-group">
+                    <!--<div class="control-group t-control-group">
                         <label for="saveUserLongTime">
                             <input type="checkbox" class="check-btn" id="saveUserLongTime" name="mian"/>保存登录状态2周
                             <input type="hidden" name="userExpiresHours" id="userExpiresHours" value="">
                         </label>
                         <a href="/PortalSite/FetchPassword" class="forget-pwd">忘记密码？</a>
-                    </div>
+                    </div>-->
                     <div class="control-group button-group">
                         <input type="submit" value="登录" title="登录" class="login-btn" />
                     </div>
@@ -195,13 +195,13 @@
                         </div>
                     </div>
                     <span id="errorMsgCode"></span>
-                    <div class="control-group t-control-group">
+                    <!--<div class="control-group t-control-group">
                         <label for="smssaveUserLongTime">
                             <input type="checkbox" class="check-btn" id="smssaveUserLongTime" />保存登录状态2周
                             <input type="hidden" name="userExpiresHours" value="">
                         </label>
 
-                    </div>
+                    </div>-->
                     <div class="control-group button-group">
                         <input type="button" value="登录" title="登录" id='SubmitCode'class="login-btn" />
                     </div>
