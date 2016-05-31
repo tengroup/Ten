@@ -96,6 +96,7 @@ var oSelectList = document.getElementById('selectList');
 
 var oClearList = $(".hasBeenSelected .clearList");
 var oCustext1 = document.getElementById('custext1');
+
 var oCustext2 = document.getElementById('custext2');
 var aItemTxt = oSelectList.getElementsByTagName('a');
 var isCusPrice = false;//是否自定义价格
@@ -126,8 +127,12 @@ oSelectList.onclick = function(e, a) {
                 delStr(val.innerHTML + '|' + sType, okSelect)
             }
         } else if (tag.getAttribute('type').toUpperCase() == 'BUTTON') { //如果点击的是 自定义价格按钮
-            radioVal = oCustext1.value + '-' + oCustext2.value + '元';
-            isCusPrice = true;
+				radioVal = oCustext1.value + '-' + oCustext2.value + '元';
+				isCusPrice = true;
+				
+				
+			
+			
 
             for (var i = 0; i < aRadio.length; i++) {
                 aRadio[i].checked = false;
