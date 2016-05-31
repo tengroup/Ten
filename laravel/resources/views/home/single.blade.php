@@ -266,6 +266,8 @@
              					alert("您已经预约过该房源了！");
              				}else if(msg==1){
              					alert("您预约了该房源！");
+             				}else if(msg==5){
+             					alert("对不起！房东不能预约！");
              				}else{
              					alert("抱歉，您预约失败！");
              				}
@@ -281,6 +283,8 @@
              					alert("您已经收藏过该房源了！");
              				}else if(msg==1){
              					alert("您收藏了该房源！");
+             				}else if(msg==5){
+             					alert("对不起！房东不能收藏！");
              				}else{
              					alert("抱歉，您收藏失败！");
              				}
