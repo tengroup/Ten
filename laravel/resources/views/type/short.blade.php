@@ -194,10 +194,10 @@
                                     <input name="radio2" type="radio" value="2000-5000" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="2000-5000">2000-5000元</a></label>
                                 <div class="custom"><span>自定义</span>&nbsp;
-                                    <input name="s_price" type="text" id="custext1"/>
+                                    <input name="s_price" type="text" id="custext1" />
                                     &nbsp;-&nbsp;
                                     <input name="b_price" type="text" id="custext2"/>
-                                    <input  type="button" id="cusbtn" />
+                                    <input  type="button" id="cusbtn" onclick="check_price()"/>
                                 </div>
                             </dd>
                         </dl>
@@ -229,23 +229,12 @@
                             <dt>主题风格</dt>
                             <dd data-more=true>
                                 <label><a href="javascript:;" values2="" values1="" attrval="不限">不限</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="一室一厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="一室一厅">一室一厅</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="两室一厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="两室两厅">两室一厅</a> </label>
-                                <input name="h_type[]" type="checkbox" value="两室两厅" autocomplete="off" style="margin-top: 10px;"/>
-                                <a href="javascript:;"  attrval="两室两厅">两室两厅</a> </label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="三室两厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="三室两厅">三室两厅</a> </label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="四室三厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="四室三厅">四室三厅</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="四室四厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="四室四厅">四室四厅</a></label>
+                            @foreach($type as $l)
+                                    <label>
+                                        <input name="h_type[]" type="checkbox" value="{{$l->t_name}}" autocomplete="off" style="margin-top: 10px;"/>
+                                        <a href="javascript:;"  attrval="{{$l->t_name}}">{{$l->t_name}}</a>
+                                    </label>
+                            @endforeach
                             </dd>
                         </dl>
 

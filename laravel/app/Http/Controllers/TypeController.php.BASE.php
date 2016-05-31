@@ -6,12 +6,7 @@ use Request;
 use Illuminate\Session;
 use Illuminate\Contracts\Cookie;
 use DB;
-/*
- * $Author:赵文杰
- * $Id:TypeController.php
- * 2016-05-21 8:26
- */
-
+header('Content-type:text/html;charset=utf-8');
 class TypeController extends Controller
 {
     //公共方法
@@ -23,18 +18,12 @@ class TypeController extends Controller
         $best=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_best=1 and status=1 ORDER by h_id limit 3");
         //查询特价
         $cheap=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where is_cheap=1  and status=1 ORDER by h_id limit 3");
-        //查询房屋数量
-        $num=DB::select(" select count(*) as count from house inner join house_type on house.t_id=house_type.t_id where status=1");
-       //类型
-        $type=DB::select(" select * from  house_type");
-        return ['hot'=>$hot,'best'=>$best,'cheap'=>$cheap,'num'=>$num[0]->count,'type'=>$type];
+        return ['hot'=>$hot,'best'=>$best,'cheap'=>$cheap];
     }
 	//短租
     public function short()
     {
-
-
-        //地区传值
+         //地区传值
         $value=Request::get('value')?Request::get('value'):'';
         //查询 时间和 关键字
         $time=Request::get('dates')?Request::get('dates'):'';
@@ -85,56 +74,19 @@ class TypeController extends Controller
         }else{
             $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and h_address like '%$value%' and in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' $where");
         }
+
        //查询
         //  $data=DB::table("house")->join("house_type","house.t_id","=","house_type.t_id")->where('h_address','like',"%$value%")->paginate($perPage = 3, $columns = ['*'], $pageName = 'page');
         //  $sql="select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and h_address like '%$value%' and in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' ORDER by h_id limit 15";
      //   $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and h_address like '%$value%' and in_time<='$start_time' and out_time>= '$end_time' and h_address like '%$check_name%' ORDER by h_id limit 15");
 
         $arr=$this->pub_all();
-       return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap'],'num'=>$arr['num'],'type'=>$arr['type']]);
+       return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
    
     }
 
 
-    //查询热销
-    public function hot(){
-        $is_hot=Request::get("is_hot");
-        $arr=DB::table('house')
-            ->join("house_type",'house.t_id','=','house_type.t_id')
-            ->where('is_hot','=','1')
-            ->where("status",'=','1')
-            ->orderBy('receive_time', 'desc')
-            ->paginate(6);
-        return view('type/cheak',['list'=>$arr,'is_hot'=>$is_hot]);
-    }
-
-    //查询精品
-    public function best(){
-        $is_best=Request::get("is_best");
-        $arr=DB::table('house')
-            ->join("house_type",'house.t_id','=','house_type.t_id')
-            ->where('is_best','=','1')
-            ->where("status",'=','1')
-            ->orderBy('receive_time', 'desc')
-            ->paginate(6);
-        return view('type/cheak',['list'=>$arr,'is_best'=>$is_best]);
-    }
-
-
-    //查询特价
-    public function cheap(){
-        $is_cheap=Request::get("is_cheap");
-        $arr=DB::table('house')
-            ->join("house_type",'house.t_id','=','house_type.t_id')
-            ->where('is_cheap','=','1')
-            ->where("status",'=','1')
-            ->orderBy('receive_time', 'desc')
-            ->paginate(6);
-        return view('type/cheak',['list'=>$arr,'is_cheap'=>$is_cheap]);
-    }
-
-
-    //    public function check_time()
+//    public function check_time()
 //    {
 //       //接收时间和 关键字查询
 //      // $time=Request::get('dates');
@@ -197,6 +149,5 @@ class TypeController extends Controller
 //        $arr=$this->pub_all();
 //        return view("type/short",['data'=>$data,'hot'=>$arr['hot'],'best'=>$arr['best'],'cheap'=>$arr['cheap']]);
 //    }
-
 
 }
