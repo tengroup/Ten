@@ -50,6 +50,7 @@
              <div id="lofslidecontent45" class="lof-slidecontent current_lof">
                  <div class="lof-main-outer" id="cao">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
+                     <?php /*大的轮播图*/ ?>
                      <ul class="lof-main-wapper">
                          <?php foreach($img as $k=>$v): ?>
                         <li>
@@ -64,6 +65,7 @@
             </div><!--lof-main-outer -->
                 <div class="lof-navigator-wapper">
 					<div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
+                    <?php /*小的轮播图*/ ?>
                     <div class="lof-navigator-outer" >
                   		<ul class="lof-navigator">
                         <?php foreach($img as $k=>$v): ?>
@@ -93,23 +95,23 @@
 			</p>
 	        <?php endforeach; ?>
 	</div><!--/aboutRoom-->
-	<div class="title">
-		<span class="line"></span>
-		<h2 class="cn"><span class="s"></span>房屋配置<span class="y">●</span></h2>
-		<p class="en">Room Allocation<span class="y">●</span></p>
-	</div>
+	<?php /*<div class="title">*/ ?>
+		<?php /*<span class="line"></span>*/ ?>
+		<?php /*<h2 class="cn"><span class="s"></span>房屋配置<span class="y">●</span></h2>*/ ?>
+		<?php /*<p class="en">Room Allocation<span class="y">●</span></p>*/ ?>
+	<?php /*</div>*/ ?>
 
-	<ul class="configuration clearfix">
-		<li class="have"><span class="bed"></span>床</li>
-		<li class="have"><span class="chest"></span>衣柜</li>
-		<li class="have"><span class="desk"></span>书桌</li>
-		<li class="have"><span class="wifi"></span>Wi-Fi</li>
-		<li class="have"><span class="washing"></span>洗衣机</li>
-		<li class="have"><span class="calorifier"></span>热水器</li>
-		<li class="have"><span class="air-condition"></span>空调</li>
-		<li class="have"><span class="microwave"></span>微波炉</li>
-		<li class="last"><span class="lock"></span>智能锁</li>
-	</ul>             
+	<?php /*<ul class="configuration clearfix">*/ ?>
+		<?php /*<li class="have"><span class="bed"></span>床</li>*/ ?>
+		<?php /*<li class="have"><span class="chest"></span>衣柜</li>*/ ?>
+		<?php /*<li class="have"><span class="desk"></span>书桌</li>*/ ?>
+		<?php /*<li class="have"><span class="wifi"></span>Wi-Fi</li>*/ ?>
+		<?php /*<li class="have"><span class="washing"></span>洗衣机</li>*/ ?>
+		<?php /*<li class="have"><span class="calorifier"></span>热水器</li>*/ ?>
+		<?php /*<li class="have"><span class="air-condition"></span>空调</li>*/ ?>
+		<?php /*<li class="have"><span class="microwave"></span>微波炉</li>*/ ?>
+		<?php /*<li class="last"><span class="lock"></span>智能锁</li>*/ ?>
+	<?php /*</ul>*/ ?>
 	<!--/greatRoommate-->
 
 
@@ -178,7 +180,7 @@
             <?php endforeach; ?>
 
 	</table>
-	<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>
+	<?php /*<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>*/ ?>
 	</div>
 	<div class="title">
 		<span class="line"></span>
@@ -195,7 +197,7 @@
 				<a href="javascript:void(0)" target="_blank"><img class="" alt="" src="picture/v460x300_20160413104002961_f.jpg"/></a>
 			</div>
 			<div class="clearfix info_sction">
-				<span class="text_l limit_w"><a href="/z/vr/60098172.html" target="_blank"><?php echo e($v->h_address); ?></a></span>
+				<span class="text_l limit_w"><a href="<?php echo e(URL('perLook?id=')); ?><?php echo e($v->h_id); ?>" target="_blank"><?php echo e($v->h_address); ?></a></span>
 				<span class="text_r">￥<i><?php echo e($v->pay); ?></i>/月</span>
 			</div>
 			<div class="clearfix gray-6">
@@ -220,16 +222,18 @@
                 </p>
             </div>
             <p class="room_tags clearfix">
-           		<span class="subway">地铁10分钟</span>
+           		<?php /*<span class="subway">地铁10分钟</span>*/ ?>
+
            		<span class="balcony">独立阳台</span>
            		<span class="style">风格1.0 原味</span>
             </p>
             <ul class="detail_room">
             	<li><b></b>面积： <?php echo e($list->h_area); ?>㎡</li>
                 <?php /*<li><b></b>朝向： 南</li>*/ ?>
-            	<li><b></b>户型：别墅</li>
+            	<li><b></b>户型：<?php echo e($list->t_name); ?></li>
             	<?php /*<li><b></b>楼层： 7/13层</li>*/ ?>
-
+                <li><b></b>居住人数：<?php echo e($list->number); ?>人</li>
+                <li><b></b>押金：<?php echo e($list->deposit); ?>元</li>
                 <?php /*<li class="last">*/ ?>
                  	<?php /*<b></b>交通：*/ ?>
             		<?php /*<span class="lineList" id="lineList">距5号线立水桥279米*/ ?>
@@ -285,7 +289,7 @@
 						});
              		})
              	</script>                                             
-	         	<div class="sharebtn pr"><a class="btn "><span class="icon"></span>分享</a>
+	         	<div class="sharebtn pr"><a class="btn "><span class="icon">分享</span></a>
 					<span class="shareCon pa">
 						<b></b>
 						<span class="weixin" title="微信"></span>
@@ -301,7 +305,7 @@
 
 <!--从接口中获取管家信息-->
 	<div class="r_fixed" id="r_fixed">
-	    <div class="tel"><span class="icon"></span> 151 0014 6754</div>
+	    <div class="tel"><span class="icon"></span> <?php echo e($list->phone); ?></div>
 			<div class="con">
 				<div class="zoInfo clearfix ">
 					<div class="img">
@@ -318,10 +322,10 @@
 		            <dt class="pr"><span class="t_zindex0 icon icon-line"></span> <span class="t_zindex1">U+承诺</span></dt>
 		            <dd>
 			            <ul class="top_list clearfix">
-			                  <li><a href="/zhuanti/azcn/index.html#0" target="_blank">100%真房源<b></b></a></li>
-			                  <li><a href="/zhuanti/azcn/index.html#3" target="_blank">3天不满意全额退款</a></li>
-			                  <li><a href="/zhuanti/azcn/index.html#1" target="_blank">房屋质量问题无责换租<b></b></a></li>
-			                  <li><a href="/zhuanti/azcn/index.html#2" target="_blank">退租押金三个工作日返还</a></li>
+			                  <li><a href="#" target="_blank">100%真房源<b></b></a></li>
+			                  <li><a href="#" target="_blank">3天不满意全额退款</a></li>
+			                  <li><a href="#" target="_blank">房屋质量问题无责换租<b></b></a></li>
+			                  <li><a href="#" target="_blank">退租押金三个工作日返还</a></li>
 			            </ul>
 			            <!-- <ul class="bottom_list clearfix">
 			              <li class="fuwu">
@@ -981,96 +985,7 @@ function leaveMessage(collect_id,is_whole){
 
 <input type="hidden" value="login" id="type">
 
- <div class="modal" id="modal" >
-    
-    <div class="modal-content logins" id="logins">
-    
-        <a href="javascript:;" class="close m_icon"></a>
-        <h2 class="logo m_icon"></h2>
-        <div class="separator m_icon"></div>
-        
-        <div class="control-group">
-            <span class="m_icon user"></span>
-            <input type="text" name="user_name" id="user_name" placeholder="请输入登录手机号" class="inp_txt" tabindex="1"/>
-            <p for="user_name" class="invalid"></p>
-        </div>
-        <div class="control-group">        
-            <span class="m_icon pas"></span>
-            <input type="password" name="user_pas" id="user_pas" placeholder="请输入6-16位密码" class="inp_txt" tabindex="2"/>
-            <p for="user_pas" class="invalid"></p>
-        </div>
-       
-        <div class="control-group " id="captcha_tr" style="display:none;">
-           <input type="hidden" id="is_captcha" value="0">
-   
-            <div class="clearfix">
-                 <input type="text" name="verification" id="verification" placeholder="请输入验证码" class="inp_txt inp_yzm"  tabindex="3"/><img src="" width="114" height="45" class="cur_pointer captcha_img"  id="login_captcha_img">
-                <span class="m_icon refurbish" id="login_refurbish"></span>
-            </div>
 
-            <p for="verification" class="invalid"></p>
-        </div>
-            
-        <div class="control-group clearfix">
-            <p class="fl checkbox" id="within"><label for="within_a_week"><span class="m_icon"></span><input type="checkbox" id="within_a_week">一周内免登录</label></p>
-            <a href="/?_p=sign&_a=weakpassowrd&step=1&type=forgetpassword" class="fr org">忘记密码？</a>
-        </div><!--/control-group-->
-         <div class="control-group clearfix">
-            <input type="button" value="登 录" class="org_btn" id="login_button">
-                
-        </div><!--/control-group-->
-
-        <div class="control-group clearfix tc bottom">
-            没有账号？现在就 <a href="javascript:;" class="org" id="toSignup">注册</a>
-        </div><!--/control-group-->
-
-    </div><!--/modal-content-->
-
-
-    <div class="modal-content signup" id="signup" style="display:none;">
-        <a href="javascript:;" class="close m_icon"></a>
-        <h2 class="logo m_icon"></h2>
-        <div class="separator m_icon"></div>
-        
-        <div class="control-group">
-            <span class="m_icon tel_icon"></span>
-            <input type="text" name="" id="sign_name" placeholder="用于登录建议使用常用手机号" class="inp_txt" />
-            <p for="sign_name" class="invalid"></p>
-        </div>
-        <div class="control-group ">
-            <input type="text" name="" id="sign_yzm" placeholder="请输入验证码" class="inp_txt inp_yzm" /><img src="" width="114" height="45" class="cur_pointer captcha_img" id="reg_captcha_img">
-            <span class="m_icon refurbish" id="reg_refurbish"></span>
-            <p for="sign_yzm" class="invalid"></p>
-        </div>
-        <div class="control-group ">
-            
-            <input type="text" name="" id="sign_duanxin" placeholder="短信验证码" class="inp_txt inp_yzm" /><input type="button" value="获取验证码" class="gray_btn" id="tel_btn" />
-            <p for="sign_duanxin" class="invalid"></p>
-        </div>
-        <div class="control-group">        
-            <span class="m_icon pas"></span>
-            <input type="password" name="" id="sign_pas" placeholder="请输入6-16位密码" class="inp_txt" />
-            <p for="sign_pas" class="invalid"></p>
-        </div>
-         <div class="control-group">        
-            <span class="m_icon pas"></span>
-            <input type="password" name="" id="sign_pas_two" placeholder="请确认密码" class="inp_txt" />
-            <p for="sign_pas_two" class="invalid"></p>
-        </div>
-
-         <div class="control-group clearfix">
-            <input type="button" value="注 册" class="org_btn" id="signup_button">
-        </div><!--/control-group-->
-        
-
-        <div class="control-group clearfix tc bottom">
-            已有账号？现在就 <a href="javascript:;" id="toLogin" class="org">登录</a>
-        </div><!--/control-group-->
-
-
-    </div><!--/modal-content-->
-    
-</div><!--/modal-->
 
 <div id="slideBar">
     <ul>
@@ -1097,7 +1012,7 @@ function leaveMessage(collect_id,is_whole){
             </a>
         </li><!--/客服-->
         <script src='js/easemob.js' async='async'></script>
-        
+
         <li class="y" id="slidePay">
             <a href="javascript:;">
                 <i class="tab-tip"></i>
@@ -1105,8 +1020,8 @@ function leaveMessage(collect_id,is_whole){
                 <em class="tab-text">在线交租</em>
             </a>
         </li><!--/交租-->
-                                
-        <li class="x" id="fankui">       
+
+        <li class="x" id="fankui">
             <a href="javascript:;">
                 <i class="tab-tip"></i>
                 <i class="tab-ico"></i>
@@ -1132,7 +1047,7 @@ function leaveMessage(collect_id,is_whole){
 
 <div class="hide">
     <div class="feedbackBox" id="feedbackBox">
-        
+
         <textarea id="feedbackTextatea" placeholder="请输入您要发送的内容"  maxlength="200"></textarea>
         <p class="invalid" id="feedTips">反馈意见不能为空！</p>
         <div class="tc mb10">
@@ -1147,7 +1062,7 @@ function leaveMessage(collect_id,is_whole){
         <p class='org mt10'>感谢对U+的建议和意见，我们会认真听取</p>
         <p class='org mt10'>也请您继续关注我们。</p>
         <p class='org mt10'>为您提供优质的服务我们责无旁贷。</p>
-        
+
 
     </div>
 

@@ -62,7 +62,7 @@
                                  </a>
                             </div>
                             <div class="clearfix info_sction">
-                                <span class="text_r">￥<i><span style="color: red;font-size: 25px">{{$v->pay}}</span></i>/月 </span>
+                                <span class="text_r">￥<i><span style="color: #ffc40f;font-size: 25px">{{$v->pay}}</span></i>/月 </span>
                             </div>
                             <div class="clearfix gray-6">
                                 <!--<span class="text_l">[丰台马家堡] 10号线角门西</span>-->

@@ -127,6 +127,7 @@ class UserController extends Controller
 
         $oneMess=DB::table('house')
             ->join("f_users","f_users.u_id","=","house.u_id")
+            ->join("house_type",'house.t_id','=','house_type.t_id')
             ->where('house.h_id', $hId)
             ->first();
 
@@ -159,7 +160,14 @@ class UserController extends Controller
         $t_id=$arr->t_id;
         //$sql="select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3";
         $data=DB::select("select * from house inner join house_type on house.t_id=house_type.t_id where status=1 and house.t_id=$t_id  and h_id!=$hId limit 3");
-
+        /*$data=DB::table("house")
+            ->join('house_type','house.t_id','=','house_type.t_id')
+            ->where('status','=',1)
+            ->where('house.t_id','=',$t_id)
+            ->where('h_id','!=',$hId)
+            ->limit(3)
+            ->get();*/
+        //var_dump($data);die;
 
         //生成静态页面
         $htmlStrings = view("home/single",['list'=>$oneMess,'img'=>$img,'resd'=>$res,'data'=>$data])->__toString();

@@ -172,7 +172,7 @@
                                 <span class="text-watermark">可作为登录账号</span>
                             </label>
 
-                            <span id="control-group"><span class="lab-text">填写邮箱，并通过验证，可获得<b class="h-text">800</b>积分，抵<b class="h-text">8元</b>订金</span></span>
+                            <!--<span id="control-group"><span class="lab-text">填写邮箱，并通过验证，可获得<b class="h-text">800</b>积分，抵<b class="h-text">8元</b>订金</span></span>-->
                         </div>
                     </div>
                     <div class="control-group agree-group">

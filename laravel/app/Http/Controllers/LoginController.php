@@ -87,6 +87,7 @@ class LoginController extends Controller
 
     /*会员登录处理*/
     public function loginPro1(){
+        //session_start();
         date_default_timezone_set('Asia/Shanghai');
         $username=Request::get('username');
         $pwd=Request::get('pwd');
@@ -125,6 +126,11 @@ class LoginController extends Controller
                         DB::table("f_users")->where("u_id",$arr->u_id)->update(['last_login'=>date("Y-m-d H:i:s")]);
                         setcookie("username",$username);
                         setcookie("u_id",$arr->u_id);
+                       // Session::put("name",$username);
+                        //echo Session::get('name');die;
+                        //echo Session::get("name");die;
+                        //$_SESSION['name']=$username;
+                       // echo $_SESSION['name'];die;
                         //echo $_COOKIE['status'];die;
                         return redirect('/');
                     }else{
@@ -161,11 +167,12 @@ class LoginController extends Controller
 
     //用户退出
     public function loginOut(){
-        setcookie('username','',time()-24*60*60);
-
-        //echo $_COOKIE['username'];die;
-        setcookie('u_id','',time()-24*60*60);
-        setcookie('status','',time()-24*60*60);
+        //session_start();
+        setcookie('username','',time()-1,'/');
+        setcookie('u_id','',time()-1,'/');
+        setcookie('status','',time()-1,'/');
+        //echo $_SESSION['name'];die;
+        //print_r($_COOKIE['username']);die;
         return redirect('/');
     }
 

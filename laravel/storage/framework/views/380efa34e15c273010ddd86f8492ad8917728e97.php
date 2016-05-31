@@ -194,13 +194,28 @@
                                     <input name="radio2" type="radio" value="2000-5000" style="margin-top: 10px;"/>
                                     <a href="javascript:;"  attrval="2000-5000">2000-5000元</a></label>
                                 <div class="custom"><span>自定义</span>&nbsp;
-                                    <input name="s_price" type="text" id="custext1"/>
+                                    <input name="s_price" type="text" id="custext1" />
                                     &nbsp;-&nbsp;
                                     <input name="b_price" type="text" id="custext2"/>
-                                    <input  type="button" id="cusbtn" />
+                                    <input  type="button" id="cusbtn" onclick="check_price()"/>
                                 </div>
                             </dd>
                         </dl>
+                        <script>
+                            function check_price(){
+                                var jia1=$('#custext1').val();
+                                var jia2=$('#custext2').val();
+                                if(jia1<800){
+                                    alert('最低价格不能低于800');
+                                }else if(jia2 >= 10000){
+                                    alert('您输入的价位过高');
+                                } else if(parseInt(jia1)>=parseInt(jia2)){
+                                  //  alert(parseInt(jia1)>=parseInt(jia2));
+                                    alert('前者的价格不能高于后者');
+                                }
+
+                            }
+                        </script>
                         <dl class=" listIndex" attr="terminal_os_s">
                             <dt>居住人数</dt>
                             <dd>
@@ -229,23 +244,12 @@
                             <dt>主题风格</dt>
                             <dd data-more=true>
                                 <label><a href="javascript:;" values2="" values1="" attrval="不限">不限</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="一室一厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="一室一厅">一室一厅</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="两室一厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="两室两厅">两室一厅</a> </label>
-                                <input name="h_type[]" type="checkbox" value="两室两厅" autocomplete="off" style="margin-top: 10px;"/>
-                                <a href="javascript:;"  attrval="两室两厅">两室两厅</a> </label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="三室两厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="三室两厅">三室两厅</a> </label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="四室三厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="四室三厅">四室三厅</a></label>
-                                <label>
-                                    <input name="h_type[]" type="checkbox" value="四室四厅" autocomplete="off" style="margin-top: 10px;"/>
-                                    <a href="javascript:;"  attrval="四室四厅">四室四厅</a></label>
+                            <?php foreach($type as $l): ?>
+                                    <label>
+                                        <input name="h_type[]" type="checkbox" value="<?php echo e($l->t_name); ?>" autocomplete="off" style="margin-top: 10px;"/>
+                                        <a href="javascript:;"  attrval="<?php echo e($l->t_name); ?>"><?php echo e($l->t_name); ?></a>
+                                    </label>
+                            <?php endforeach; ?>
                             </dd>
                         </dl>
 
@@ -255,7 +259,7 @@
 
     </div>
 
-    <div class="hasBeenSelected clearfix"><span id="time-num">共计<font>  </font>家房屋</span>
+    <div class="hasBeenSelected clearfix"><span id="time-num" style="font-size: 15px;">共计<font><?php echo $num?></font>家房屋</span>
         <div style="float:right;margin-right: 200px;" class="eliminateCriteria">【清空】 </div>
         <dl>
             <dt>已选条件：</dt>

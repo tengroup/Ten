@@ -177,8 +177,10 @@ $this->registerJsFile("@web/assets/1b5abb4b/jquery-1.js");
   </tr>
 </table>
 <script>
+
     $("#username").blur(function(){
         var username=$("#username").val();
+        //alert(username)
         $.get("index.php?r=login/gain_pwd",{username:username},function(e){
             //document.getElementById("whether").checked='true';
             $("#password").val(e)
