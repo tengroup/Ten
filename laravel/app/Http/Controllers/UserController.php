@@ -185,6 +185,11 @@ class UserController extends Controller
     //添加收藏
     public function appointmentAdd()
     {
+        $type=$_COOKIE['status'];
+        if($type!=10){
+            echo 5;
+            die;
+        }
         $hId=Request::get('id');
         $uId=$_COOKIE['u_id'];
         $data = DB::table('collect')->where('u_id', $uId)->where('h_id', $hId)->get();
@@ -207,6 +212,11 @@ class UserController extends Controller
     //添加预约
     public function appointAdd()
     {
+        $type=$_COOKIE['status'];
+        if($type!=10){
+            echo 5;
+            die;
+        }
         $hId=Request::get('id');
         $uId=$_COOKIE['u_id'];
         $data = DB::table('preplot')->where('u_id', $uId)->where('h_id', $hId)->get();
