@@ -127,8 +127,6 @@ oSelectList.onclick = function(e, a) {
                 delStr(val.innerHTML + '|' + sType, okSelect)
             }
         } else if (tag.getAttribute('type').toUpperCase() == 'BUTTON') { //如果点击的是 自定义价格按钮
-            
-				
 				radioVal = oCustext1.value + '-' + oCustext2.value + '元';
 				isCusPrice = true;
 				
