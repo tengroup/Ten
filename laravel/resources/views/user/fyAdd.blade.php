@@ -71,7 +71,6 @@
 
 <!--引用公用头部信息-->
 @include ("commonality.head")
-
 <!-- banner1 -->
 	<div class="banner1">
 		<div class="container">
@@ -109,16 +108,16 @@
             <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="basic-addon1">area</span>
                 @if(!empty($list->h_area))
-                    <input type="text" placeholder="房屋面积" name="h_area" value="{{$list->h_area}}"/>
+                    <input type="text" placeholder="房屋面积" maxlength="8" name="h_area" value="{{$list->h_area}}" id="h_area"/>㎡
                 @else
-                    <input type="text" placeholder="房屋面积" name="h_area" value=""/>
+                    <input type="text" placeholder="房屋面积" name="h_area" maxlength="8" value="" id="h_area"/>㎡
                 @endif
 
                 <span class="input-group-addon" id="basic-addon1">number</span>
                 @if(!empty($list->number))
-                    <input type="text" placeholder="可住人数" name="number" value="{{$list->number}}">
+                    <input type="text" placeholder="可住人数" name="number" value="{{$list->number}}" maxlength="3" id="number">
                 @else
-                    <input type="text" placeholder="可住人数" name="number" value="">
+                    <input type="text" placeholder="可住人数" name="number" value="" maxlength="3" id="number">
                 @endif
             </div>
 
@@ -132,9 +131,9 @@
                 @endif
                 <span class="input-group-addon" id="basic-addon1">￥</span>
                 @if(!empty($list->deposit))
-                    <input type="text" placeholder="压金" name="deposit"  value="{{$list->deposit}}">
+                    <input type="text" placeholder="压金" name="deposit"  value="{{$list->deposit}}" maxlength="6" id="deposit">
                 @else
-                    <input type="text" placeholder="压金" name="deposit" >
+                    <input type="text" placeholder="压金" name="deposit" maxlength="6" id="deposit">
                 @endif
 			</div>
 
@@ -158,9 +157,9 @@
 			<div class="input-group wow fadeInUp" data-wow-duration="1000ms"  data-wow-delay="300ms">
 				<span class="input-group-addon">$</span>
                 @if(!empty($list->pay))
-					<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="{{$list->pay}}">
+					<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="{{$list->pay}}" maxlength="6" id='pay'>
                 @else
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="">
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="租金" name="pay" value="" maxlength="6" id='pay'>
                 @endif
 				<span class="input-group-addon">.00</span>
 			</div>
@@ -170,9 +169,9 @@
             <div class="input-group wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon2">Linkman</span>
                 @if(!empty($list->linkman))
-                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="{{$list->linkman}}">
+                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="{{$list->linkman}}" maxlength="6">
                 @else
-                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="">
+                    <input type="text" class="form-control" placeholder="联系人" aria-describedby="sizing-addon2" name="linkman" value="" maxlength="6">
                 @endif
             </div>
 
@@ -180,9 +179,9 @@
             <div class="input-group input-group-sm wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon3">Tel</span>
                 @if(!empty($list->phone))
-                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="{{$list->phone}}">
+                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="{{$list->phone}}" maxlength="15">
                 @else
-                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="">
+                    <input type="text" class="form-control" placeholder="联系电话" aria-describedby="sizing-addon3" name="phone" value="" maxlength="15">
                 @endif
             </div>
 
@@ -227,11 +226,8 @@
             <!-- 房屋描述-->
             <div class="input-group input-group-lg wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <span class="input-group-addon" id="sizing-addon1">content</span>
-                <textarea   aria-describedby="sizing-addon1" cols="130" placeholder="这里填写您对房屋的描述" rows="10" name="content">
-                    @if(!empty($list->content))
-                        {{$list->content}}
-                    @endif
-                </textarea>
+                <textarea cols="130" placeholder="这里填写您对房屋的描述" rows="10" name="content" id="content">@if(!empty($list->content)){{$list->content}}@endif</textarea>
+                <span id="s_content"> 您还可以输入<b id="zi">300</b>字 </span>
             </div>
 
             <!--图片上传-->
@@ -266,6 +262,54 @@
 
 </html>
 <script>
+    $("#content").keyup(function (){
+        var content=$("#content").val();
+        var num=content.length;
+        var zhi = 300-parseInt(num);
+        //alert(zhi)
+        if(zhi<0){
+            alert("您的字数已经超了")
+            $("#content").val(content.substr(0,300))
+            $("#zi").html(zhi+1)
+        }else{
+            $("#zi").html(zhi)
+        }
+    })
+
+    //验证面积不能为负值
+    $("#h_area").keyup(function (){
+        var h_area = $("#h_area").val()
+        if(h_area<0){
+            alert("请输入正确的面积哦")
+            $("#h_area").val('')
+        }
+    })
+    //验证居住人不能是负数
+    $("#number").keyup(function (){
+        var number = $("#number").val()
+        if(number<0){
+            alert("请输入正确入住人数的哦")
+            $("#number").val('')
+        }
+    })
+    //验证押金不能是负数
+    $("#deposit").keyup(function (){
+        var deposit = $("#deposit").val()
+        if(deposit<0){
+            alert("您输入的押金不正确哦")
+            $("#deposit").val('')
+        }
+    })
+    //验证租金不能是负数
+    $("#pay").keyup(function (){
+        var pay = $("#pay").val()
+        if(pay<0){
+            alert("您输入的押金不正确哦")
+            $("#pay").val('')
+        }
+    })
+
+
     $("#tj_address").click(function(){
         $("#map").attr("style","display:black");
         document.getElementById('shadow').style.display='block';

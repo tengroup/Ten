@@ -70,9 +70,9 @@
                                     @if($v->status==1)
                                         审核 通过
                                     @elseif($v->status==2)
-                                        审核 未通过
+                                        <font color="#ff8c00"><b>审核 未通过</b></font>
                                     @else
-                                        未审核
+                                        <font color="red">未审核</font>
                                     @endif
                                  </span>
                             </div>

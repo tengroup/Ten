@@ -54,7 +54,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="logo">
+<<<<<<< HEAD
                     <a class="navbar-brand" href="http://www.u.com/index">
+=======
+                    <a class="navbar-brand" href="http://www.sunhui.com/Ten/laravel/public/index">
+>>>>>>> 029e543bca72d0726b675bc9c0fefb2f35ca1876
                         U+
                         <!-- <img src="images/u+.jpg" alt="U+"> -->
                     </a>
@@ -65,6 +69,7 @@
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="cl-effect-13" id="cl-effect-13">
                     <ul class="nav navbar-nav">
+<<<<<<< HEAD
                         <li><a href="http://www.u.com/index" class="active">首页</a></li>
                         <li role="presentation" class="dropdown">
                                                                                                                     <a href="http://www.u.com/short"> 我要租房  </a>
@@ -73,6 +78,17 @@
 
                         <li><a href="http://www.u.com/events"> 今日更新 </a></li>
                                          </ul>
+=======
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/index" class="active">首页</a></li>
+                        <li role="presentation" class="dropdown">
+                                                                                                                    <a href="http://www.sunhui.com/Ten/laravel/public/short"> 我要租房  </a>
+                                                                                            
+                                                    </li>
+
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/events"> 今日更新 </a></li>
+                                                                          <li><a href="http://www.sunhui.com/Ten/laravel/public/message"> 留言 </a></li>
+                                                                  </ul>
+>>>>>>> 029e543bca72d0726b675bc9c0fefb2f35ca1876
 
                 </nav>
                 <div class="social-icons">
@@ -81,6 +97,7 @@
                         <li><a class="icon-link round p" href="#"></a></li>
                         <li><a class="icon-link round twitter" href="#"></a></li>
                         <li><a class="icon-link round dribble" href="#"></a></li>
+<<<<<<< HEAD
                         <li><a href="http://www.u.com/login"><img src="houst_img/user_center.png" alt=""></a></li>-->
                         <font color="#f0f8ff">欢迎
                                                                     游客
@@ -92,6 +109,21 @@
                                 <li><a href="http://www.u.com/personal">个人信息</a></li>
                                                                     <li><a href="http://www.u.com/fyAdd">房源添加</a></li>
                                     <li><a href="http://www.u.com/appointment">预约列表</a></li>
+=======
+                        <li><a href="http://www.sunhui.com/Ten/laravel/public/login"><img src="houst_img/user_center.png" alt=""></a></li>-->
+                        <font color="#f0f8ff">欢迎
+                                                                    辉哥哥
+                                                            登录</font>
+                                                    <li><a href="login/loginout" style="color: blue">退出</a></li>
+                                                <li><a href="http://www.sunhui.com/Ten/laravel/public/register" style="color: blue">注册</a></li>
+                        <li role="presentation" class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: blue">
+                                用户中心 <span class="caret"></span>
+                            </a>
+                                                        <ul class="dropdown-menu">
+                                <li><a href="http://www.sunhui.com/Ten/laravel/public/personal">个人信息</a></li>
+                                                                    <li><a href="http://www.sunhui.com/Ten/laravel/public/appointment">收藏列表</a></li>
+>>>>>>> 029e543bca72d0726b675bc9c0fefb2f35ca1876
                                                             </ul>
                         </li>
                     </ul>

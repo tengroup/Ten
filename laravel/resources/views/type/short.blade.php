@@ -201,6 +201,21 @@
                                 </div>
                             </dd>
                         </dl>
+                        <script>
+                            function check_price(){
+                                var jia1=$('#custext1').val();
+                                var jia2=$('#custext2').val();
+                                if(jia1<800){
+                                    alert('最低价格不能低于800');
+                                }else if(jia2 >= 10000){
+                                    alert('您输入的价位过高');
+                                } else if(parseInt(jia1)>=parseInt(jia2)){
+                                  //  alert(parseInt(jia1)>=parseInt(jia2));
+                                    alert('前者的价格不能高于后者');
+                                }
+
+                            }
+                        </script>
                         <dl class=" listIndex" attr="terminal_os_s">
                             <dt>居住人数</dt>
                             <dd>

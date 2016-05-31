@@ -303,7 +303,7 @@ class UserController extends Controller
             ->join('house_type', 'house.t_id', '=', 'house_type.t_id')
             ->where('u_id','=',$u_id)
             ->orderBy('h_time', 'desc')
-            ->paginate(9);
+            ->paginate(6);
 
         return view("user/fyList",$arr);
     }

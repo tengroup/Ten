@@ -50,6 +50,7 @@
              <div id="lofslidecontent45" class="lof-slidecontent current_lof">
                  <div class="lof-main-outer" id="cao">
                      <div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
+                     {{--大的轮播图--}}
                      <ul class="lof-main-wapper">
                          @foreach($img as $k=>$v)
                         <li>
@@ -64,6 +65,7 @@
             </div><!--lof-main-outer -->
                 <div class="lof-navigator-wapper">
 					<div onclick="return false" href="javascript:;" class="lof-previous icon icon-prev"></div><!--lof-previous -->
+                    {{--小的轮播图--}}
                     <div class="lof-navigator-outer" >
                   		<ul class="lof-navigator">
                         @foreach($img as $k=>$v)
@@ -92,23 +94,23 @@
 			</p>
 	        @endforeach
 	</div><!--/aboutRoom-->
-	<div class="title">
-		<span class="line"></span>
-		<h2 class="cn"><span class="s"></span>房屋配置<span class="y">●</span></h2>
-		<p class="en">Room Allocation<span class="y">●</span></p>
-	</div>
+	{{--<div class="title">--}}
+		{{--<span class="line"></span>--}}
+		{{--<h2 class="cn"><span class="s"></span>房屋配置<span class="y">●</span></h2>--}}
+		{{--<p class="en">Room Allocation<span class="y">●</span></p>--}}
+	{{--</div>--}}
 
-	<ul class="configuration clearfix">
-		<li class="have"><span class="bed"></span>床</li>
-		<li class="have"><span class="chest"></span>衣柜</li>
-		<li class="have"><span class="desk"></span>书桌</li>
-		<li class="have"><span class="wifi"></span>Wi-Fi</li>
-		<li class="have"><span class="washing"></span>洗衣机</li>
-		<li class="have"><span class="calorifier"></span>热水器</li>
-		<li class="have"><span class="air-condition"></span>空调</li>
-		<li class="have"><span class="microwave"></span>微波炉</li>
-		<li class="last"><span class="lock"></span>智能锁</li>
-	</ul>             
+	{{--<ul class="configuration clearfix">--}}
+		{{--<li class="have"><span class="bed"></span>床</li>--}}
+		{{--<li class="have"><span class="chest"></span>衣柜</li>--}}
+		{{--<li class="have"><span class="desk"></span>书桌</li>--}}
+		{{--<li class="have"><span class="wifi"></span>Wi-Fi</li>--}}
+		{{--<li class="have"><span class="washing"></span>洗衣机</li>--}}
+		{{--<li class="have"><span class="calorifier"></span>热水器</li>--}}
+		{{--<li class="have"><span class="air-condition"></span>空调</li>--}}
+		{{--<li class="have"><span class="microwave"></span>微波炉</li>--}}
+		{{--<li class="last"><span class="lock"></span>智能锁</li>--}}
+	{{--</ul>--}}
 	<!--/greatRoommate-->
 
 
@@ -177,7 +179,7 @@
             @endforeach
 
 	</table>
-	<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>
+	{{--<p class="mt10 fs14"><span class="gray-6">●</span> 请<a href="/static/201401/androidapp.html" class="org" target="_blank">下载</a>U+App签约并使用银联、京东支付、U+白条完成支付。</p>--}}
 	</div>
 	<div class="title">
 		<span class="line"></span>
